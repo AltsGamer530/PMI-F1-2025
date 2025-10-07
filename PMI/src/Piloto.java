@@ -1,14 +1,14 @@
-package src;
+
 
 public class Piloto {
     private String Nombre;
     private String Apellido;
     private Fecha FechaDeNacimiento;
     private String Nacionalidad;
-    private String NumeroDeAuto;
+    private int NumeroDeAuto;
     private String Equipo;
     private String Rol;
-    private String Puntos;
+    private int Puntos;
     private String Podios;
     private String Poles;
     private String VueltasRapidas;
@@ -17,8 +17,8 @@ public class Piloto {
     private String Fia;
     
     public Piloto(String Nombre,String Apellido,Fecha FechaDeNacimiento,
-            String Nacionalidad,String NumeroDeAuto,String Equipo,String Rol,
-            String Puntos,String Podios,String Poles,String VueltasRapidas,
+            String Nacionalidad,int NumeroDeAuto,String Equipo,String Rol,
+            int Puntos,String Podios,String Poles,String VueltasRapidas,
             String Penalizaciones,String Abandonos,String Fia){
     this.Nombre=Nombre;
     this.Apellido=Apellido;
@@ -54,7 +54,7 @@ public class Piloto {
         return Nacionalidad;
     }
 
-    public String getNumeroDeAuto() {
+    public int getNumeroDeAuto() {
         return NumeroDeAuto;
     }
 
@@ -66,7 +66,7 @@ public class Piloto {
         return Rol;
     }
 
-    public String getPuntos() {
+    public int getPuntos() {
         return Puntos;
     }
 
@@ -112,7 +112,7 @@ public class Piloto {
         this.Nacionalidad = Nacionalidad;
     }
 
-    public void setNumeroDeAuto(String NumeroDeAuto) {
+    public void setNumeroDeAuto(int NumeroDeAuto) {
         this.NumeroDeAuto = NumeroDeAuto;
     }
 
@@ -124,7 +124,7 @@ public class Piloto {
         this.Rol = Rol;
     }
 
-    public void setPuntos(String Puntos) {
+    public void setPuntos(int Puntos) {
         this.Puntos = Puntos;
     }
 

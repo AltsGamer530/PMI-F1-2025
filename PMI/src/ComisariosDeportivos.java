@@ -1,15 +1,17 @@
+
+
 public class ComisariosDeportivos {
 
     private String Nombre;
     private String Apellido;
     private Fecha FechaDeNacimiento;
     private String Nacionalidad;
-    private String SancionesAplicadas;
+    private int SancionesAplicadas;
     private String InternacionalFia;
     
     public ComisariosDeportivos(String Nombre,String Apellido,
-    String FechaDeNacimiento,String Nacionalidad,
-    String SancionesAplicadas,String InternacionalFia){
+    Fecha FechaDeNacimiento,String Nacionalidad,
+    int SancionesAplicadas,String InternacionalFia){
         this.Nombre=Nombre;
         this.Apellido=Apellido;
         this.FechaDeNacimiento=FechaDeNacimiento;
@@ -34,7 +36,7 @@ public class ComisariosDeportivos {
         return Nacionalidad;
     }
 
-    public String getSancionesAplicadas() {
+    public int getSancionesAplicadas() {
         return SancionesAplicadas;
     }
 
@@ -50,7 +52,7 @@ public class ComisariosDeportivos {
         this.Apellido = Apellido;
     }
 
-    public void setFechaDeNacimiento(String FechaDeNacimiento) {
+    public void setFechaDeNacimiento(Fecha FechaDeNacimiento) {
         this.FechaDeNacimiento = FechaDeNacimiento;
     }
 
@@ -58,14 +60,11 @@ public class ComisariosDeportivos {
         this.Nacionalidad = Nacionalidad;
     }
 
-    public void setSancionesAplicadas(String SancionesAplicadas) {
+    public void setSancionesAplicadas(int SancionesAplicadas) {
         this.SancionesAplicadas = SancionesAplicadas;
     }
 
     public void setInternacionalFia(String InternacionalFia) {
         this.InternacionalFia = InternacionalFia;
     }
-    
-   
-    
 }

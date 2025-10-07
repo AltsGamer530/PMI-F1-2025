@@ -1,3 +1,5 @@
+
+
 public class Fecha {
     int dia,mes,ano;
 
@@ -35,6 +37,10 @@ public class Fecha {
     
     public void mostrarFecha(){
         System.out.println("Fecha: " + this.dia + "/" + this.mes + "/" + this.ano);
+    }
+    @Override
+    public String toString(){
+        return this.dia + "/" + this.mes + "/" + this.ano;
     }
     
     public int cantDias(Fecha f){

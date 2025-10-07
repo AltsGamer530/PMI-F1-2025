@@ -1,24 +1,21 @@
-
 public class ComisariosDeportivos {
- 
+
     private String Nombre;
     private String Apellido;
-    private String FechaDeNacimiento;
+    private Fecha FechaDeNacimiento;
     private String Nacionalidad;
     private String SancionesAplicadas;
     private String InternacionalFia;
     
-    
     public ComisariosDeportivos(String Nombre,String Apellido,
     String FechaDeNacimiento,String Nacionalidad,
     String SancionesAplicadas,String InternacionalFia){
-    this.Nombre=Nombre;
-    this.Apellido=Apellido;
-    this.FechaDeNacimiento=FechaDeNacimiento;
-    this.Nacionalidad=Nacionalidad;
-    this.SancionesAplicadas=SancionesAplicadas;
-    this.InternacionalFia=InternacionalFia;
-    
+        this.Nombre=Nombre;
+        this.Apellido=Apellido;
+        this.FechaDeNacimiento=FechaDeNacimiento;
+        this.Nacionalidad=Nacionalidad;
+        this.SancionesAplicadas=SancionesAplicadas;
+        this.InternacionalFia=InternacionalFia;
     }
 
     public String getNombre() {
@@ -29,7 +26,7 @@ public class ComisariosDeportivos {
         return Apellido;
     }
 
-    public String getFechaDeNacimiento() {
+    public Fecha getFechaDeNacimiento() {
         return FechaDeNacimiento;
     }
 

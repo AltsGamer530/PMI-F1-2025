@@ -1,8 +1,9 @@
+package src;
 
 public class Piloto {
     private String Nombre;
     private String Apellido;
-    private String FechaDeNacimiento;
+    private Fecha FechaDeNacimiento;
     private String Nacionalidad;
     private String NumeroDeAuto;
     private String Equipo;
@@ -15,7 +16,7 @@ public class Piloto {
     private String Abandonos;
     private String Fia;
     
-    public Piloto(String Nombre,String Apellido,String FechaDeNacimiento,
+    public Piloto(String Nombre,String Apellido,Fecha FechaDeNacimiento,
             String Nacionalidad,String NumeroDeAuto,String Equipo,String Rol,
             String Puntos,String Podios,String Poles,String VueltasRapidas,
             String Penalizaciones,String Abandonos,String Fia){
@@ -35,6 +36,8 @@ public class Piloto {
     this.Fia=Fia;
     }
 
+    public Piloto(){}
+
     public String getNombre() {
         return Nombre;
     }
@@ -43,7 +46,7 @@ public class Piloto {
         return Apellido;
     }
 
-    public String getFechaDeNacimiento() {
+    public Fecha getFechaDeNacimiento() {
         return FechaDeNacimiento;
     }
 
@@ -101,7 +104,7 @@ public class Piloto {
         this.Apellido = Apellido;
     }
 
-    public void setFechaDeNacimiento(String FechaDeNacimiento) {
+    public void setFechaDeNacimiento(Fecha FechaDeNacimiento) {
         this.FechaDeNacimiento = FechaDeNacimiento;
     }
 

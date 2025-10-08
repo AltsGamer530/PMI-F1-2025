@@ -9,17 +9,17 @@ public class Piloto {
     private String Equipo;
     private String Rol;
     private int Puntos;
-    private String Podios;
-    private String Poles;
-    private String VueltasRapidas;
-    private String Penalizaciones;
-    private String Abandonos;
-    private String Fia;
+    private int Podios;
+    private int Poles;
+    private int VueltasRapidas;
+    private int Penalizaciones;
+    private int Abandonos;
+    private boolean Fia;
     
     public Piloto(String Nombre,String Apellido,Fecha FechaDeNacimiento,
             String Nacionalidad,int NumeroDeAuto,String Equipo,String Rol,
-            int Puntos,String Podios,String Poles,String VueltasRapidas,
-            String Penalizaciones,String Abandonos,String Fia){
+            int Puntos,int Podios,int Poles,int VueltasRapidas,
+            int Penalizaciones,int Abandonos,boolean Fia){
     this.Nombre=Nombre;
     this.Apellido=Apellido;
     this.FechaDeNacimiento=FechaDeNacimiento;
@@ -70,27 +70,27 @@ public class Piloto {
         return Puntos;
     }
 
-    public String getPodios() {
+    public int getPodios() {
         return Podios;
     }
 
-    public String getPoles() {
+    public int getPoles() {
         return Poles;
     }
 
-    public String getVueltasRapidas() {
+    public int getVueltasRapidas() {
         return VueltasRapidas;
     }
 
-    public String getPenalizaciones() {
+    public int getPenalizaciones() {
         return Penalizaciones;
     }
 
-    public String getAbandonos() {
+    public int getAbandonos() {
         return Abandonos;
     }
 
-    public String getFia() {
+    public boolean getFia() {
         return Fia;
     }
 
@@ -128,31 +128,46 @@ public class Piloto {
         this.Puntos = Puntos;
     }
 
-    public void setPodios(String Podios) {
+    public void setPodios(int Podios) {
         this.Podios = Podios;
     }
 
-    public void setPoles(String Poles) {
+    public void setPoles(int Poles) {
         this.Poles = Poles;
     }
 
-    public void setVueltasRapidas(String VueltasRapidas) {
+    public void setVueltasRapidas(int VueltasRapidas) {
         this.VueltasRapidas = VueltasRapidas;
     }
 
-    public void setPenalizaciones(String Penalizaciones) {
+    public void setPenalizaciones(int Penalizaciones) {
         this.Penalizaciones = Penalizaciones;
     }
 
-    public void setAbandonos(String Abandonos) {
+    public void setAbandonos(int Abandonos) {
         this.Abandonos = Abandonos;
     }
 
-    public void setFia(String Fia) {
+    public void setFia(boolean Fia) {
         this.Fia = Fia;
     }
     
-    
+    public void mostrarDatosPi(){
+        System.out.println("Nombre: "+this.getNombre());
+        System.out.println("Apellido: "+this.getApellido());
+        System.out.println("Fecha de nacimiento: "+this.getFechaDeNacimiento());
+        System.out.println("Nacionalidad: "+this.getNacionalidad());
+        System.out.println("Numero de Auto: "+this.getNumeroDeAuto());
+        System.out.println("Equipo: "+this.getEquipo());
+        System.out.println("Rol en el equipo: "+this.getRol());
+        System.out.println("Puntos: "+this.getPuntos());
+        System.out.println("Podios: "+this.getPodios());
+        System.out.println("Poles: "+this.getPoles());
+        System.out.println("Vueltas Rapidas: "+this.getVueltasRapidas());
+        System.out.println("Penalizaciones: "+this.getPenalizaciones());
+        System.out.println("Abandonos: "+this.getAbandonos());
+        System.out.println("Licencia FIA: "+ (this.getFia() ? "Si" : "No"));
+    }
     
     
 }

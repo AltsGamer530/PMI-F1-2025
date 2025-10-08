@@ -7,17 +7,31 @@ public class ComisariosDeportivos {
     private Fecha FechaDeNacimiento;
     private String Nacionalidad;
     private int SancionesAplicadas;
-    private String InternacionalFia;
+    private boolean InternacionalFia;
+    private int id;
     
     public ComisariosDeportivos(String Nombre,String Apellido,
     Fecha FechaDeNacimiento,String Nacionalidad,
-    int SancionesAplicadas,String InternacionalFia){
+    int SancionesAplicadas,boolean InternacionalFia, int id){
         this.Nombre=Nombre;
         this.Apellido=Apellido;
         this.FechaDeNacimiento=FechaDeNacimiento;
         this.Nacionalidad=Nacionalidad;
         this.SancionesAplicadas=SancionesAplicadas;
         this.InternacionalFia=InternacionalFia;
+        this.id = id;
+    }
+
+    //Metodos
+
+    public void mostrarDatosCo(){
+        System.out.println("ID:" + id + "-" + Nombre + " " + Apellido + "- Sanciones: " + SancionesAplicadas + "- FIA Internacional: " + InternacionalFia );
+    }
+
+    //getters
+
+    public int getId(){
+        return id;
     }
 
     public String getNombre() {
@@ -40,9 +54,13 @@ public class ComisariosDeportivos {
         return SancionesAplicadas;
     }
 
-    public String getInternacionalFia() {
+    public boolean getInternacionalFia() {
         return InternacionalFia;
     }
+
+
+    //Setters
+
 
     public void setNombre(String Nombre) {
         this.Nombre = Nombre;
@@ -64,7 +82,11 @@ public class ComisariosDeportivos {
         this.SancionesAplicadas = SancionesAplicadas;
     }
 
-    public void setInternacionalFia(String InternacionalFia) {
+    public void setInternacionalFia(boolean InternacionalFia) {
         this.InternacionalFia = InternacionalFia;
+    }
+
+    public void setId(int id){
+        this.id = id;
     }
 }

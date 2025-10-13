@@ -1,6 +1,8 @@
+package modelo;
 
 
-public class ComisariosDeportivos {
+
+public class ComisarioDeportivo{
 
     private String Nombre;
     private String Apellido;
@@ -10,7 +12,7 @@ public class ComisariosDeportivos {
     private boolean InternacionalFia;
     private int id;
     
-    public ComisariosDeportivos(String Nombre,String Apellido,
+    public ComisarioDeportivo(String Nombre,String Apellido,
     Fecha FechaDeNacimiento,String Nacionalidad,
     int SancionesAplicadas,boolean InternacionalFia, int id){
         this.Nombre=Nombre;

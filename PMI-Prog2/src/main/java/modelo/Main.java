@@ -1,3 +1,6 @@
+package modelo;
+
+import controlador.GestorArchivos;
 import java.util.ArrayList;
 
 public class Main {
@@ -6,10 +9,6 @@ public class Main {
         for(Piloto p : lista){
             System.out.println("---------------------------");
             p.mostrarDatosPi();
-        }
-
-
-
-        
+        }       
     }
 }

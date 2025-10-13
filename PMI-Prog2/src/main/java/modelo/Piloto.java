@@ -1,4 +1,4 @@
-
+package modelo;
 
 public class Piloto {
     private String Nombre;

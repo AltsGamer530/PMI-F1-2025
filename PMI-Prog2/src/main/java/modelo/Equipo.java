@@ -1,3 +1,5 @@
+package modelo;
+import java.util.Scanner;
 
 /*Todo piloto pertenece a un equipo. De cada equipo se debe conocer:
  Nombre del equipo (Constructor)
@@ -7,6 +9,8 @@ o Condiciones:
  Pilotos por equipo: al menos 2 titulares y como máximo 4 (para 
 contemplar piloto(s) de reserva). */
 //todo piloto pertenece a un equipo, piloto pertenece a equipos, con herencia?
+//los equipos tienen pilotos, pero son clases separadas
+
 public class Equipo {
     private int id; // Solo hay 10 equipos
     private String nombreE; 
@@ -32,16 +36,28 @@ public class Equipo {
         public void mostrarDatos(){
         System.out.println(id + "-" + nombreE + "(" + pais + ")");
         } //Mostrar datos
-
+        
+        public int localizarPiloto(int numeroDeAuto){
+            if(this.cantidadPilotos == 0) return -1; //no hay pilotos
+            for(int i=0; i<this.cantidadPilotos; i++){
+                if(this.pilotos[i].getNumeroDeAuto() == numeroDeAuto) return i; //encontrado
+            }
+            return -2; // no esta
+        }
+        
         public boolean agregarPiloto(Piloto p) {
-            if(cantidadPilotos < 4){
-                pilotos[cantidadPilotos] = p;
-                cantidadPilotos++;
-                return true;
-            } else {
+            int pos;
+            if(this.cantidadPilotos == 4){
                 System.out.println("Tontito no se puede mas de 4 (Te pusieron)"); //"No se puede agregar más pilotos al equipo " + nombre
                 return false;
             }
+            pos = this.localizarPiloto(p.getNumeroDeAuto());
+            if(pos < 0){
+                this.pilotos[pos] = p;
+                return true;
+            }
+            System.out.println("No se pudo agregar el piloto");
+            return false;
         }       //Para agregar pilotos
 
 
@@ -53,27 +69,27 @@ public class Equipo {
         }
 
         public boolean elimarPiloto(int numeroAuto) { //Siento que me voy a olvidar de algo de aca que es importante
-            for(int i = 0; i < cantidadPilotos; i++){
-                if (pilotos[i].getNumeroDeAuto() == numeroAuto) {
-                    for(int j = i; j < cantidadPilotos - 1; j++){
-                        pilotos[j] = pilotos[j + 1];
-                    }
+            int pos = this.localizarPiloto(numeroAuto);
+            if(pos >= 0){
+                for(int i = pos; i < cantidadPilotos - 1; i++){
+                   pilotos[i] = pilotos[i + 1];
                     cantidadPilotos--;
                     System.out.println("Piloto eliminado excitantemente");
                     return true;
-                } 
-            } 
-                System.out.println("No se encontro el piloto...");
-                return false; 
+                }
+            }
+               
+            System.out.println("No se encontro el piloto...");
+            return false; 
         }
 
 
         public boolean modificarPiloto(int numeroAuto){
             Scanner sc = new Scanner(System.in);
-            for (int i = 0; i < cantidadPilotos;i++){
-                if (pilotos[i].getNumeroDeAuto() == numeroAuto){
-                    System.out.println("Piloto enocontrado: ");
-                    pilotos[i].mostrarDatosPi();
+            int i = this.localizarPiloto(numeroAuto);
+            if(i >= 0){
+                System.out.println("Piloto enocontrado: ");
+                pilotos[i].mostrarDatosPi();
 
                 System.out.println("Que desea modificar?: ");
                 System.out.println("1.Numero de Auto");
@@ -84,48 +100,49 @@ public class Equipo {
                 System.out.println("6.Vueltas Rapidas");
                 System.out.println("7.Penalizaciones");
                 System.out.println("8.Abandonos(DNF)");
-                
+                    
+                int opcion = sc.nextInt();
+                    
                 switch (opcion) {
                     case 1:
                         System.out.println("Nuevo numero de auto: ");
-                        pilotos[i].setNumeroDeAuto(sc.nextLine());
+                        pilotos[i].setNumeroDeAuto(sc.nextInt());
                         break;
                     case 2:
                         System.out.println("Nuevo Rol: ");
                         pilotos[i].setRol(sc.nextLine());
                         break;
-                    case 3:
-                        System.out.println("Nuevos puntos: ");
-                        pilotos[i].setPuntos(sc.nextLine());
-                        break;
-                    case 4:
-                        System.out.println("Nuevo podio: ");
-                        pilotos[i].setPodios(sc.nextLine());
-                        break;
-                    case 5:
-                        System.out.println("Nuevo Pole: ");
-                        pilotos[i].setPoles(sc.nextLine());
-                        break;
-                    case 6:
-                        System.out.println("Vueltas Rapidas Actuales: ");
-                        pilotos[i].setVueltasRapidas(sc.nextLine());
-                        break;
-                    case 7:
-                        System.out.println("Nuevas Penalizaciones: ");
-                        pilotos[i].setPenalizaciones(sc.nextLine());
-                        break;
-                    case 8:
-                        System.out.println("Nuevos Abandonos");
-                        pilotos[i].setAbandonos(sc.nextLine());
-                        break;
-                    default:
-                        System.out.println("Opción inválida");
-                        return false;
+                        case 3:
+                            System.out.println("Nuevos puntos: ");
+                            pilotos[i].setPuntos(sc.nextInt());
+                            break;
+                        case 4:
+                            System.out.println("Nuevo podio: ");
+                            pilotos[i].setPodios(sc.nextInt());
+                            break;
+                        case 5:
+                            System.out.println("Nuevo Pole: ");
+                            pilotos[i].setPoles(sc.nextInt());
+                            break;
+                        case 6:
+                            System.out.println("Vueltas Rapidas Actuales: ");
+                            pilotos[i].setVueltasRapidas(sc.nextInt());
+                            break;
+                        case 7:
+                            System.out.println("Nuevas Penalizaciones: ");
+                            pilotos[i].setPenalizaciones(sc.nextInt());
+                            break;
+                        case 8:
+                            System.out.println("Nuevos Abandonos");
+                            pilotos[i].setAbandonos(sc.nextInt());
+                            break;
+                        default:
+                            System.out.println("Opción inválida");
+                            return false;
                 }
-                }
-            System.out.println("No se encontró el piloto con ese número de auto");
-        return false;
             }
+            System.out.println("No se encontró el piloto con ese número de auto");
+            return false;
         }
 
         public boolean modificarComisario(ComisariosDeportivos[] comisarios, int cantidad){
@@ -133,7 +150,7 @@ public class Equipo {
             System.out.println("Ingrese el ID del comisario a modificar: ");
             int idBuscado = sc.nextInt();
 
-            for(int = 0; i < cantidad; i++){
+            for(int i = 0; i < cantidad; i++){
                 if (comisarios[i].getId() == idBuscado) {
                     System.out.println("Comisario encontrado: ");
                     comisarios[i].mostrarDatosCo();
@@ -142,10 +159,10 @@ public class Equipo {
                     System.out.println("1. Sanciones aplicadas: ");
                     System.out.println("2. Fia Internacional(True/False): ");
 
-                    int opcion = sc.nextInt;
+                    int opcion = sc.nextInt();
                     sc.nextLine();
 
-                    switch () {
+                    switch (opcion) {
                         case 1:
                             System.out.print("Nuevo valor de sanciones: ");
                         int nuevasSanciones = sc.nextInt();
@@ -174,14 +191,10 @@ public class Equipo {
                 System.out.println("No hay mas espacio para comisarios");
                 return cantidad;
             }
-
+            return 0;
         //Tengo que hacer un verificador para que no se repita el id pero alta paja ya estoy cansado
         //Que se encargue el boludo del Alts del futuro
-
-        
-
-
-
+        //eso se soluciona con una clase lista y un metodo para buscar
         }
 
         

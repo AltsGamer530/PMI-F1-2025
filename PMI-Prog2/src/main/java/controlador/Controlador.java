@@ -10,7 +10,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import modelo.Piloto;
 import modelo.ComisarioDeportivo;
-import modelo.Equipo:
+import modelo.Equipo;
+import modelo.EquiposPredefinidos;
 import modelo.Fecha;
 
 /**
@@ -18,7 +19,7 @@ import modelo.Fecha;
  * @author Admin
  */
 public class Controlador {
-    public static ArrayList<Piloto> cargarPilotos(){
+    public static ArrayList<Piloto> cargarPilotosDeArchivo(){
         ArrayList<Piloto> pilotos = new ArrayList<>();
         File f = new File("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI\\src\\Pilotos.txt");
         String line;
@@ -51,4 +52,9 @@ public class Controlador {
         //NASHEE ANDA
         return pilotos;
     }
+    
+    public static void agregarPilotoInterfaz(Piloto p){
+        
+    }
+    
 }

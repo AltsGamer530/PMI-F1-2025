@@ -145,7 +145,7 @@ public class Equipo {
             return false;
         }
 
-        public boolean modificarComisario(ComisariosDeportivos[] comisarios, int cantidad){
+        public boolean modificarComisario(ComisarioDeportivo[] comisarios, int cantidad){
             Scanner sc = new Scanner(System.in);
             System.out.println("Ingrese el ID del comisario a modificar: ");
             int idBuscado = sc.nextInt();
@@ -186,7 +186,7 @@ public class Equipo {
             return false;
         }
 
-        public int agregarComisario(ComisariosDeportivos[] comisarios, int cantidad, ComisariosDeportivos nuevo) {
+        public int agregarComisario(ComisarioDeportivo[] comisarios, int cantidad, ComisarioDeportivo nuevo) {
             if(cantidad >= comisarios.length){
                 System.out.println("No hay mas espacio para comisarios");
                 return cantidad;

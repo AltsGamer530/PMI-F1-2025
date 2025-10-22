@@ -5,19 +5,19 @@ import java.util.ArrayList;
  * @author arctan
  */
 public class ListaPilotos {
-    private ArrayList<Piloto> listaPilotos;
+    private ArrayList<Piloto> lista;
     private int cantPilotos;
 
     public ListaPilotos() {
-        this.listaPilotos = new ArrayList<Piloto>();
+        this.lista = new ArrayList<Piloto>();
     }
 
-    public ArrayList<Piloto> getListaPilotos() {
-        return listaPilotos;
+    public ArrayList<Piloto> getLista() {
+        return lista;
     }
 
     public void setListaPilotos(ArrayList<Piloto> listaPilotos) {
-        this.listaPilotos = listaPilotos;
+        this.lista = listaPilotos;
     }
 
     public int getCantPilotos() {
@@ -28,5 +28,28 @@ public class ListaPilotos {
         this.cantPilotos = cantPilotos;
     }
     
+    public Piloto buscarPilotoPorNumero(int numeroAuto){
+        for(Piloto p: lista)
+            if(p.getNumeroDeAuto() == numeroAuto) return p;
+        return null;
+    }
+    
+    public boolean addPiloto(Piloto p){
+        Piloto paux = buscarPilotoPorNumero(p.getNumeroDeAuto());
+        if(paux == null){
+            lista.add(p);
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean eliminarPiloto(int numeroAuto){
+        Piloto p = buscarPilotoPorNumero(numeroAuto);
+        if(p != null){
+            lista.remove(p);
+            return true;
+        }
+        return false;
+    }
     
 }

@@ -39,3 +39,4 @@ bin/
 # Otros
 out/
 build/
+*.class

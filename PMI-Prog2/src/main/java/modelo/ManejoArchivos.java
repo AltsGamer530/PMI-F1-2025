@@ -18,7 +18,7 @@ public class ManejoArchivos {
     public ManejoArchivos(){}
     
     public static void cargarPilotosDeArchivo(ListaPilotos lista){
-        File f = new File("/home/arctan/Desktop/Program/PMI-F1-2025/PMI-Prog2/src/main/java/controlador/Pilotos.txt");
+        File f = new File("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\modelo\\Pilotos.txt");
         String line;
         try(BufferedReader reader = new BufferedReader(new FileReader(f))){
             while((line = reader.readLine()) != null){
@@ -42,7 +42,8 @@ public class ManejoArchivos {
                 aux.setAbandonos(Integer.parseInt(reader.readLine()));
                 aux.setFia(Boolean.parseBoolean(reader.readLine()));
                 
-                lista.getListaPilotos().add(aux);
+                lista.getLista().add(aux);
+                System.out.println("se cargo un piloto nashe");
                 
             }
         }catch(IOException e){

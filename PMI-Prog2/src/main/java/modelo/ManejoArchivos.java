@@ -18,7 +18,7 @@ public class ManejoArchivos {
     public ManejoArchivos(){}
     
     public static void cargarPilotosDeArchivo(ListaPilotos lista){
-        File f = new File("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\modelo\\Pilotos.txt");
+        File f = new File("./data/Pilotos.txt");
         String line;
         try(BufferedReader reader = new BufferedReader(new FileReader(f))){
             while((line = reader.readLine()) != null){

@@ -169,5 +169,4 @@ public class Piloto {
         System.out.println("Licencia FIA: "+ (this.getFia() ? "Si" : "No"));
     }
     
-    
 }

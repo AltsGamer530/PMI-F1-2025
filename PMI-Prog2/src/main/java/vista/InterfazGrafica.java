@@ -259,9 +259,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
+        grupoRolPiloto.add(pReserva);
         pReserva.setForeground(new java.awt.Color(51, 51, 51));
         pReserva.setText("Reserva");
 
+        grupoRolPiloto.add(pTitular);
         pTitular.setForeground(new java.awt.Color(51, 51, 51));
         pTitular.setText("Titular");
         pTitular.addActionListener(new java.awt.event.ActionListener() {
@@ -270,6 +272,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
+        grupoRolPiloto.add(pProbador);
         pProbador.setForeground(new java.awt.Color(51, 51, 51));
         pProbador.setText("Probador");
         pProbador.setToolTipText("");
@@ -624,13 +627,14 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    /*
-    //no se por qué jode
-    //esta parte es para que solo se pueda seleccionar un rol al cargar un piloto nuevo
+    
+    /*/
+    esta parte es para que solo se pueda seleccionar un rol al cargar un piloto nuevo
     grupoRolPiloto.add(pTitular);
     grupoRolPiloto.add(pReserva);
     grupoRolPiloto.add(pProbador);
     */
+    
     private void botonCargarPilotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarPilotoActionPerformed
         // TODO add your handling code here:
         panelContenedor.removeAll();
@@ -692,6 +696,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     private void botonGuardarPilotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarPilotoActionPerformed
         // TODO add your handling code here:
+        grupoRolPiloto.add(pTitular);
+        grupoRolPiloto.add(pReserva);
+        grupoRolPiloto.add(pProbador);
         Piloto p = new Piloto();
         p.setNombre(campoNombrePiloto.getText());
         p.setApellido(campoApellidoPiloto.getText());
@@ -702,14 +709,13 @@ public class InterfazGrafica extends javax.swing.JFrame {
         p.setFechaDeNacimiento(fechaNac);
         p.setNumeroDeAuto(Integer.parseInt(campoNroAutoPiloto.getText()));
         p.setEquipo(campoEquipoPiloto.getSelectedItem().toString());
-        /*
-        //arreglar lo de buttonGroup primero
+        p.setNacionalidad(campoNacionalidadPiloto.getSelectedItem().toString());
+        
         String rol = "";
         if(pTitular.isSelected()) rol = "Titular";
         else if(pReserva.isSelected()) rol = "Reserva";
         else if(pProbador.isSelected()) rol = "Probador";
         p.setRol(rol);
-        */
         lista.addPiloto(p);
         System.out.println("Se agrego el piloto nashe");
         p.mostrarDatosPi();

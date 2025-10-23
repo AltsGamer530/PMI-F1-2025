@@ -52,4 +52,22 @@ public class ListaPilotos {
         return false;
     }
     
+    public ListaPilotos filtrarPilotosPorPuntaje(int puntos){
+        ListaPilotos filtrados = new ListaPilotos();
+        for(Piloto p : this.lista){
+            if(p.getPuntos() >= puntos) filtrados.addPiloto(p);
+        }
+        return filtrados;
+    }
+    
+    public Piloto pilotoConMasPenalizaciones(){
+        Piloto p;
+        int max = 0;
+        for(Piloto paux : this.lista){
+            if(p.getPenalizaciones() > max) p = paux;
+        }
+        if(max == 0) return null;
+        return p;
+    }
+    
 }

@@ -3,13 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
-
 import java.io.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import controlador.Controlador;
 
 /**
  *
@@ -23,7 +21,7 @@ public class ManejoArchivos {
         String line;
         try(BufferedReader reader = new BufferedReader(new FileReader(f))){
             while((line = reader.readLine()) != null){
-                //leyendo el archivo
+                //leyendo el archivo nashe
                 Piloto aux = new Piloto();
                 aux.setNombre(line);
                 aux.setApellido(reader.readLine());
@@ -48,18 +46,49 @@ public class ManejoArchivos {
             }
         }catch(IOException e){
             System.err.println("Error leyendo el archivo: " + e.getMessage());
-            return false;
         } 
         //ANDA
         System.out.println("pilotos guardados en lista");
         return true;
     }
+
+    public static boolean cargarComisariosDeArchivo(ListaComisarios lista){
+        File f = new File("./data/ComisariosDeportivos.txt");
+        String line;
+        try(BufferedReader reader = new BufferedReader(new FileReader(f))){
+            while((line = reader.readLine()) != null){
+                //leyendo el archivo
+                ComisarioDeportivo aux = new ComisarioDeportivo();
+                aux.setId(Integer.parseInt(reader.readLine()));
+                aux.setNombre(line);
+                aux.setApellido(reader.readLine());
+                String[] fecha = reader.readLine().split("/");
+                aux.setFechaDeNacimiento(new Fecha(Integer.parseInt(fecha[0]),
+                                                   Integer.parseInt(fecha[2]),
+                                                   Integer.parseInt(fecha[2])));
+                aux.setNacionalidad(reader.readLine());
+                aux.setSancionesAplicadas(Integer.parseInt(reader.readLine()));
+                aux.setInternacionalFia(Boolean.parseBoolean(reader.readLine()));
+                lista.addComisario(aux);
+                System.out.println("se cargo un comisario");
+                
+            }
+        }catch(IOException e){
+            System.err.println("Error leyendo el archivo: " + e.getMessage());
+        } 
+        //ANDA
+        System.out.println("comisarios guardados en lista");
+        return true;
+    }
     
+
+
     //llamar cuando: actualizar archivo (cargar piloto y cerrar aplicación)
-    public static boolean guardarEnArchivo(ListaPilotos lista){
-        File f = new File("./data/Pilotos.txt");
-        try(PrintWriter pw = new PrintWriter(new FileWriter(f, false))){
-            for(Piloto p : lista.getLista()){
+    public static boolean guardarEnArchivo(ListaPilotos pilotos, ListaComisarios comisarios){
+        int exito_pilotos = 0, exito_comisarios = 0;
+        File f1 = new File("./data/Pilotos.txt");
+        try(PrintWriter pw = new PrintWriter(new FileWriter(f1, false))){
+            for(Piloto p : pilotos.getLista()){
                 //guardar pilotos
                  pw.println(p.getNombre());
                  pw.println(p.getApellido());
@@ -75,13 +104,31 @@ public class ManejoArchivos {
                  pw.println(p.getPenalizaciones());
                  pw.println(p.getAbandonos());
                  pw.println(p.getFia() ? "Si" : "No");
+                 exito_pilotos = 1;
+                 System.out.println("archivo pilotos actualizado");
             }
-            
         }catch(IOException e){
              System.err.println("Error al guardar los pilotos: " + e.getMessage());
-             return false;
         }
-        System.out.println("archivo actualizado");
-        return true;
+        
+        File f2 = new File("./data/ComisariosDeportivos.txt");
+        try(PrintWriter pw = new PrintWriter(new FileWriter(f2, false))){
+            for(ComisarioDeportivo c : comisarios.getLista()){
+                //guardar pilotos
+                 pw.println(c.getNombre());
+                 pw.println(c.getApellido());
+                 pw.println(c.getFechaDeNacimiento().toString());
+                 pw.println(c.getNacionalidad());
+                 pw.println(c.getSancionesAplicadas());
+                 pw.println(c.getInternacionalFia() ? "Si" : "No");
+            }
+            exito_comisarios = 1;
+            System.out.println("archivo comisarios actualizado");
+        }catch(IOException e){
+             System.err.println("Error al guardar los comisarios: " + e.getMessage());
+        }
+        
+        if(exito_pilotos == 1 && exito_comisarios == 1) return true;
+        return false;
     }    
 }

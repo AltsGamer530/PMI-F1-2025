@@ -4,13 +4,15 @@ package modelo;
 
 public class ComisarioDeportivo{
 
+    private int id;
     private String Nombre;
     private String Apellido;
     private Fecha FechaDeNacimiento;
     private String Nacionalidad;
     private int SancionesAplicadas;
     private boolean InternacionalFia;
-    private int id;
+    
+    public ComisarioDeportivo(){}
     
     public ComisarioDeportivo(String Nombre,String Apellido,
     Fecha FechaDeNacimiento,String Nacionalidad,

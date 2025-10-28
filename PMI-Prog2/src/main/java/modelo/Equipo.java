@@ -16,6 +16,7 @@ public class Equipo {
     private String nombreE; 
     private String pais;
     private Piloto pilotos[];
+    private final int MAX_COMISARIOS = 4;
     private int cantidadPilotos; //maximo 4 piolotos y 2 comisarios
 
         public Equipo(){
@@ -142,6 +143,7 @@ public class Equipo {
                 }
             }
             System.out.println("No se encontró el piloto con ese número de auto");
+            sc.close();
             return false;
         }
 
@@ -186,18 +188,58 @@ public class Equipo {
             return false;
         }
 
+        public int buscarComisarioPorId(ComisarioDeportivo[] comisarios, int cantidad, int idBuscado){
+            for (int i = 0; i < cantidad; i++){
+                if(comisarios[i].getId() == idBuscado) return i;
+            }
+            return -1;
+        }
+
+
         public int agregarComisario(ComisarioDeportivo[] comisarios, int cantidad, ComisarioDeportivo nuevo) {
-            if(cantidad >= comisarios.length){
+            if(cantidad == MAX_COMISARIOS){
                 System.out.println("No hay mas espacio para comisarios");
                 return cantidad;
             }
-            return 0;
+
+            if (buscarComisarioPorId(comisarios, cantidad, nuevo.getId()) != -1){
+                System.out.println("Ya existe un comisario con el ID " + nuevo.getId());
+                return cantidad;
+            }
+
+            comisarios[cantidad-1] = nuevo;
+            System.out.println("Comisario agregado (ID " + nuevo.getId() + ").");
+            return cantidad + 1;
         //Tengo que hacer un verificador para que no se repita el id pero alta paja ya estoy cansado
         //Que se encargue el boludo del Alts del futuro
         //eso se soluciona con una clase lista y un metodo para buscar
+        //HECHO
         }
-
+        // lpm tengo que hacer para eliminar y mostrar los comisarios, acordate
+        public int eliminarComisario(ComisarioDeportivo[] comisarios, int cantidad, int idBuscado) {
+        int idx = buscarComisarioPorId(comisarios, cantidad, idBuscado);
+        if (idx == -1) {
+            System.out.println("No se encontró comisario con ID " + idBuscado + ".");
+            return cantidad;
+        }
+        // compactar: correr a la izquierda
+        for (int i = idx; i < cantidad - 1; i++) {
+            comisarios[i] = comisarios[i + 1];
+        }
         
+        System.out.println("Comisario con ID " + idBuscado + " eliminado.");
+        return cantidad - 1;
+    }
+
+    public void mostrarComisarios(ComisarioDeportivo[] comisarios, int cantidad) {
+        if (cantidad == 0) {
+            System.out.println("No hay comisarios cargados.");
+            return;
+        }
+        for (int i = 0; i < cantidad; i++) {
+            comisarios[i].mostrarDatosCo();
+        }
+    }
         //getters
         public int getId(){
             return id;

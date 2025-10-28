@@ -4,21 +4,14 @@
  */
 package vista;
 
-<<<<<<< Updated upstream:InterfazGrafica.java
-=======
 import controlador.Controlador;
 import modelo.*;
 
->>>>>>> Stashed changes:PMI-Prog2/src/main/java/vista/InterfazGrafica.java
 /**
  *
  * @author Admin
  */
 public class InterfazGrafica extends javax.swing.JFrame {
-<<<<<<< Updated upstream:InterfazGrafica.java
-    
-=======
->>>>>>> Stashed changes:PMI-Prog2/src/main/java/vista/InterfazGrafica.java
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InterfazGrafica.class.getName());
 
     /**
@@ -602,8 +595,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     private void botonMostrarPilotosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMostrarPilotosActionPerformed
         // TODO add your handling code here:
-<<<<<<< Updated upstream:InterfazGrafica.java
-=======
         Controlador.obtenerPilotosArchivo();
         if(Controlador.getListaPilotos() == null) System.out.println("no se pudo cargar los pilotos");
         else{
@@ -612,7 +603,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         }
         
->>>>>>> Stashed changes:PMI-Prog2/src/main/java/vista/InterfazGrafica.java
     }//GEN-LAST:event_botonMostrarPilotosActionPerformed
 
     private void botonCargarComisarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarComisarioActionPerformed
@@ -677,8 +667,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     private void botonGuardarPilotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarPilotoActionPerformed
         // TODO add your handling code here:
-<<<<<<< Updated upstream:InterfazGrafica.java
-=======
         grupoRolPiloto.add(pTitular);
         grupoRolPiloto.add(pReserva);
         grupoRolPiloto.add(pProbador);
@@ -702,7 +690,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         if(Controlador.agregarPilotoInterfaz(p)) System.out.println("Se agrego el piloto nashe");
         else System.out.println("no se pudo agregar el piloto (repetido)");
         Controlador.actualizarArchivo();
->>>>>>> Stashed changes:PMI-Prog2/src/main/java/vista/InterfazGrafica.java
     }//GEN-LAST:event_botonGuardarPilotoActionPerformed
 
     private void checkProbadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkProbadorActionPerformed

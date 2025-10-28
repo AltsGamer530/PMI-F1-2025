@@ -20,6 +20,13 @@ public class ListaPilotos {
     public int getCantPilotos() {
         return lista.size();
     }
+    
+    public int localizarPiloto(int numeroAuto){
+        for(int i=0; i<lista.size(); i++){
+            if(lista.get(i).getNumeroDeAuto() == numeroAuto) return i;
+        }
+        return -1;
+    }
 
     public Piloto buscarPilotoPorNumero(int numeroAuto) {
         for (int i = 0; i < lista.size(); i++) {

@@ -23,11 +23,12 @@ public class ManejoArchivos {
             while((line = reader.readLine()) != null){
                 //leyendo el archivo nashe
                 Piloto aux = new Piloto();
-                aux.setNombre(line);
+                aux.setID(Integer.parseInt(line));
+                aux.setNombre(reader.readLine());
                 aux.setApellido(reader.readLine());
                 String[] fecha = reader.readLine().split("/");
                 aux.setFechaDeNacimiento(new Fecha(Integer.parseInt(fecha[0]),
-                                                   Integer.parseInt(fecha[2]),
+                                                   Integer.parseInt(fecha[1]),
                                                    Integer.parseInt(fecha[2])));
                 aux.setNacionalidad(reader.readLine());
                 aux.setNumeroDeAuto(Integer.parseInt(reader.readLine()));
@@ -90,6 +91,7 @@ public class ManejoArchivos {
         try(PrintWriter pw = new PrintWriter(new FileWriter(f1, false))){
             for(Piloto p : pilotos.getLista()){
                 //guardar pilotos
+                 pw.println(p.getID());
                  pw.println(p.getNombre());
                  pw.println(p.getApellido());
                  pw.println(p.getFechaDeNacimiento().toString());
@@ -115,6 +117,7 @@ public class ManejoArchivos {
         try(PrintWriter pw = new PrintWriter(new FileWriter(f2, false))){
             for(ComisarioDeportivo c : comisarios.getLista()){
                 //guardar pilotos
+                 pw.println(c.getId());
                  pw.println(c.getNombre());
                  pw.println(c.getApellido());
                  pw.println(c.getFechaDeNacimiento().toString());

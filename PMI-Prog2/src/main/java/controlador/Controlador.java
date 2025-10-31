@@ -61,11 +61,9 @@ public class Controlador {
         return listaComisarios.eliminarComisario(id);
     }
     
-    public static boolean modificarPilotoInterfaz(Piloto pModificado){
-        int id = pModificado.getID();
-        Piloto pOriginal = listaPilotos.buscarPilotoPorID(id);
+    public static boolean modificarPilotoInterfaz(int nroAuto, Piloto pModificado){
+        Piloto pOriginal = listaPilotos.buscarPilotoPorNumero(nroAuto);
         boolean modificado = false;
-        if(pOriginal == null) return false;
         if(pOriginal.getNumeroDeAuto() != pModificado.getNumeroDeAuto()){
             pOriginal.setNumeroDeAuto(pModificado.getNumeroDeAuto());
             modificado = true;
@@ -98,6 +96,7 @@ public class Controlador {
             pOriginal.setAbandonos(pModificado.getAbandonos());
             modificado = true;
         }
+        
         return modificado;
     }
 

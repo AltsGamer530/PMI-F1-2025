@@ -1,7 +1,6 @@
 package modelo;
 
 public class Piloto {
-    private int ID;
     private String Nombre;
     private String Apellido;
     private Fecha FechaDeNacimiento;
@@ -17,19 +16,10 @@ public class Piloto {
     private int Abandonos;
     private boolean Fia;
     
-    public int getID(){
-        return ID;
-    }
-    
-    public void setID(int id){
-        this.ID = id;
-    }
-    
-    public Piloto(int id, String Nombre,String Apellido,Fecha FechaDeNacimiento,
+    public Piloto(String Nombre,String Apellido,Fecha FechaDeNacimiento,
             String Nacionalidad,int NumeroDeAuto,String Equipo,String Rol,
             int Puntos,int Podios,int Poles,int VueltasRapidas,
             int Penalizaciones,int Abandonos,boolean Fia){
-    this.ID = id;
     this.Nombre=Nombre;
     this.Apellido=Apellido;
     this.FechaDeNacimiento=FechaDeNacimiento;
@@ -47,7 +37,7 @@ public class Piloto {
     }
 
     public Piloto(){}
-    
+
     public String getNombre() {
         return Nombre;
     }
@@ -163,10 +153,9 @@ public class Piloto {
     }
     
     public void mostrarDatosPi(){
-        System.out.println("ID: "+this.getID());
         System.out.println("Nombre: "+this.getNombre());
         System.out.println("Apellido: "+this.getApellido());
-        System.out.println("Fecha de nacimiento: "+this.getFechaDeNacimiento().toString());
+        System.out.println("Fecha de nacimiento: "+this.getFechaDeNacimiento());
         System.out.println("Nacionalidad: "+this.getNacionalidad());
         System.out.println("Numero de Auto: "+this.getNumeroDeAuto());
         System.out.println("Equipo: "+this.getEquipo());

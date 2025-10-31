@@ -38,10 +38,6 @@ public class Equipo {
         System.out.println(id + "-" + nombreE + "(" + pais + ")");
         } //Mostrar datos
         
-        public int getCantidadPilotos(){
-            return this.cantidadPilotos;
-        }
-        
         public int localizarPiloto(int numeroDeAuto){
             if(this.cantidadPilotos == 0) return -1; //no hay pilotos
             for(int i=0; i<this.cantidadPilotos; i++){
@@ -270,10 +266,7 @@ public class Equipo {
         public void setPais(String pais){
             this.pais = pais;
         }
-        
-        public Piloto[] getPilotos(){
-            return this.pilotos;
-        }
+
     
 
 }

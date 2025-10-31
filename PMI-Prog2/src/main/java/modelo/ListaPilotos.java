@@ -1,12 +1,17 @@
 package modelo;
-
 import java.util.ArrayList;
-
+import java.util.Scanner;
+        
+/**
+ *
+ * @author arctan
+ */
 public class ListaPilotos {
     private ArrayList<Piloto> lista;
-    
+    private int cantPilotos;
+
     public ListaPilotos() {
-        this.lista = new ArrayList<>();
+        this.lista = new ArrayList<Piloto>();
     }
 
     public ArrayList<Piloto> getLista() {
@@ -18,7 +23,11 @@ public class ListaPilotos {
     }
 
     public int getCantPilotos() {
-        return lista.size();
+        return cantPilotos;
+    }
+
+    public void setCantPilotos(int cantPilotos) {
+        this.cantPilotos = cantPilotos;
     }
     
     public int localizarPiloto(int numeroAuto){
@@ -27,94 +36,116 @@ public class ListaPilotos {
         }
         return -1;
     }
-
-    public Piloto buscarPilotoPorNumero(int numeroAuto) {
-        for (int i = 0; i < lista.size(); i++) {
-            if (lista.get(i).getNumeroDeAuto() == numeroAuto) {
-                return lista.get(i);
-            }
-        }
+    
+    public Piloto buscarPilotoPorNumero(int numeroAuto){
+        for(Piloto p: lista)
+            if(p.getNumeroDeAuto() == numeroAuto) return p;
         return null;
     }
     
-    public Piloto buscarPilotoPorID(int id){
-        for(int i=0; i<lista.size(); i++){
-            if(lista.get(i).getID() == id){
-                return lista.get(i);
-            }
-        }
-        return null;
-    }
-    
-    public boolean addPiloto(Piloto p) {
-        if (p == null) {
-            return false;
-        }
+    public boolean addPiloto(Piloto p){
         Piloto paux = buscarPilotoPorNumero(p.getNumeroDeAuto());
-        if (paux == null) {
+        if(paux == null){
             lista.add(p);
-            if(p.getID() == 0) p.setID(this.getLista().size());
             return true;
         }
         return false;
     }
-
-    public boolean eliminarPiloto(int numeroAuto) {
+    
+    public boolean eliminarPiloto(int numeroAuto){
         Piloto p = buscarPilotoPorNumero(numeroAuto);
-        if (p != null) {
+        if(p != null){
             lista.remove(p);
             return true;
         }
         return false;
     }
-
-    public ListaPilotos filtrarPilotosPorPuntaje(int puntos) {
+    
+    public ListaPilotos filtrarPilotosPorPuntaje(int puntos){
         ListaPilotos filtrados = new ListaPilotos();
-        for (int i = 0; i < this.lista.size(); i++) {
-            Piloto p = this.lista.get(i);
-            if (p.getPuntos() >= puntos) {
-                filtrados.addPiloto(p);
-            }
+        for(Piloto p : this.lista){
+            if(p.getPuntos() >= puntos) filtrados.addPiloto(p);
         }
         return filtrados;
     }
-
-    public Piloto pilotoConMasPenalizaciones() {
-        if (lista.isEmpty()) {
-            return null;
+    
+    public Piloto pilotoConMasPenalizaciones(){
+        Piloto p = new Piloto();
+        int max = 0;
+        for(Piloto paux : this.lista){
+            if(paux.getPenalizaciones() > max) p = paux;
         }
-
-        Piloto pilotoMaxPenalizaciones = lista.get(0);
-        int maxPenalizaciones = lista.get(0).getPenalizaciones();
-
-        for (int i = 1; i < this.lista.size(); i++) {
-            Piloto paux = this.lista.get(i);
-            if (paux.getPenalizaciones() > maxPenalizaciones) {
-                maxPenalizaciones = paux.getPenalizaciones();
-                pilotoMaxPenalizaciones = paux;
-            }
-        }
-        return pilotoMaxPenalizaciones;
-    }
-
-    public void mostrarTodosLosPilotos() {
-        if (lista.isEmpty()) {
-            System.out.println("No hay pilotos cargados.");
-            return;
-        }
-        for (int i = 0; i < lista.size(); i++) {
-            lista.get(i).mostrarDatosPi();
-            System.out.println("--------------------");
-        }
+        if(max == 0) return null;
+        return p;
     }
     
-    public int contarPilotosPorRol(String rolBuscado) {
-        int count = 0;
-        for (int i = 0; i < lista.size(); i++) {
-            if (lista.get(i).getRol().equalsIgnoreCase(rolBuscado)) {
-                count++;
-            }
+    public int cantPilotosPorRol(String rol){
+        int cont = 0;
+        for(Piloto p : this.lista){
+            if(p.getRol() == rol) cont++;
         }
-        return count;
+        return cont;
     }
+    
+    public boolean modificarPiloto(int numeroAuto){
+        Scanner sc = new Scanner(System.in);
+        int i = this.localizarPiloto(numeroAuto);
+        if(i >= 0){
+        System.out.println("Piloto enocontrado: ");
+        this.lista.get(i).mostrarDatosPi();
+
+        System.out.println("Que desea modificar?: ");
+        System.out.println("1.Numero de Auto");
+        System.out.println("2.Rol");
+        System.out.println("3.Puntos");
+        System.out.println("4.Podios");
+        System.out.println("5.Poles");
+        System.out.println("6.Vueltas Rapidas");
+        System.out.println("7.Penalizaciones");
+        System.out.println("8.Abandonos(DNF)");
+                    
+        int opcion = sc.nextInt();
+                    
+        switch (opcion) {
+            case 1:
+                System.out.println("Nuevo numero de auto: ");
+                    this.lista.get(i).setNumeroDeAuto(sc.nextInt());
+                        break;
+            case 2:
+            System.out.println("Nuevo Rol: ");
+                        this.lista.get(i).setRol(sc.nextLine());
+                        break;
+                        case 3:
+                            System.out.println("Nuevos puntos: ");
+                            this.lista.get(i).setPuntos(sc.nextInt());
+                            break;
+                        case 4:
+                            System.out.println("Nuevo podio: ");
+                            this.lista.get(i).setPodios(sc.nextInt());
+                            break;
+                        case 5:
+                            System.out.println("Nuevo Pole: ");
+                            this.lista.get(i).setPoles(sc.nextInt());
+                            break;
+                        case 6:
+                            System.out.println("Vueltas Rapidas Actuales: ");
+                            this.lista.get(i).setVueltasRapidas(sc.nextInt());
+                            break;
+                        case 7:
+                            System.out.println("Nuevas Penalizaciones: ");
+                            this.lista.get(i).setPenalizaciones(sc.nextInt());
+                            break;
+                        case 8:
+                            System.out.println("Nuevos Abandonos");
+                            this.lista.get(i).setAbandonos(sc.nextInt());
+                            break;
+                        default:
+                            System.out.println("Opción inválida");
+                            return false;
+                }
+            }
+            System.out.println("No se encontró el piloto con ese número de auto");
+            return false;
+        }
+    
 }

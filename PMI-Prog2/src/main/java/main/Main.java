@@ -6,6 +6,7 @@ package main;
 
 import modelo.*;
 import controlador.Controlador;
+import javax.swing.JOptionPane;
 import vista.InterfazGrafica;
 
 /**
@@ -16,8 +17,6 @@ public class Main {
      public static void main(String args[]) {
 
         /* Create and display the form */
-        Controlador.obtenerPilotosArchivo();
-        Controlador.obtenerComisariosArchivo();
         java.awt.EventQueue.invokeLater(() -> new vista.InterfazGrafica().setVisible(true));
     }
 }

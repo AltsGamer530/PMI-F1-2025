@@ -91,6 +91,7 @@ public class ManejoArchivos {
         try(PrintWriter pw = new PrintWriter(new FileWriter(f1, false))){
             for(Piloto p : pilotos.getLista()){
                 //guardar pilotos
+                 pw.println("-----------------------------");
                  pw.println(p.getID());
                  pw.println(p.getNombre());
                  pw.println(p.getApellido());
@@ -117,6 +118,7 @@ public class ManejoArchivos {
         try(PrintWriter pw = new PrintWriter(new FileWriter(f2, false))){
             for(ComisarioDeportivo c : comisarios.getLista()){
                 //guardar pilotos
+                 pw.println("-----------------------------");
                  pw.println(c.getID());
                  pw.println(c.getNombre());
                  pw.println(c.getApellido());

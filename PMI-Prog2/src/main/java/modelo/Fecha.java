@@ -1,6 +1,6 @@
 package modelo;
 
-
+import java.time.LocalDate;
 
 public class Fecha {
     int dia,mes,ano;
@@ -65,6 +65,16 @@ public class Fecha {
         dias = Math.abs(dias1 - dias2);
         
         return dias;
+    }
+    
+    public int cantAnos(Fecha f){
+        return Math.floorDiv(cantDias(f),365);
+    }
+    
+    public int getAnosTranscurridos(){
+        LocalDate hoy = LocalDate.now();
+        Fecha fechaHoy = new Fecha(hoy.getDayOfMonth(), hoy.getMonthValue(), hoy.getYear());
+        return this.cantAnos(fechaHoy);
     }
     
 }

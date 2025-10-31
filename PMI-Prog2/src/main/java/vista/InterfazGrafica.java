@@ -6,7 +6,7 @@ package vista;
 
 import modelo.ComisarioDeportivo;
 import modelo.Equipo;
-import modelo.EquiposPredefinidos;
+import modelo.ListaEquipos;
 import modelo.Fecha;
 import modelo.ListaPilotos;
 import modelo.ManejoArchivos;
@@ -43,7 +43,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         botonPilotos = new javax.swing.JButton();
         botonComisarios = new javax.swing.JButton();
         botonEquipos = new javax.swing.JButton();
-        botonInicio = new javax.swing.JButton();
         panelContenedor = new javax.swing.JPanel();
         panelCargarPiloto = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -100,7 +99,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("F1 Manager 2025");
 
-        panelBotones.setBackground(new java.awt.Color(153, 255, 255));
+        panelBotones.setBackground(new java.awt.Color(40, 40, 40));
 
         botonPilotos.setText("Pilotos");
         botonPilotos.addActionListener(new java.awt.event.ActionListener() {
@@ -123,13 +122,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
-        botonInicio.setText("Inicio");
-        botonInicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonInicioActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout panelBotonesLayout = new javax.swing.GroupLayout(panelBotones);
         panelBotones.setLayout(panelBotonesLayout);
         panelBotonesLayout.setHorizontalGroup(
@@ -141,9 +133,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addComponent(botonComisarios)
                 .addGap(26, 26, 26)
                 .addComponent(botonEquipos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonInicio)
-                .addContainerGap())
+                .addContainerGap(378, Short.MAX_VALUE))
         );
         panelBotonesLayout.setVerticalGroup(
             panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,8 +142,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonPilotos)
                     .addComponent(botonComisarios)
-                    .addComponent(botonEquipos)
-                    .addComponent(botonInicio))
+                    .addComponent(botonEquipos))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -428,6 +417,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addContainerGap(267, Short.MAX_VALUE))
         );
 
+        panelPilotos.setBackground(new java.awt.Color(255, 255, 255));
+
+        botonCargarPiloto.setBackground(new java.awt.Color(100, 100, 100));
+        botonCargarPiloto.setForeground(new java.awt.Color(255, 255, 255));
         botonCargarPiloto.setText("Cargar piloto");
         botonCargarPiloto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -435,6 +428,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
+        botonEliminarPiloto.setBackground(new java.awt.Color(100, 100, 100));
+        botonEliminarPiloto.setForeground(new java.awt.Color(255, 255, 255));
         botonEliminarPiloto.setText("Eliminar piloto");
         botonEliminarPiloto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -442,6 +437,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
+        botonMostrarPilotos.setBackground(new java.awt.Color(100, 100, 100));
+        botonMostrarPilotos.setForeground(new java.awt.Color(255, 255, 255));
         botonMostrarPilotos.setText("Mostrar pilotos");
         botonMostrarPilotos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -453,26 +450,28 @@ public class InterfazGrafica extends javax.swing.JFrame {
         panelPilotos.setLayout(panelPilotosLayout);
         panelPilotosLayout.setHorizontalGroup(
             panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelPilotosLayout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addGroup(panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(botonMostrarPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonEliminarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonCargarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(502, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPilotosLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(botonCargarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
+                .addComponent(botonEliminarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(124, 124, 124)
+                .addComponent(botonMostrarPilotos)
+                .addGap(37, 37, 37))
         );
         panelPilotosLayout.setVerticalGroup(
             panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPilotosLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(botonCargarPiloto)
-                .addGap(18, 18, 18)
-                .addComponent(botonEliminarPiloto)
-                .addGap(18, 18, 18)
-                .addComponent(botonMostrarPilotos)
-                .addContainerGap(342, Short.MAX_VALUE))
+                .addGap(354, 354, 354)
+                .addGroup(panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonEliminarPiloto)
+                    .addComponent(botonCargarPiloto)
+                    .addComponent(botonMostrarPilotos))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
+        botonCargarComisario.setBackground(new java.awt.Color(100, 100, 100));
+        botonCargarComisario.setForeground(new java.awt.Color(255, 255, 255));
         botonCargarComisario.setText("Cargar comisario");
         botonCargarComisario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -480,6 +479,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
+        botonEliminarComisario.setBackground(new java.awt.Color(100, 100, 100));
+        botonEliminarComisario.setForeground(new java.awt.Color(255, 255, 255));
         botonEliminarComisario.setText("Eliminar Comisario");
         botonEliminarComisario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -487,6 +488,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
+        botonMostrarComisario.setBackground(new java.awt.Color(100, 100, 100));
+        botonMostrarComisario.setForeground(new java.awt.Color(255, 255, 255));
         botonMostrarComisario.setText("Mostrar comisarios");
         botonMostrarComisario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -518,6 +521,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addContainerGap(330, Short.MAX_VALUE))
         );
 
+        botonMostrarEquipos.setBackground(new java.awt.Color(100, 100, 100));
+        botonMostrarEquipos.setForeground(new java.awt.Color(255, 255, 255));
         botonMostrarEquipos.setText("Mostrar Equipos");
         botonMostrarEquipos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -601,16 +606,17 @@ public class InterfazGrafica extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(panelBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addContainerGap())
-            .addComponent(panelContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(158, 158, 158))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -653,14 +659,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_botonMostrarPilotosActionPerformed
-
-    private void botonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInicioActionPerformed
-        // TODO add your handling code here:
-        panelContenedor.removeAll();
-        panelContenedor.add(panelInicio);
-        panelContenedor.repaint();
-        panelContenedor.revalidate();
-    }//GEN-LAST:event_botonInicioActionPerformed
 
     private void botonPilotosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPilotosActionPerformed
         // TODO add your handling code here:
@@ -789,7 +787,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JButton botonEliminarPiloto;
     private javax.swing.JButton botonEquipos;
     private javax.swing.JButton botonGuardarPiloto;
-    private javax.swing.JButton botonInicio;
     private javax.swing.JButton botonMostrarComisario;
     private javax.swing.JButton botonMostrarEquipos;
     private javax.swing.JButton botonMostrarPilotos;

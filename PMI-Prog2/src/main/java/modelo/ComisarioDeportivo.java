@@ -1,89 +1,57 @@
 package modelo;
 
-public class ComisarioDeportivo{
-
-    private String Nombre;
-    private String Apellido;
-    private Fecha FechaDeNacimiento;
-    private String Nacionalidad;
-    private int SancionesAplicadas;
-    private boolean InternacionalFia;
+public class ComisarioDeportivo extends Persona{
+    
+    private int sancionesAplicadas;
+    private boolean internacionalFia;
     private int id;
     
-    public ComisarioDeportivo(String Nombre,String Apellido,
-    Fecha FechaDeNacimiento,String Nacionalidad,
-    int SancionesAplicadas,boolean InternacionalFia, int id){
-        this.Nombre=Nombre;
-        this.Apellido=Apellido;
-        this.FechaDeNacimiento=FechaDeNacimiento;
-        this.Nacionalidad=Nacionalidad;
-        this.SancionesAplicadas=SancionesAplicadas;
-        this.InternacionalFia=InternacionalFia;
+    public ComisarioDeportivo(String nombre, String apellido,
+                             Fecha fechaDeNacimiento, String nacionalidad,
+                            int SancionesAplicadas,boolean InternacionalFia, int id){
+        
+        super(nombre, apellido, fechaDeNacimiento, nacionalidad);
+        this.sancionesAplicadas=SancionesAplicadas;
+        this.internacionalFia=InternacionalFia;
         this.id = id;
     }
-
+    public ComisarioDeportivo() {
+    }
     //Metodos
 
     public void mostrarDatosCo(){
-        System.out.println("ID:" + id + "-" + Nombre + " " + Apellido + "- Sanciones: " + SancionesAplicadas + "- FIA Internacional: " + InternacionalFia );
-    }
+        super.mostrarDatosBasicos(); // Llama al método de la clase padre
+        System.out.println("ID: " + id);
+        System.out.println("Sanciones: " + sancionesAplicadas);
+        System.out.println("FIA Internacional: " + (internacionalFia ? "Si" : "No"));
+        }
+    //Getters
 
-    //getters
-
-    public int getId(){
-        return id;
-    }
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public String getApellido() {
-        return Apellido;
-    }
-
-    public Fecha getFechaDeNacimiento() {
-        return FechaDeNacimiento;
-    }
-
-    public String getNacionalidad() {
-        return Nacionalidad;
-    }
-
+    
     public int getSancionesAplicadas() {
-        return SancionesAplicadas;
+        return sancionesAplicadas;
     }
 
     public boolean getInternacionalFia() {
-        return InternacionalFia;
+        return internacionalFia;
+    }
+
+    public int getId(){
+        return id;
     }
 
 
     //Setters
 
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
-    public void setApellido(String Apellido) {
-        this.Apellido = Apellido;
-    }
-
-    public void setFechaDeNacimiento(Fecha FechaDeNacimiento) {
-        this.FechaDeNacimiento = FechaDeNacimiento;
-    }
-
-    public void setNacionalidad(String Nacionalidad) {
-        this.Nacionalidad = Nacionalidad;
-    }
+    
 
     public void setSancionesAplicadas(int SancionesAplicadas) {
-        this.SancionesAplicadas = SancionesAplicadas;
+        this.sancionesAplicadas = SancionesAplicadas;
     }
 
     public void setInternacionalFia(boolean InternacionalFia) {
-        this.InternacionalFia = InternacionalFia;
+        this.internacionalFia = InternacionalFia;
     }
 
     public void setId(int id){

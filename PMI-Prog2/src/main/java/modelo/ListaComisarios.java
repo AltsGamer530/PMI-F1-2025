@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author arctan
+ * @author arctan & Alts
  */
 public class ListaComisarios {
     private ArrayList<ComisarioDeportivo> lista;
@@ -54,6 +54,4 @@ public class ListaComisarios {
         }
         return false;
     }
-    
-    
 }

@@ -1,7 +1,4 @@
 package modelo;
-
-
-
 public class Fecha {
     int dia,mes,ano;
 

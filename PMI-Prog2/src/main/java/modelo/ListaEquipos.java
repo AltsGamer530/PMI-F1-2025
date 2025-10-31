@@ -3,6 +3,7 @@ package modelo;
 import java.util.ArrayList;
 
 //Cambie el nombre a ListaEquipos !!!!!!ANOTAR PARA QUE EL TANSI SEPA!!!!!!!!!!!!
+//nashe
 public class ListaEquipos {
     private ArrayList<Equipo> equipos;
 
@@ -12,14 +13,14 @@ public class ListaEquipos {
     }
 
     private void inicializarEquiposPredefinidos() {
-        equipos.add(new Equipo(1, "Ferrar",          "Italia"));
+        equipos.add(new Equipo(1, "Ferrari",          "Italia"));
         equipos.add(new Equipo(2, "Red Bull Racing", "Austria"));
         equipos.add(new Equipo(3, "McLaren",         "Reino Unido"));
         equipos.add(new Equipo(4, "Haas",            "Estados Unidos"));
         equipos.add(new Equipo(5, "Los Na",          "Peru")); 
         equipos.add(new Equipo(6, "Alpine",          "Francia"));
         equipos.add(new Equipo(7, "Racing Bulls",    "Italia"));
-        equipos.add(new Equipo(8, "Willians",        "Reino Unido"));
+        equipos.add(new Equipo(8, "Williams",        "Reino Unido"));
         equipos.add(new Equipo(9, "Aston Martin",    "Reino Unido"));
         equipos.add(new Equipo(10,"Magios Racing",   "Alemania")); 
     }
@@ -27,6 +28,8 @@ public class ListaEquipos {
     public ArrayList<Equipo> getEquipos() {
         return equipos;
     }
+
+    /* 
 
     public Equipo buscarEquipoPorId(int id) {
     for (int i = 0; i < equipos.size(); i++) {
@@ -70,7 +73,7 @@ public class ListaEquipos {
         return 0;
     }
     
-   
+   //arreglado
     public Equipo equipoConMasPuntos(){
         if(equipos.isEmpty()){
             return null;
@@ -79,21 +82,20 @@ public class ListaEquipos {
         int maxPuntos = 0; //capaz haya que ponerlo en -1 no se
 
         for (int i = 0; i < equipos.size(); i++) {
-    Equipo equipoActual = equipos.get(i);
-    int puntosDelEquipo = 0;
+            Equipo equipoActual = equipos.get(i);
+            int puntosDelEquipo = 0;
 
-    Piloto[] listaPilotos = equipoActual.getPilotos(); 
-        for (int j = 0; j < listaPilotos.length; j++) {
-            Piloto pilotoActual = listaPilotos[j];
-            puntosDelEquipo += pilotoActual.getPuntos();
+            Piloto[] listaPilotos = equipoActual.getPilotos(); 
+            for (int j = 0; j < listaPilotos.length; j++) {
+                Piloto pilotoActual = listaPilotos[j];
+                puntosDelEquipo += pilotoActual.getPuntos();
+            }
+            if (puntosDelEquipo > maxPuntos) {
+                maxPuntos = puntosDelEquipo;
+                equipoGanador = equipoActual;
+            }
         }
-    if (puntosDelEquipo > maxPuntos) {
-        maxPuntos = puntosDelEquipo;
-        equipoGanador = equipoActual;
-    }
-}
         return equipoGanador;
     }
-    
-    
+    */
 }

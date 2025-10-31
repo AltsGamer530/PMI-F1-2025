@@ -33,12 +33,12 @@ public class ListaComisarios {
     
     public ComisarioDeportivo buscarComisarioPorId(int Id){
         for(ComisarioDeportivo c: lista)
-            if(c.getId() == Id) return c;
+            if(c.getID() == Id) return c;
         return null;
     }
     
     public boolean addComisario(ComisarioDeportivo c){
-        ComisarioDeportivo caux = buscarComisarioPorId(c.getId());
+        ComisarioDeportivo caux = buscarComisarioPorId(c.getID());
         if(caux == null){
             lista.add(c);
             return true;

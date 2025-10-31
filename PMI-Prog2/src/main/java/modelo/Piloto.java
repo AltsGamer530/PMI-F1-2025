@@ -1,10 +1,6 @@
 package modelo;
 
-public class Piloto {
-    private String Nombre;
-    private String Apellido;
-    private Fecha FechaDeNacimiento;
-    private String Nacionalidad;
+public class Piloto extends Persona{
     private int NumeroDeAuto;
     private String Equipo;
     private String Rol;
@@ -16,14 +12,11 @@ public class Piloto {
     private int Abandonos;
     private boolean Fia;
     
-    public Piloto(String Nombre,String Apellido,Fecha FechaDeNacimiento,
+    public Piloto(int id, String Nombre,String Apellido,Fecha FechaDeNacimiento,
             String Nacionalidad,int NumeroDeAuto,String Equipo,String Rol,
             int Puntos,int Podios,int Poles,int VueltasRapidas,
             int Penalizaciones,int Abandonos,boolean Fia){
-    this.Nombre=Nombre;
-    this.Apellido=Apellido;
-    this.FechaDeNacimiento=FechaDeNacimiento;
-    this.Nacionalidad=Nacionalidad;
+    super(id,Nombre,Apellido,FechaDeNacimiento,Nacionalidad);
     this.NumeroDeAuto=NumeroDeAuto;
     this.Equipo=Equipo;
     this.Rol=Rol;
@@ -35,25 +28,9 @@ public class Piloto {
     this.Abandonos=Abandonos;
     this.Fia=Fia;
     }
-
+    
     public Piloto(){}
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public String getApellido() {
-        return Apellido;
-    }
-
-    public Fecha getFechaDeNacimiento() {
-        return FechaDeNacimiento;
-    }
-
-    public String getNacionalidad() {
-        return Nacionalidad;
-    }
-
+    
     public int getNumeroDeAuto() {
         return NumeroDeAuto;
     }
@@ -92,24 +69,6 @@ public class Piloto {
 
     public boolean getFia() {
         return Fia;
-    }
-
-    
-    
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
-    public void setApellido(String Apellido) {
-        this.Apellido = Apellido;
-    }
-
-    public void setFechaDeNacimiento(Fecha FechaDeNacimiento) {
-        this.FechaDeNacimiento = FechaDeNacimiento;
-    }
-
-    public void setNacionalidad(String Nacionalidad) {
-        this.Nacionalidad = Nacionalidad;
     }
 
     public void setNumeroDeAuto(int NumeroDeAuto) {
@@ -152,11 +111,9 @@ public class Piloto {
         this.Fia = Fia;
     }
     
-    public void mostrarDatosPi(){
-        System.out.println("Nombre: "+this.getNombre());
-        System.out.println("Apellido: "+this.getApellido());
-        System.out.println("Fecha de nacimiento: "+this.getFechaDeNacimiento());
-        System.out.println("Nacionalidad: "+this.getNacionalidad());
+    @Override
+    public void mostrarDatos(){
+        super.mostrarDatos();
         System.out.println("Numero de Auto: "+this.getNumeroDeAuto());
         System.out.println("Equipo: "+this.getEquipo());
         System.out.println("Rol en el equipo: "+this.getRol());

@@ -15,12 +15,11 @@ public class Equipo {
     private int id; // Solo hay 10 equipos
     private String nombreE; 
     private String pais;
-    private Piloto pilotos[];
+    private Piloto pilotos[] = new Piloto[4];
     private final int MAX_COMISARIOS = 4;
-    private int cantidadPilotos; //maximo 4 piolotos y 2 comisarios
+    private int cantidadPilotos; //maximo 4 pilotos y 2 comisarios
 
         public Equipo(){
-            pilotos = new Piloto[4];
             cantidadPilotos = 0;
         }
 
@@ -28,15 +27,18 @@ public class Equipo {
             this.id = id;
             this.nombreE = nombreE;
             this.pais = pais;
-            this.pilotos = new Piloto[4];
             this.cantidadPilotos = 0;
         }
 
-        //meteortos (metodos)
+        //metodos
 
         public void mostrarDatos(){
         System.out.println(id + "-" + nombreE + "(" + pais + ")");
         } //Mostrar datos
+        
+        public int getCantidadPilotos(){
+            return this.cantidadPilotos;
+        }
         
         public int localizarPiloto(int numeroDeAuto){
             if(this.cantidadPilotos == 0) return -1; //no hay pilotos
@@ -65,7 +67,7 @@ public class Equipo {
         public void mostrarPilotos(){
             System.out.println("Pitos del equipo" + nombreE + ":");
             for (int i = 0; i < cantidadPilotos; i++){
-                pilotos[i].mostrarDatosPi();
+                pilotos[i].mostrarDatos();
             }
         }
 
@@ -90,7 +92,7 @@ public class Equipo {
             int i = this.localizarPiloto(numeroAuto);
             if(i >= 0){
                 System.out.println("Piloto enocontrado: ");
-                pilotos[i].mostrarDatosPi();
+                pilotos[i].mostrarDatos();
 
                 System.out.println("Que desea modificar?: ");
                 System.out.println("1.Numero de Auto");
@@ -153,9 +155,9 @@ public class Equipo {
             int idBuscado = sc.nextInt();
 
             for(int i = 0; i < cantidad; i++){
-                if (comisarios[i].getId() == idBuscado) {
+                if (comisarios[i].getID() == idBuscado) {
                     System.out.println("Comisario encontrado: ");
-                    comisarios[i].mostrarDatosCo();
+                    comisarios[i].mostrarDatos();
 
                     System.out.println("Que desea modificar?");
                     System.out.println("1. Sanciones aplicadas: ");
@@ -173,7 +175,7 @@ public class Equipo {
                         case 2:
                             System.out.print("¿Es internacional FIA? (true/false): ");
                         boolean nuevoValor = sc.nextBoolean();
-                        comisarios[i].setInternacionalFia(nuevoValor);
+                        comisarios[i].setFia(nuevoValor);
                             break;
                         default:
                             System.out.println("Opcion invalida (La opcion es down)");
@@ -190,7 +192,7 @@ public class Equipo {
 
         public int buscarComisarioPorId(ComisarioDeportivo[] comisarios, int cantidad, int idBuscado){
             for (int i = 0; i < cantidad; i++){
-                if(comisarios[i].getId() == idBuscado) return i;
+                if(comisarios[i].getID() == idBuscado) return i;
             }
             return -1;
         }
@@ -202,13 +204,13 @@ public class Equipo {
                 return cantidad;
             }
 
-            if (buscarComisarioPorId(comisarios, cantidad, nuevo.getId()) != -1){
-                System.out.println("Ya existe un comisario con el ID " + nuevo.getId());
+            if (buscarComisarioPorId(comisarios, cantidad, nuevo.getID()) != -1){
+                System.out.println("Ya existe un comisario con el ID " + nuevo.getID());
                 return cantidad;
             }
 
             comisarios[cantidad-1] = nuevo;
-            System.out.println("Comisario agregado (ID " + nuevo.getId() + ").");
+            System.out.println("Comisario agregado (ID " + nuevo.getID() + ").");
             return cantidad + 1;
         //Tengo que hacer un verificador para que no se repita el id pero alta paja ya estoy cansado
         //Que se encargue el boludo del Alts del futuro
@@ -237,7 +239,7 @@ public class Equipo {
             return;
         }
         for (int i = 0; i < cantidad; i++) {
-            comisarios[i].mostrarDatosCo();
+            comisarios[i].mostrarDatos();
         }
     }
         //getters
@@ -266,7 +268,10 @@ public class Equipo {
         public void setPais(String pais){
             this.pais = pais;
         }
-
+        
+        public Piloto[] getPilotos(){
+            return this.pilotos;
+        }
     
 
 }

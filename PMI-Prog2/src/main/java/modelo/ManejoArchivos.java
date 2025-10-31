@@ -23,11 +23,12 @@ public class ManejoArchivos {
             while((line = reader.readLine()) != null){
                 //leyendo el archivo nashe
                 Piloto aux = new Piloto();
-                aux.setNombre(line);
+                aux.setID(Integer.parseInt(reader.readLine()));
+                aux.setNombre(reader.readLine());
                 aux.setApellido(reader.readLine());
                 String[] fecha = reader.readLine().split("/");
                 aux.setFechaDeNacimiento(new Fecha(Integer.parseInt(fecha[0]),
-                                                   Integer.parseInt(fecha[2]),
+                                                   Integer.parseInt(fecha[1]),
                                                    Integer.parseInt(fecha[2])));
                 aux.setNacionalidad(reader.readLine());
                 aux.setNumeroDeAuto(Integer.parseInt(reader.readLine()));
@@ -59,8 +60,8 @@ public class ManejoArchivos {
             while((line = reader.readLine()) != null){
                 //leyendo el archivo
                 ComisarioDeportivo aux = new ComisarioDeportivo();
-                aux.setId(Integer.parseInt(reader.readLine()));
-                aux.setNombre(line);
+                aux.setID(Integer.parseInt(reader.readLine()));
+                aux.setNombre(reader.readLine());
                 aux.setApellido(reader.readLine());
                 String[] fecha = reader.readLine().split("/");
                 aux.setFechaDeNacimiento(new Fecha(Integer.parseInt(fecha[0]),
@@ -68,7 +69,7 @@ public class ManejoArchivos {
                                                    Integer.parseInt(fecha[2])));
                 aux.setNacionalidad(reader.readLine());
                 aux.setSancionesAplicadas(Integer.parseInt(reader.readLine()));
-                aux.setInternacionalFia(Boolean.parseBoolean(reader.readLine()));
+                aux.setFia(Boolean.parseBoolean(reader.readLine()));
                 lista.addComisario(aux);
                 System.out.println("se cargo un comisario");
                 
@@ -90,6 +91,7 @@ public class ManejoArchivos {
         try(PrintWriter pw = new PrintWriter(new FileWriter(f1, false))){
             for(Piloto p : pilotos.getLista()){
                 //guardar pilotos
+                 pw.println(p.getID());
                  pw.println(p.getNombre());
                  pw.println(p.getApellido());
                  pw.println(p.getFechaDeNacimiento().toString());
@@ -115,12 +117,13 @@ public class ManejoArchivos {
         try(PrintWriter pw = new PrintWriter(new FileWriter(f2, false))){
             for(ComisarioDeportivo c : comisarios.getLista()){
                 //guardar pilotos
+                 pw.println(c.getID());
                  pw.println(c.getNombre());
                  pw.println(c.getApellido());
                  pw.println(c.getFechaDeNacimiento().toString());
                  pw.println(c.getNacionalidad());
                  pw.println(c.getSancionesAplicadas());
-                 pw.println(c.getInternacionalFia() ? "Si" : "No");
+                 pw.println(c.getFia() ? "Si" : "No");
             }
             exito_comisarios = 1;
             System.out.println("archivo comisarios actualizado");

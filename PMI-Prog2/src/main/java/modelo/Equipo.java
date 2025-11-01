@@ -18,6 +18,7 @@ public class Equipo {
     private Piloto pilotos[] = new Piloto[4];
     private final int MAX_COMISARIOS = 4;
     private int cantidadPilotos; //maximo 4 pilotos y 2 comisarios
+    private int puntosTotales;
 
         public Equipo(){
             cantidadPilotos = 0;
@@ -28,12 +29,21 @@ public class Equipo {
             this.nombreE = nombreE;
             this.pais = pais;
             this.cantidadPilotos = 0;
+            this.puntosTotales = 0;
         }
 
         //metodos
 
+        public int getPuntosTotales(){
+            int sum = 0;
+            for(int i=0; i<cantidadPilotos; i++){
+                sum += pilotos[i].getPuntos();
+            }
+            return sum;
+        }
+        
         public void mostrarDatos(){
-        System.out.println(id + "-" + nombreE + "(" + pais + ")");
+        System.out.println(id + "-" + nombreE + "(" + pais + ")" + " Pilotos: "+ cantidadPilotos + " Puntos totales: "+ puntosTotales);
         } //Mostrar datos
         
         public int getCantidadPilotos(){
@@ -56,7 +66,9 @@ public class Equipo {
             }
             pos = this.localizarPiloto(p.getNumeroDeAuto());
             if(pos < 0){
-                this.pilotos[pos] = p;
+                this.pilotos[cantidadPilotos] = p;
+                this.puntosTotales += p.getPuntos();
+                this.cantidadPilotos++;
                 return true;
             }
             System.out.println("No se pudo agregar el piloto");
@@ -71,12 +83,14 @@ public class Equipo {
             }
         }
 
-        public boolean elimarPiloto(int numeroAuto) { //Siento que me voy a olvidar de algo de aca que es importante
-            int pos = this.localizarPiloto(numeroAuto);
+        public boolean elimarPiloto(int id) { //Siento que me voy a olvidar de algo de aca que es importante
+            int pos = this.localizarPiloto(id);
+            int puntos = pilotos[pos].getPuntos();
             if(pos >= 0){
                 for(int i = pos; i < cantidadPilotos - 1; i++){
                    pilotos[i] = pilotos[i + 1];
                     cantidadPilotos--;
+                    puntosTotales -= puntos;
                     System.out.println("Piloto eliminado excitantemente");
                     return true;
                 }

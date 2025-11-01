@@ -23,6 +23,7 @@ import java.util.Calendar;
  */
 public class InterfazGrafica extends javax.swing.JFrame {
     private Piloto pilotoSeleccionado = null;
+    private ComisarioDeportivo cSeleccionado = null;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InterfazGrafica.class.getName());
 
     /**
@@ -91,16 +92,18 @@ public class InterfazGrafica extends javax.swing.JFrame {
         grupoLicenciaFIAModificar = new javax.swing.ButtonGroup();
         jSpinner1 = new javax.swing.JSpinner();
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
-        panelEquipos = new javax.swing.JPanel();
-        botonMostrarEquipos = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel36 = new javax.swing.JLabel();
         panelContenedor = new javax.swing.JPanel();
         panelInicio = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         panelCampos = new javax.swing.JPanel();
+        panelEstadisticasComisario = new javax.swing.JPanel();
+        checkFIATrueComisario = new javax.swing.JRadioButton();
+        checkFIAFalseComisario = new javax.swing.JRadioButton();
+        campoSancionesAplicadas = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
         panelEstadisticasPiloto = new javax.swing.JPanel();
         campoPuntosPiloto = new javax.swing.JTextField();
         campoPodiosPiloto = new javax.swing.JTextField();
@@ -173,15 +176,45 @@ public class InterfazGrafica extends javax.swing.JFrame {
         botonCancelarPilotoModificado = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         panelContenedorModificarPiloto = new javax.swing.JPanel();
+        panelModificarComisario = new javax.swing.JPanel();
+        panelBotonesModificarComisario = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        botonGuardarComisarioModificado = new javax.swing.JButton();
+        botonCancelarComisarioModificado = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
+        panelContenedorModificarComisario = new javax.swing.JPanel();
+        panelCargarComisario = new javax.swing.JPanel();
+        panelBotonGuardar1 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        botonGuardarComisario = new javax.swing.JButton();
+        panelContenedorCargarComisario = new javax.swing.JPanel();
+        jSeparator4 = new javax.swing.JSeparator();
         panelComisarios = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         panelBotonesComisarios = new javax.swing.JPanel();
         botonMostrarComisarios = new javax.swing.JButton();
         botonCargarComisario = new javax.swing.JButton();
-        botonModificarPiloto1 = new javax.swing.JButton();
-        botonEliminarPiloto1 = new javax.swing.JButton();
-        panelContenedorPilotos1 = new javax.swing.JPanel();
+        botonModificarComisario = new javax.swing.JButton();
+        botonEliminarComisario = new javax.swing.JButton();
+        panelContenedorComisarios = new javax.swing.JPanel();
+        panelEquipos = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        panelBotonesEquipos = new javax.swing.JPanel();
+        botonOrdenarPorPilotos = new javax.swing.JButton();
+        botonOrdenarPorPuntaje = new javax.swing.JButton();
+        botonMostrarEquipo = new javax.swing.JButton();
+        panelContenedorEquipos = new javax.swing.JPanel();
+        panelMostrarEquipos = new javax.swing.JPanel();
+        scrollEquipos = new javax.swing.JScrollPane();
+        tablaEquipos = new javax.swing.JTable();
+        panelMostrarComisarios = new javax.swing.JPanel();
+        panelBotonesConsultasComisarios = new javax.swing.JPanel();
+        botonFiltrarPorFIA = new javax.swing.JButton();
+        contenedorBotonesConsultasComisarios = new javax.swing.JPanel();
+        scrollComisarios = new javax.swing.JScrollPane();
+        tablaComisarios = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         panelBotones = new javax.swing.JPanel();
@@ -189,63 +222,19 @@ public class InterfazGrafica extends javax.swing.JFrame {
         botonInicio = new javax.swing.JButton();
         contenedorBotones = new javax.swing.JPanel();
         botonComisarios = new javax.swing.JButton();
-        jSeparator6 = new javax.swing.JSeparator();
         botonPilotos = new javax.swing.JButton();
         botonEquipos = new javax.swing.JButton();
+        botonAcercaDe = new javax.swing.JButton();
         contenedorIconos = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        panelGeneral = new javax.swing.JPanel();
+        labelVersion = new javax.swing.JLabel();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
-
-        panelEquipos.setMaximumSize(new java.awt.Dimension(780, 494));
-
-        botonMostrarEquipos.setText("Mostrar Equipos");
-        botonMostrarEquipos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonMostrarEquiposActionPerformed(evt);
-            }
-        });
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Nombre", "Apellido", "Nro de Auto", "Equipo", "Rol", "Podios", "Penalizaciones", "Poles", "Licencia FIA", "Vueltas Rapidas"
-            }
-        ));
-        jScrollPane2.setViewportView(jTable1);
-
-        javax.swing.GroupLayout panelEquiposLayout = new javax.swing.GroupLayout(panelEquipos);
-        panelEquipos.setLayout(panelEquiposLayout);
-        panelEquiposLayout.setHorizontalGroup(
-            panelEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelEquiposLayout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(botonMostrarEquipos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addGap(59, 59, 59))
-        );
-        panelEquiposLayout.setVerticalGroup(
-            panelEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelEquiposLayout.createSequentialGroup()
-                .addGroup(panelEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelEquiposLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE))
-                    .addGroup(panelEquiposLayout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(botonMostrarEquipos)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("F1 Manager 2025");
@@ -258,9 +247,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
         setForeground(new java.awt.Color(0, 0, 0));
         setMaximumSize(new java.awt.Dimension(1180, 670));
         setMinimumSize(new java.awt.Dimension(1180, 670));
+        setPreferredSize(new java.awt.Dimension(1180, 670));
         setSize(new java.awt.Dimension(1180, 670));
-
-        jLabel36.setText("F1 Manager 2025 v0.0.1 Magios Inc. 2025");
 
         panelContenedor.setBackground(new java.awt.Color(0, 0, 0));
         panelContenedor.setForeground(new java.awt.Color(0, 0, 0));
@@ -282,13 +270,81 @@ public class InterfazGrafica extends javax.swing.JFrame {
         jLabel34.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel34.setText("Bienvenido a F1 Manager 2025");
+        jLabel34.setText("Bienvenido a F1 Manager 2025 v1.0.0");
         panelInicio.add(jLabel34);
-        jLabel34.setBounds(250, 370, 420, 50);
+        jLabel34.setBounds(200, 370, 530, 50);
 
         panelContenedor.add(panelInicio, "card3");
 
         panelCampos.setBackground(new java.awt.Color(0, 0, 0));
+
+        panelEstadisticasComisario.setBackground(new java.awt.Color(0, 0, 51));
+        panelEstadisticasComisario.setForeground(new java.awt.Color(0, 0, 0));
+
+        checkFIATrueComisario.setBackground(new java.awt.Color(0, 0, 51));
+        grupoLicenciaFIAModificar.add(checkFIATrueComisario);
+        checkFIATrueComisario.setForeground(new java.awt.Color(255, 255, 255));
+        checkFIATrueComisario.setText("Si");
+
+        checkFIAFalseComisario.setBackground(new java.awt.Color(0, 0, 51));
+        grupoLicenciaFIAModificar.add(checkFIAFalseComisario);
+        checkFIAFalseComisario.setForeground(new java.awt.Color(255, 255, 255));
+        checkFIAFalseComisario.setText("No");
+
+        campoSancionesAplicadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoSancionesAplicadasActionPerformed(evt);
+            }
+        });
+
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("Sanciones aplicadas");
+
+        jLabel41.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel41.setText("Licencia Internacional FIA");
+
+        jLabel42.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel42.setText("Estadísticas");
+
+        javax.swing.GroupLayout panelEstadisticasComisarioLayout = new javax.swing.GroupLayout(panelEstadisticasComisario);
+        panelEstadisticasComisario.setLayout(panelEstadisticasComisarioLayout);
+        panelEstadisticasComisarioLayout.setHorizontalGroup(
+            panelEstadisticasComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEstadisticasComisarioLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel42)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addGroup(panelEstadisticasComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel41)
+                    .addComponent(jLabel25))
+                .addGap(18, 18, 18)
+                .addGroup(panelEstadisticasComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(checkFIAFalseComisario)
+                    .addComponent(checkFIATrueComisario)
+                    .addComponent(campoSancionesAplicadas, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(441, 441, 441))
+        );
+        panelEstadisticasComisarioLayout.setVerticalGroup(
+            panelEstadisticasComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEstadisticasComisarioLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelEstadisticasComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel42)
+                    .addComponent(jLabel25)
+                    .addComponent(campoSancionesAplicadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addGroup(panelEstadisticasComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel41)
+                    .addGroup(panelEstadisticasComisarioLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(checkFIATrueComisario)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(checkFIAFalseComisario)))
+                .addGap(0, 210, Short.MAX_VALUE))
+        );
 
         panelEstadisticasPiloto.setBackground(new java.awt.Color(0, 0, 51));
         panelEstadisticasPiloto.setForeground(new java.awt.Color(0, 0, 0));
@@ -336,10 +392,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 "Aston Martin",
                 "Ferrari",
                 "Haas",
-                "Kick Sauber",
                 "McLaren",
-                "Mercedes",
-                "Minardi",
                 "Losco F1",
                 "Red Bull Racing",
                 "Magios Racists",
@@ -407,7 +460,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
                     .addGap(16, 16, 16)
                     .addComponent(jLabel21)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
                     .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
@@ -516,7 +569,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                             .addComponent(pReserva)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(pProbador)))
-                    .addGap(0, 24, Short.MAX_VALUE))
+                    .addGap(0, 30, Short.MAX_VALUE))
             );
 
             panelDatosPersonales.setBackground(new java.awt.Color(51, 0, 0));
@@ -639,7 +692,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
     panelCamposLayout.setHorizontalGroup(
         panelCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addComponent(panelEstadisticasPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        .addComponent(panelDatosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, 951, Short.MAX_VALUE)
+        .addComponent(panelDatosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, 945, Short.MAX_VALUE)
+        .addGroup(panelCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCamposLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelEstadisticasComisario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()))
     );
     panelCamposLayout.setVerticalGroup(
         panelCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -647,7 +705,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addComponent(panelDatosPersonales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(panelEstadisticasPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addContainerGap(203, Short.MAX_VALUE))
+        .addGroup(panelCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCamposLayout.createSequentialGroup()
+                .addContainerGap(126, Short.MAX_VALUE)
+                .addComponent(panelEstadisticasComisario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(80, Short.MAX_VALUE)))
     );
 
     panelContenedor.add(panelCampos, "card8");
@@ -743,7 +806,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(panelPilotosLayout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addComponent(panelBotonesPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, 945, Short.MAX_VALUE))
+                .addComponent(panelBotonesPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, 939, Short.MAX_VALUE))
             .addContainerGap())
         .addGroup(panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelContenedorPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -757,7 +820,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addContainerGap(527, Short.MAX_VALUE))
         .addGroup(panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPilotosLayout.createSequentialGroup()
-                .addGap(0, 102, Short.MAX_VALUE)
+                .addGap(0, 60, Short.MAX_VALUE)
                 .addComponent(panelContenedorPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)))
     );
 
@@ -892,7 +955,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addComponent(botonFiltrarPorPuntos1)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addComponent(contenedorBotonesConsultasPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, 677, Short.MAX_VALUE)
+            .addComponent(contenedorBotonesConsultasPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, 671, Short.MAX_VALUE)
             .addContainerGap())
     );
     panelBotonesConsultasPilotosLayout.setVerticalGroup(
@@ -923,7 +986,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
     panelMostrarPilotosLayout.setVerticalGroup(
         panelMostrarPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMostrarPilotosLayout.createSequentialGroup()
-            .addContainerGap(86, Short.MAX_VALUE)
+            .addContainerGap(44, Short.MAX_VALUE)
             .addComponent(panelBotonesConsultasPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(tabbedMostrarPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1053,7 +1116,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
                     .addGap(18, 18, 18)
                     .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 432, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 421, Short.MAX_VALUE)
                     .addComponent(botonCancelarPilotoModificado)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addComponent(botonGuardarPilotoModificado))
@@ -1115,6 +1178,184 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     panelContenedor.add(panelModificarPiloto, "card7");
 
+    panelModificarComisario.setBackground(new java.awt.Color(0, 0, 0));
+    panelModificarComisario.setMaximumSize(new java.awt.Dimension(945, 518));
+    panelModificarComisario.setMinimumSize(new java.awt.Dimension(945, 518));
+
+    panelBotonesModificarComisario.setBackground(new java.awt.Color(0, 0, 0));
+
+    jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+    jLabel27.setText("Modificar Comisario");
+
+    botonGuardarComisarioModificado.setBackground(new java.awt.Color(204, 102, 0));
+    botonGuardarComisarioModificado.setText("Guardar Cambios");
+    botonGuardarComisarioModificado.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonGuardarComisarioModificadoActionPerformed(evt);
+        }
+    });
+
+    botonCancelarComisarioModificado.setBackground(new java.awt.Color(204, 102, 0));
+    botonCancelarComisarioModificado.setText("Cancelar");
+    botonCancelarComisarioModificado.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonCancelarComisarioModificadoActionPerformed(evt);
+        }
+    });
+
+    javax.swing.GroupLayout panelBotonesModificarComisarioLayout = new javax.swing.GroupLayout(panelBotonesModificarComisario);
+    panelBotonesModificarComisario.setLayout(panelBotonesModificarComisarioLayout);
+    panelBotonesModificarComisarioLayout.setHorizontalGroup(
+        panelBotonesModificarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelBotonesModificarComisarioLayout.createSequentialGroup()
+            .addGroup(panelBotonesModificarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelBotonesModificarComisarioLayout.createSequentialGroup()
+                    .addGap(18, 18, 18)
+                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 421, Short.MAX_VALUE)
+                    .addComponent(botonCancelarComisarioModificado)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(botonGuardarComisarioModificado))
+                .addGroup(panelBotonesModificarComisarioLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jSeparator2)))
+            .addContainerGap())
+    );
+    panelBotonesModificarComisarioLayout.setVerticalGroup(
+        panelBotonesModificarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelBotonesModificarComisarioLayout.createSequentialGroup()
+            .addGroup(panelBotonesModificarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelBotonesModificarComisarioLayout.createSequentialGroup()
+                    .addGap(11, 11, 11)
+                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelBotonesModificarComisarioLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(panelBotonesModificarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(botonCancelarComisarioModificado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonGuardarComisarioModificado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
+    );
+
+    panelContenedorModificarComisario.setBackground(new java.awt.Color(0, 0, 0));
+    panelContenedorModificarComisario.setMaximumSize(new java.awt.Dimension(945, 504));
+    panelContenedorModificarComisario.setMinimumSize(new java.awt.Dimension(945, 504));
+
+    javax.swing.GroupLayout panelContenedorModificarComisarioLayout = new javax.swing.GroupLayout(panelContenedorModificarComisario);
+    panelContenedorModificarComisario.setLayout(panelContenedorModificarComisarioLayout);
+    panelContenedorModificarComisarioLayout.setHorizontalGroup(
+        panelContenedorModificarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 0, Short.MAX_VALUE)
+    );
+    panelContenedorModificarComisarioLayout.setVerticalGroup(
+        panelContenedorModificarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 504, Short.MAX_VALUE)
+    );
+
+    javax.swing.GroupLayout panelModificarComisarioLayout = new javax.swing.GroupLayout(panelModificarComisario);
+    panelModificarComisario.setLayout(panelModificarComisarioLayout);
+    panelModificarComisarioLayout.setHorizontalGroup(
+        panelModificarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addComponent(panelBotonesModificarComisario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addGroup(panelModificarComisarioLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(panelContenedorModificarComisario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    panelModificarComisarioLayout.setVerticalGroup(
+        panelModificarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelModificarComisarioLayout.createSequentialGroup()
+            .addComponent(panelBotonesModificarComisario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelContenedorModificarComisario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
+    );
+
+    panelContenedor.add(panelModificarComisario, "card7");
+
+    panelCargarComisario.setBackground(new java.awt.Color(0, 0, 0));
+    panelCargarComisario.setForeground(new java.awt.Color(0, 0, 0));
+    panelCargarComisario.setMaximumSize(new java.awt.Dimension(900, 476));
+    panelCargarComisario.setMinimumSize(new java.awt.Dimension(900, 476));
+
+    panelBotonGuardar1.setBackground(new java.awt.Color(0, 0, 0));
+    panelBotonGuardar1.setForeground(new java.awt.Color(0, 0, 0));
+    panelBotonGuardar1.setMaximumSize(new java.awt.Dimension(900, 40));
+    panelBotonGuardar1.setMinimumSize(new java.awt.Dimension(900, 40));
+
+    jLabel26.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+    jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel26.setText("CARGA DE COMISARIO");
+
+    botonGuardarComisario.setBackground(new java.awt.Color(204, 102, 0));
+    botonGuardarComisario.setText("Guardar");
+    botonGuardarComisario.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonGuardarComisarioActionPerformed(evt);
+        }
+    });
+
+    javax.swing.GroupLayout panelBotonGuardar1Layout = new javax.swing.GroupLayout(panelBotonGuardar1);
+    panelBotonGuardar1.setLayout(panelBotonGuardar1Layout);
+    panelBotonGuardar1Layout.setHorizontalGroup(
+        panelBotonGuardar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelBotonGuardar1Layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 549, Short.MAX_VALUE)
+            .addComponent(botonGuardarComisario, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
+    );
+    panelBotonGuardar1Layout.setVerticalGroup(
+        panelBotonGuardar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelBotonGuardar1Layout.createSequentialGroup()
+            .addGroup(panelBotonGuardar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addComponent(botonGuardarComisario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE))
+    );
+
+    panelContenedorCargarComisario.setBackground(new java.awt.Color(0, 0, 0));
+    panelContenedorCargarComisario.setMaximumSize(new java.awt.Dimension(945, 504));
+    panelContenedorCargarComisario.setMinimumSize(new java.awt.Dimension(945, 504));
+
+    javax.swing.GroupLayout panelContenedorCargarComisarioLayout = new javax.swing.GroupLayout(panelContenedorCargarComisario);
+    panelContenedorCargarComisario.setLayout(panelContenedorCargarComisarioLayout);
+    panelContenedorCargarComisarioLayout.setHorizontalGroup(
+        panelContenedorCargarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 945, Short.MAX_VALUE)
+    );
+    panelContenedorCargarComisarioLayout.setVerticalGroup(
+        panelContenedorCargarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 504, Short.MAX_VALUE)
+    );
+
+    javax.swing.GroupLayout panelCargarComisarioLayout = new javax.swing.GroupLayout(panelCargarComisario);
+    panelCargarComisario.setLayout(panelCargarComisarioLayout);
+    panelCargarComisarioLayout.setHorizontalGroup(
+        panelCargarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelCargarComisarioLayout.createSequentialGroup()
+            .addGroup(panelCargarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(panelBotonGuardar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(panelCargarComisarioLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(panelContenedorCargarComisario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addContainerGap())
+    );
+    panelCargarComisarioLayout.setVerticalGroup(
+        panelCargarComisarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelCargarComisarioLayout.createSequentialGroup()
+            .addComponent(panelBotonGuardar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelContenedorCargarComisario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
+    );
+
+    panelContenedor.add(panelCargarComisario, "card6");
+
     panelComisarios.setBackground(new java.awt.Color(0, 0, 0));
     panelComisarios.setForeground(new java.awt.Color(0, 0, 0));
     panelComisarios.setMaximumSize(new java.awt.Dimension(945, 626));
@@ -1168,33 +1409,33 @@ public class InterfazGrafica extends javax.swing.JFrame {
     });
     panelBotonesComisarios.add(botonCargarComisario);
 
-    botonModificarPiloto1.setBackground(new java.awt.Color(204, 102, 0));
-    botonModificarPiloto1.setText("Modificar comisario");
-    botonModificarPiloto1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    botonModificarPiloto1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-    botonModificarPiloto1.addActionListener(new java.awt.event.ActionListener() {
+    botonModificarComisario.setBackground(new java.awt.Color(204, 102, 0));
+    botonModificarComisario.setText("Modificar comisario");
+    botonModificarComisario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonModificarComisario.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+    botonModificarComisario.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            botonModificarPiloto1ActionPerformed(evt);
+            botonModificarComisarioActionPerformed(evt);
         }
     });
-    panelBotonesComisarios.add(botonModificarPiloto1);
+    panelBotonesComisarios.add(botonModificarComisario);
 
-    botonEliminarPiloto1.setBackground(new java.awt.Color(204, 102, 0));
-    botonEliminarPiloto1.setText("Eliminar piloto");
-    botonEliminarPiloto1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    botonEliminarPiloto1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-    botonEliminarPiloto1.addActionListener(new java.awt.event.ActionListener() {
+    botonEliminarComisario.setBackground(new java.awt.Color(204, 102, 0));
+    botonEliminarComisario.setText("Eliminar comisario");
+    botonEliminarComisario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonEliminarComisario.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+    botonEliminarComisario.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            botonEliminarPiloto1ActionPerformed(evt);
+            botonEliminarComisarioActionPerformed(evt);
         }
     });
-    panelBotonesComisarios.add(botonEliminarPiloto1);
+    panelBotonesComisarios.add(botonEliminarComisario);
 
-    panelContenedorPilotos1.setBackground(new java.awt.Color(0, 0, 0));
-    panelContenedorPilotos1.setForeground(new java.awt.Color(0, 0, 0));
-    panelContenedorPilotos1.setMaximumSize(new java.awt.Dimension(945, 516));
-    panelContenedorPilotos1.setMinimumSize(new java.awt.Dimension(945, 516));
-    panelContenedorPilotos1.setLayout(new java.awt.CardLayout());
+    panelContenedorComisarios.setBackground(new java.awt.Color(0, 0, 0));
+    panelContenedorComisarios.setForeground(new java.awt.Color(0, 0, 0));
+    panelContenedorComisarios.setMaximumSize(new java.awt.Dimension(945, 516));
+    panelContenedorComisarios.setMinimumSize(new java.awt.Dimension(945, 516));
+    panelContenedorComisarios.setLayout(new java.awt.CardLayout());
 
     javax.swing.GroupLayout panelComisariosLayout = new javax.swing.GroupLayout(panelComisarios);
     panelComisarios.setLayout(panelComisariosLayout);
@@ -1205,10 +1446,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(panelComisariosLayout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addComponent(panelBotonesComisarios, javax.swing.GroupLayout.DEFAULT_SIZE, 945, Short.MAX_VALUE))
+                .addComponent(panelBotonesComisarios, javax.swing.GroupLayout.DEFAULT_SIZE, 939, Short.MAX_VALUE))
             .addContainerGap())
         .addGroup(panelComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelContenedorPilotos1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(panelContenedorComisarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
     panelComisariosLayout.setVerticalGroup(
         panelComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1219,11 +1460,249 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addContainerGap(527, Short.MAX_VALUE))
         .addGroup(panelComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelComisariosLayout.createSequentialGroup()
-                .addGap(0, 102, Short.MAX_VALUE)
-                .addComponent(panelContenedorPilotos1, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 60, Short.MAX_VALUE)
+                .addComponent(panelContenedorComisarios, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)))
     );
 
     panelContenedor.add(panelComisarios, "card4");
+
+    panelEquipos.setBackground(new java.awt.Color(0, 0, 0));
+    panelEquipos.setForeground(new java.awt.Color(0, 0, 0));
+    panelEquipos.setMaximumSize(new java.awt.Dimension(945, 626));
+    panelEquipos.setMinimumSize(new java.awt.Dimension(945, 626));
+
+    jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+    jPanel4.setForeground(new java.awt.Color(0, 0, 0));
+
+    jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+    jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel24.setText("Equipos");
+
+    javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+    jPanel4.setLayout(jPanel4Layout);
+    jPanel4Layout.setHorizontalGroup(
+        jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanel4Layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jLabel24)
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    jPanel4Layout.setVerticalGroup(
+        jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanel4Layout.createSequentialGroup()
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel24))
+    );
+
+    panelBotonesEquipos.setBackground(new java.awt.Color(0, 0, 0));
+    panelBotonesEquipos.setForeground(new java.awt.Color(0, 0, 0));
+    panelBotonesEquipos.setLayout(new java.awt.GridLayout());
+
+    botonOrdenarPorPilotos.setBackground(new java.awt.Color(204, 102, 0));
+    botonOrdenarPorPilotos.setText("Ordenar por cantidad de pilotos");
+    botonOrdenarPorPilotos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonOrdenarPorPilotos.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+    botonOrdenarPorPilotos.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonOrdenarPorPilotosActionPerformed(evt);
+        }
+    });
+    panelBotonesEquipos.add(botonOrdenarPorPilotos);
+
+    botonOrdenarPorPuntaje.setBackground(new java.awt.Color(204, 102, 0));
+    botonOrdenarPorPuntaje.setText("Ordenar por puntaje total");
+    botonOrdenarPorPuntaje.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonOrdenarPorPuntaje.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonOrdenarPorPuntajeActionPerformed(evt);
+        }
+    });
+    panelBotonesEquipos.add(botonOrdenarPorPuntaje);
+
+    botonMostrarEquipo.setBackground(new java.awt.Color(204, 102, 0));
+    botonMostrarEquipo.setText("Mostrar equipo");
+    botonMostrarEquipo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonMostrarEquipo.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+    botonMostrarEquipo.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonMostrarEquipoActionPerformed(evt);
+        }
+    });
+    panelBotonesEquipos.add(botonMostrarEquipo);
+
+    panelContenedorEquipos.setBackground(new java.awt.Color(0, 0, 0));
+    panelContenedorEquipos.setForeground(new java.awt.Color(0, 0, 0));
+    panelContenedorEquipos.setMaximumSize(new java.awt.Dimension(945, 516));
+    panelContenedorEquipos.setMinimumSize(new java.awt.Dimension(945, 516));
+    panelContenedorEquipos.setLayout(new java.awt.CardLayout());
+
+    javax.swing.GroupLayout panelEquiposLayout = new javax.swing.GroupLayout(panelEquipos);
+    panelEquipos.setLayout(panelEquiposLayout);
+    panelEquiposLayout.setHorizontalGroup(
+        panelEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelEquiposLayout.createSequentialGroup()
+            .addGroup(panelEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelEquiposLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panelBotonesEquipos, javax.swing.GroupLayout.DEFAULT_SIZE, 939, Short.MAX_VALUE))
+            .addContainerGap())
+        .addGroup(panelEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelContenedorEquipos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    panelEquiposLayout.setVerticalGroup(
+        panelEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelEquiposLayout.createSequentialGroup()
+            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(panelBotonesEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(527, Short.MAX_VALUE))
+        .addGroup(panelEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEquiposLayout.createSequentialGroup()
+                .addGap(0, 60, Short.MAX_VALUE)
+                .addComponent(panelContenedorEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)))
+    );
+
+    panelContenedor.add(panelEquipos, "card4");
+
+    panelMostrarEquipos.setBackground(new java.awt.Color(0, 0, 0));
+
+    tablaEquipos.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {
+            {null, null, null, null},
+            {null, null, null, null},
+            {null, null, null, null},
+            {null, null, null, null}
+        },
+        new String [] {
+            "Nombre", "Pais", "Pilotos", "Puntos Totales"
+        }
+    ) {
+        boolean[] canEdit = new boolean [] {
+            false, false, false, false
+        };
+
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return canEdit [columnIndex];
+        }
+    });
+    scrollEquipos.setViewportView(tablaEquipos);
+
+    javax.swing.GroupLayout panelMostrarEquiposLayout = new javax.swing.GroupLayout(panelMostrarEquipos);
+    panelMostrarEquipos.setLayout(panelMostrarEquiposLayout);
+    panelMostrarEquiposLayout.setHorizontalGroup(
+        panelMostrarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 951, Short.MAX_VALUE)
+        .addGroup(panelMostrarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMostrarEquiposLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(scrollEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 951, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)))
+    );
+    panelMostrarEquiposLayout.setVerticalGroup(
+        panelMostrarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 606, Short.MAX_VALUE)
+        .addGroup(panelMostrarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMostrarEquiposLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(scrollEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)))
+    );
+
+    panelContenedor.add(panelMostrarEquipos, "card11");
+
+    panelMostrarComisarios.setBackground(new java.awt.Color(0, 0, 0));
+    panelMostrarComisarios.setForeground(new java.awt.Color(0, 0, 0));
+    panelMostrarComisarios.setMaximumSize(new java.awt.Dimension(945, 518));
+    panelMostrarComisarios.setMinimumSize(new java.awt.Dimension(945, 518));
+
+    panelBotonesConsultasComisarios.setBackground(new java.awt.Color(0, 0, 0));
+    panelBotonesConsultasComisarios.setForeground(new java.awt.Color(0, 0, 0));
+
+    botonFiltrarPorFIA.setBackground(new java.awt.Color(255, 153, 0));
+    botonFiltrarPorFIA.setForeground(new java.awt.Color(255, 255, 255));
+    botonFiltrarPorFIA.setText("Filtrar por Licencia FIA");
+    botonFiltrarPorFIA.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonFiltrarPorFIAActionPerformed(evt);
+        }
+    });
+
+    contenedorBotonesConsultasComisarios.setBackground(new java.awt.Color(0, 0, 0));
+    contenedorBotonesConsultasComisarios.setForeground(new java.awt.Color(0, 0, 0));
+    contenedorBotonesConsultasComisarios.setLayout(new java.awt.GridLayout());
+
+    javax.swing.GroupLayout panelBotonesConsultasComisariosLayout = new javax.swing.GroupLayout(panelBotonesConsultasComisarios);
+    panelBotonesConsultasComisarios.setLayout(panelBotonesConsultasComisariosLayout);
+    panelBotonesConsultasComisariosLayout.setHorizontalGroup(
+        panelBotonesConsultasComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelBotonesConsultasComisariosLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(botonFiltrarPorFIA)
+            .addGap(180, 180, 180)
+            .addComponent(contenedorBotonesConsultasComisarios, javax.swing.GroupLayout.DEFAULT_SIZE, 592, Short.MAX_VALUE)
+            .addContainerGap())
+    );
+    panelBotonesConsultasComisariosLayout.setVerticalGroup(
+        panelBotonesConsultasComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBotonesConsultasComisariosLayout.createSequentialGroup()
+            .addGroup(panelBotonesConsultasComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(panelBotonesConsultasComisariosLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(botonFiltrarPorFIA))
+                .addComponent(contenedorBotonesConsultasComisarios, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE))
+            .addContainerGap())
+    );
+
+    tablaComisarios.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {
+            {null, null, null, null, null, null, null},
+            {null, null, null, null, null, null, null},
+            {null, null, null, null, null, null, null},
+            {null, null, null, null, null, null, null}
+        },
+        new String [] {
+            "Nombre", "Apellido", "Fecha de Nacimiento", "Edad", "Pais de origen", "Sanciones Aplicadas", "Licencia FIA"
+        }
+    ) {
+        Class[] types = new Class [] {
+            java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
+        };
+        boolean[] canEdit = new boolean [] {
+            false, false, false, false, false, true, true
+        };
+
+        public Class getColumnClass(int columnIndex) {
+            return types [columnIndex];
+        }
+
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return canEdit [columnIndex];
+        }
+    });
+    scrollComisarios.setViewportView(tablaComisarios);
+
+    javax.swing.GroupLayout panelMostrarComisariosLayout = new javax.swing.GroupLayout(panelMostrarComisarios);
+    panelMostrarComisarios.setLayout(panelMostrarComisariosLayout);
+    panelMostrarComisariosLayout.setHorizontalGroup(
+        panelMostrarComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelMostrarComisariosLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(panelBotonesConsultasComisarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addGroup(panelMostrarComisariosLayout.createSequentialGroup()
+            .addComponent(scrollComisarios)
+            .addContainerGap())
+    );
+    panelMostrarComisariosLayout.setVerticalGroup(
+        panelMostrarComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMostrarComisariosLayout.createSequentialGroup()
+            .addContainerGap(38, Short.MAX_VALUE)
+            .addComponent(panelBotonesConsultasComisarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(scrollComisarios, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE))
+    );
+
+    panelContenedor.add(panelMostrarComisarios, "card2");
 
     jPanel2.setBackground(new java.awt.Color(0, 0, 0));
     jPanel2.setForeground(new java.awt.Color(0, 0, 0));
@@ -1277,10 +1756,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
     });
 
-    jSeparator6.setBackground(new java.awt.Color(0, 0, 0));
-    jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
-    jSeparator6.setToolTipText("");
-
     botonPilotos.setBackground(new java.awt.Color(204, 102, 0));
     botonPilotos.setText("Pilotos");
     botonPilotos.setMaximumSize(new java.awt.Dimension(93, 27));
@@ -1298,38 +1773,40 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
     });
 
+    botonAcercaDe.setBackground(new java.awt.Color(204, 102, 0));
+    botonAcercaDe.setText("Acerca de");
+    botonAcercaDe.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonAcercaDeActionPerformed(evt);
+        }
+    });
+
     javax.swing.GroupLayout contenedorBotonesLayout = new javax.swing.GroupLayout(contenedorBotones);
     contenedorBotones.setLayout(contenedorBotonesLayout);
     contenedorBotonesLayout.setHorizontalGroup(
         contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(contenedorBotonesLayout.createSequentialGroup()
-            .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(botonComisarios, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                    .addComponent(botonPilotos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addComponent(botonEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addComponent(botonAcercaDe, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(botonComisarios, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                        .addComponent(botonPilotos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(botonEquipos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addContainerGap(12, Short.MAX_VALUE))
-        .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contenedorBotonesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSeparator6, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                .addContainerGap()))
     );
     contenedorBotonesLayout.setVerticalGroup(
         contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(contenedorBotonesLayout.createSequentialGroup()
             .addContainerGap()
             .addComponent(botonPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(103, 103, 103)
+            .addGap(48, 48, 48)
             .addComponent(botonComisarios, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(78, 78, 78)
+            .addGap(68, 68, 68)
             .addComponent(botonEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(78, Short.MAX_VALUE))
-        .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorBotonesLayout.createSequentialGroup()
-                .addContainerGap(278, Short.MAX_VALUE)
-                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+            .addComponent(botonAcercaDe, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(43, 43, 43))
     );
 
     contenedorIconos.setBackground(new java.awt.Color(0, 0, 0));
@@ -1340,6 +1817,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
     jLabel38.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\Imagenes\\iconoComisario.png")); // NOI18N
 
     jLabel39.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\Imagenes\\iconoEquipo.png")); // NOI18N
+
+    jLabel28.setFont(new java.awt.Font("sansserif", 0, 48)); // NOI18N
+    jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel28.setText("?");
 
     javax.swing.GroupLayout contenedorIconosLayout = new javax.swing.GroupLayout(contenedorIconos);
     contenedorIconos.setLayout(contenedorIconosLayout);
@@ -1357,17 +1838,23 @@ public class InterfazGrafica extends javax.swing.JFrame {
                         .addComponent(jLabel39))
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addContainerGap())
+        .addGroup(contenedorIconosLayout.createSequentialGroup()
+            .addGap(26, 26, 26)
+            .addComponent(jLabel28)
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
     contenedorIconosLayout.setVerticalGroup(
         contenedorIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(contenedorIconosLayout.createSequentialGroup()
             .addGap(46, 46, 46)
             .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(80, 80, 80)
+            .addGap(31, 31, 31)
             .addComponent(jLabel38)
-            .addGap(68, 68, 68)
+            .addGap(49, 49, 49)
             .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(132, Short.MAX_VALUE))
+            .addGap(42, 42, 42)
+            .addComponent(jLabel28)
+            .addContainerGap(142, Short.MAX_VALUE))
     );
 
     javax.swing.GroupLayout panelBotonesLayout = new javax.swing.GroupLayout(panelBotones);
@@ -1397,6 +1884,22 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addContainerGap())
     );
 
+    panelGeneral.setBackground(new java.awt.Color(0, 0, 0));
+    panelGeneral.setMaximumSize(new java.awt.Dimension(1180, 670));
+    panelGeneral.setMinimumSize(new java.awt.Dimension(1180, 670));
+    panelGeneral.setName(""); // NOI18N
+    panelGeneral.setPreferredSize(new java.awt.Dimension(1180, 670));
+    panelGeneral.setLayout(new java.awt.BorderLayout());
+
+    labelVersion.setForeground(new java.awt.Color(255, 255, 255));
+    labelVersion.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+    labelVersion.setText("F1 Manager 2025 v1.0.0 Magios Inc. 2025");
+    labelVersion.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+    labelVersion.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+    labelVersion.setVerifyInputWhenFocusTarget(false);
+    labelVersion.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+    panelGeneral.add(labelVersion, java.awt.BorderLayout.PAGE_END);
+
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
@@ -1405,24 +1908,25 @@ public class InterfazGrafica extends javax.swing.JFrame {
         .addGroup(layout.createSequentialGroup()
             .addComponent(panelBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(panelContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(panelContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 967, Short.MAX_VALUE)
-                .addComponent(jLabel36)))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelGeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 1174, Short.MAX_VALUE)
+                .addContainerGap()))
     );
     layout.setVerticalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(layout.createSequentialGroup()
             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panelBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addComponent(panelContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+            .addContainerGap(25, Short.MAX_VALUE))
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 641, Short.MAX_VALUE)
-                .addComponent(jLabel36)))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelGeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE)))
     );
 
     pack();
@@ -1486,10 +1990,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_botonMostrarPilotosActionPerformed
 
     
-    private void botonMostrarEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMostrarEquiposActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonMostrarEquiposActionPerformed
-
     private void cargarPilotoEnFormulario(Piloto p){
         campoNombrePiloto.setText(p.getNombre());
         campoApellidoPiloto.setText(p.getApellido());
@@ -1588,16 +2088,22 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private void botonCancelarPilotoModificadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarPilotoModificadoActionPerformed
         // TODO add your handling code here:
         panelContenedor.removeAll();
-        panelPilotos.removeAll();
-        panelContenedorPilotos.add(panelMostrarPilotos);
         panelContenedor.add(panelPilotos);
+        panelContenedorPilotos.removeAll();
+        panelContenedorPilotos.add(panelMostrarPilotos);
+        panelContenedorPilotos.repaint();
+        panelContenedorPilotos.revalidate();
         panelContenedor.repaint();
         panelContenedor.revalidate();
         
     }//GEN-LAST:event_botonCancelarPilotoModificadoActionPerformed
 
     private void muestraPilotos_Personal(modelo.ListaPilotos lista){
+        System.out.println(lista.getLista().size());
         DefaultTableModel model = (DefaultTableModel)tablaDatosPersonalesPilotos.getModel();
+        model.fireTableDataChanged();
+        tablaDatosPersonalesPilotos.revalidate();
+        tablaDatosPersonalesPilotos.repaint();
         model.setRowCount(0);
         
         for(modelo.Piloto p : lista.getLista()){
@@ -1611,6 +2117,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
     
     private void muestraPilotos_Stats(modelo.ListaPilotos lista){
         DefaultTableModel model = (DefaultTableModel)tablaEstadisticasPilotos.getModel();
+        model.fireTableDataChanged();
+        tablaEstadisticasPilotos.revalidate();
+        tablaEstadisticasPilotos.repaint();
         model.setRowCount(0);
         String FIA = "";
         for(modelo.Piloto p : lista.getLista()){
@@ -1639,18 +2148,59 @@ public class InterfazGrafica extends javax.swing.JFrame {
         panelContenedor.revalidate();
     }//GEN-LAST:event_botonPilotosActionPerformed
 
+    private void muestraEquipos(ListaEquipos equipos){
+        DefaultTableModel model = (DefaultTableModel)tablaEquipos.getModel();
+        model.fireTableDataChanged();
+        tablaEquipos.revalidate();
+        tablaEquipos.repaint();
+        model.setRowCount(0);
+        for(Equipo e : equipos.getEquipos()){
+            Object[] fila = {
+                e.getNombreE(), e.getPais(), e.getCantidadPilotos(), e.getPuntosTotales()
+            };
+            model.addRow(fila);
+        }
+    }
+    
     private void botonEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEquiposActionPerformed
         // TODO add your handling code here:
+        muestraEquipos(Controlador.getListaEquipos());
         panelContenedor.removeAll();
         panelContenedor.add(panelEquipos);
+        panelContenedorEquipos.add(panelMostrarEquipos);
+        panelContenedor.add(panelEquipos);
+        panelContenedorEquipos.repaint();
+        panelContenedorEquipos.revalidate();
         panelContenedor.repaint();
         panelContenedor.revalidate();
     }//GEN-LAST:event_botonEquiposActionPerformed
-
+    
+    private void muestraComisarios(ListaComisarios lista){
+        System.out.println(lista.getCantComisarios());
+        DefaultTableModel model = (DefaultTableModel)tablaComisarios.getModel();
+        model.setRowCount(0);
+        String FIA = "";
+        for(ComisarioDeportivo c : lista.getLista()){
+            if(c.getFia()) FIA = "Si";
+            else FIA = "No";
+            Object[] fila = {
+                c.getNombre(), c.getApellido(), c.getFechaDeNacimiento(),
+                c.getFechaDeNacimiento().getAnosTranscurridos(),
+                c.getNacionalidad(), c.getSancionesAplicadas(), FIA
+            };
+            model.addRow(fila);
+        }
+    }
+    
     private void botonComisariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonComisariosActionPerformed
         // TODO add your handling code here:
+        muestraComisarios(Controlador.getListaComisarios());
         panelContenedor.removeAll();
         panelContenedor.add(panelComisarios);
+        panelContenedorComisarios.removeAll();
+        panelContenedorComisarios.add(panelMostrarComisarios);
+        panelContenedorComisarios.repaint();
+        panelContenedorComisarios.revalidate();
         panelContenedor.repaint();
         panelContenedor.revalidate();
     }//GEN-LAST:event_botonComisariosActionPerformed
@@ -1727,7 +2277,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             if(Controlador.agregarPilotoInterfaz(p)){
                 JOptionPane.showMessageDialog(this, "Se cargó el piloto correctamente\nID: " + p.getID(), "Carga Exitosa", JOptionPane.INFORMATION_MESSAGE);
                 Controlador.actualizarArchivo();
-            }else JOptionPane.showMessageDialog(this, "Error: No se pudo cargar el piloto (repetido)", "Error", JOptionPane.ERROR_MESSAGE);
+            }else JOptionPane.showMessageDialog(this, "Error: No se pudo cargar el piloto\nPosibles causas:\n- Piloto repetido\n- Error inesperado", "Error", JOptionPane.ERROR_MESSAGE);            
         }
     }//GEN-LAST:event_botonGuardarPilotoActionPerformed
 
@@ -1745,19 +2295,183 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     private void botonMostrarComisariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMostrarComisariosActionPerformed
         // TODO add your handling code here:
+        muestraComisarios(Controlador.getListaComisarios());
+        panelContenedor.removeAll();
+        panelContenedor.add(panelComisarios);
+        panelContenedorComisarios.removeAll();
+        panelContenedorComisarios.add(panelMostrarComisarios);
+        panelContenedorComisarios.repaint();
+        panelContenedorComisarios.revalidate();   
+        panelContenedor.repaint();
+        panelContenedor.revalidate();
     }//GEN-LAST:event_botonMostrarComisariosActionPerformed
 
     private void botonCargarComisarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarComisarioActionPerformed
         // TODO add your handling code here:
+        panelContenedor.removeAll();
+        panelContenedor.add(panelComisarios);
+        panelContenedorComisarios.removeAll();
+        panelContenedorComisarios.add(panelCargarComisario);
+        panelContenedorCargarComisario.add(panelDatosPersonales);
+        panelContenedorCargarComisario.add(panelEstadisticasComisario);
+        panelContenedorComisarios.repaint();
+        panelContenedorComisarios.revalidate();   
+        panelContenedor.repaint();
+        panelContenedor.revalidate();  
+        
     }//GEN-LAST:event_botonCargarComisarioActionPerformed
 
-    private void botonModificarPiloto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarPiloto1ActionPerformed
+    private void cargarComisarioEnFormulario(ComisarioDeportivo c){
+        campoNombrePiloto.setText(c.getNombre());
+        campoApellidoPiloto.setText(c.getApellido());
+        int dia = c.getFechaDeNacimiento().getDia();
+        int mes = c.getFechaDeNacimiento().getMes();
+        int ano = c.getFechaDeNacimiento().getAno();
+        Calendar cal = Calendar.getInstance();
+        cal.set(ano, mes-1, dia); //enero es 0
+        Date fecha = cal.getTime();
+        campoFechaNacPiloto.setDate(fecha);
+        campoSancionesAplicadas.setText(String.valueOf(c.getSancionesAplicadas()));
+        if(c.getFia()) checkFIATrueComisario.setSelected(true);
+        else checkFIAFalseComisario.setSelected(true);
+    }
+    
+    private void botonModificarComisarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarComisarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonModificarPiloto1ActionPerformed
+        int fila = tablaComisarios.getSelectedRow();
+        if(fila == -1){
+            JOptionPane.showMessageDialog(this,"Seleccione un comisario en la tabla", "Aviso", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        cSeleccionado = Controlador.getListaComisarios().getLista().get(fila);
+        panelContenedor.removeAll();
+        panelContenedor.add(panelComisarios);
+        panelContenedorComisarios.removeAll();
+        panelContenedorComisarios.add(panelModificarComisario);
+        panelContenedorModificarComisario.add(panelDatosPersonales);
+        panelContenedorModificarComisario.add(panelEstadisticasComisario);
+        cargarComisarioEnFormulario(cSeleccionado);
+        panelContenedorComisarios.repaint();
+        panelContenedorComisarios.revalidate();   
+        panelContenedor.repaint();
+        panelContenedor.revalidate();   
+        
+    }//GEN-LAST:event_botonModificarComisarioActionPerformed
 
-    private void botonEliminarPiloto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarPiloto1ActionPerformed
+    private void botonEliminarComisarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarComisarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonEliminarPiloto1ActionPerformed
+        int fila = tablaComisarios.getSelectedRow();
+        if(fila == -1){
+            JOptionPane.showMessageDialog(this,"Seleccione un comisario en la tabla", "Aviso", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        cSeleccionado = Controlador.getListaComisarios().getLista().get(fila);
+        int respuesta = JOptionPane.showConfirmDialog(this,
+        "¿Desea eliminar a "+cSeleccionado.getNombre()+" "+cSeleccionado.getApellido()+"?",
+        "Confirmar eliminación", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE
+        );
+        
+        if(respuesta == JOptionPane.YES_OPTION){
+            //eliminar
+            if(Controlador.eliminarComisarioInterfaz(cSeleccionado.getID())){
+                JOptionPane.showMessageDialog(this, "Se eliminó el piloto.\nHaga click en 'Mostrar comisarios' para ver los cambios");
+                Controlador.actualizarArchivo();
+            }else JOptionPane.showMessageDialog(this, "No se pudo eliminar el piloto", "Error Inesperado", JOptionPane.ERROR_MESSAGE);
+        }else if(respuesta == JOptionPane.NO_OPTION){
+            JOptionPane.showMessageDialog(this, "No se eliminó el piloto.");
+        }
+    }//GEN-LAST:event_botonEliminarComisarioActionPerformed
+
+    private void botonOrdenarPorPilotosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOrdenarPorPilotosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonOrdenarPorPilotosActionPerformed
+
+    private void botonOrdenarPorPuntajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOrdenarPorPuntajeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonOrdenarPorPuntajeActionPerformed
+
+    private void botonMostrarEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMostrarEquipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonMostrarEquipoActionPerformed
+
+    private void campoSancionesAplicadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSancionesAplicadasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSancionesAplicadasActionPerformed
+
+    private void botonFiltrarPorFIAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFiltrarPorFIAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonFiltrarPorFIAActionPerformed
+
+    private void botonGuardarComisarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarComisarioActionPerformed
+        // TODO add your handling code here:
+        ComisarioDeportivo c = new ComisarioDeportivo();
+        if(campoNombrePiloto.getText().isBlank() || campoApellidoPiloto.getText().isBlank() ||
+           campoFechaNacPiloto.getDate() == null || campoSancionesAplicadas.getText().isBlank() ||
+           (!checkFIATrueComisario.isSelected() && !checkFIAFalseComisario.isSelected())){
+            JOptionPane.showMessageDialog(this,"Debe llenar todos los campos para continuar", "Error", JOptionPane.ERROR_MESSAGE);
+        }else {
+            c.setNombre(campoNombrePiloto.getText());
+            c.setApellido(campoApellidoPiloto.getText());
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(campoFechaNacPiloto.getDate());
+            int dia = cal.get(Calendar.DAY_OF_MONTH);
+            int mes = cal.get(Calendar.MONTH) + 1; //enero es 
+            int ano = cal.get(Calendar.YEAR);
+            Fecha f = new Fecha(dia,mes,ano);
+            c.setFechaDeNacimiento(f);
+            c.setNacionalidad(campoNacionalidadPiloto.getSelectedItem().toString());
+            c.setSancionesAplicadas(Integer.parseInt(campoSancionesAplicadas.getText()));
+            c.setFia(checkFIATruePiloto.isSelected());
+            if(Controlador.agregarComisarioInterfaz(c)){
+                JOptionPane.showMessageDialog(this, "Se cargó el comisario correctamente\nID de Comisario: " + c.getID(), "Carga Exitosa", JOptionPane.INFORMATION_MESSAGE);
+                Controlador.actualizarArchivo();
+            }else JOptionPane.showMessageDialog(this, "Error: No se pudo cargar el comisario\nPosibles causas:\n- Comisario repetido\n- Error inesperado", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_botonGuardarComisarioActionPerformed
+
+    private void botonGuardarComisarioModificadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarComisarioModificadoActionPerformed
+        // TODO add your handling code here:
+        ComisarioDeportivo c = new ComisarioDeportivo(cSeleccionado.getID(), cSeleccionado.getNombre(), cSeleccionado.getApellido(),
+                              cSeleccionado.getFechaDeNacimiento(), cSeleccionado.getNacionalidad(),0,false);
+        if(campoSancionesAplicadas.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this,"Debe llenar todos los campos para continuar", "Error", JOptionPane.ERROR_MESSAGE);
+        }else {
+        
+        //----- modificar los parametros de c -----
+        c.setSancionesAplicadas(Integer.parseInt(campoSancionesAplicadas.getText()));
+        c.setFia(checkFIATrueComisario.isSelected());
+        c.mostrarDatos();
+        System.out.println("^ piloto c/ modificaciones");
+        if(Controlador.modificarComisarioInterfaz(c)){
+            JOptionPane.showMessageDialog(this, "Se modificó el comisario correctamente", "Modificación Exitosa", JOptionPane.INFORMATION_MESSAGE);
+            Controlador.actualizarArchivo();
+        }else JOptionPane.showMessageDialog(this, "No se pudo modificar el comisario", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_botonGuardarComisarioModificadoActionPerformed
+
+    private void botonCancelarComisarioModificadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarComisarioModificadoActionPerformed
+        // TODO add your handling code here:
+        muestraComisarios(Controlador.getListaComisarios());
+        panelContenedor.removeAll();
+        panelContenedor.add(panelComisarios);
+        panelContenedorComisarios.removeAll();
+        panelContenedorComisarios.add(panelMostrarComisarios);
+        panelContenedorComisarios.repaint();
+        panelContenedorComisarios.revalidate();
+        panelContenedor.repaint();
+        panelContenedor.revalidate();
+    }//GEN-LAST:event_botonCancelarComisarioModificadoActionPerformed
+
+    private void botonAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAcercaDeActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this,
+        "F1 Manager 2025\n"
+        + "Version: 1.0.0\n"
+        + "Desarrollado por: Magios Inc.\n"
+        + "@ 2025 Todos los derechos reservados",
+        "Acerca de",
+        JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_botonAcercaDeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1765,25 +2479,32 @@ public class InterfazGrafica extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonAcercaDe;
+    private javax.swing.JButton botonCancelarComisarioModificado;
     private javax.swing.JButton botonCancelarPilotoModificado;
     private javax.swing.JButton botonCargarComisario;
     private javax.swing.JButton botonCargarPiloto;
     private javax.swing.JButton botonComisarios;
+    private javax.swing.JButton botonEliminarComisario;
     private javax.swing.JButton botonEliminarPiloto;
-    private javax.swing.JButton botonEliminarPiloto1;
     private javax.swing.JButton botonEquipos;
+    private javax.swing.JButton botonFiltrarPorFIA;
     private javax.swing.JButton botonFiltrarPorPuntos;
     private javax.swing.JButton botonFiltrarPorPuntos1;
     private javax.swing.JButton botonFiltrarPorPuntos2;
     private javax.swing.JButton botonFiltrarPorPuntos3;
+    private javax.swing.JButton botonGuardarComisario;
+    private javax.swing.JButton botonGuardarComisarioModificado;
     private javax.swing.JButton botonGuardarPiloto;
     private javax.swing.JButton botonGuardarPilotoModificado;
     private javax.swing.JButton botonInicio;
+    private javax.swing.JButton botonModificarComisario;
     private javax.swing.JButton botonModificarPiloto;
-    private javax.swing.JButton botonModificarPiloto1;
     private javax.swing.JButton botonMostrarComisarios;
-    private javax.swing.JButton botonMostrarEquipos;
+    private javax.swing.JButton botonMostrarEquipo;
     private javax.swing.JButton botonMostrarPilotos;
+    private javax.swing.JButton botonOrdenarPorPilotos;
+    private javax.swing.JButton botonOrdenarPorPuntaje;
     private javax.swing.JButton botonPilotos;
     private javax.swing.JTextField campoAbandonosPiloto;
     private javax.swing.JTextPane campoApellidoPiloto;
@@ -1797,10 +2518,14 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JTextField campoPodiosPiloto;
     private javax.swing.JTextField campoPolesPiloto;
     private javax.swing.JTextField campoPuntosPiloto;
+    private javax.swing.JTextField campoSancionesAplicadas;
     private javax.swing.JTextField campoVueltasRapidasPiloto;
+    private javax.swing.JRadioButton checkFIAFalseComisario;
     private javax.swing.JRadioButton checkFIAFalsePiloto;
+    private javax.swing.JRadioButton checkFIATrueComisario;
     private javax.swing.JRadioButton checkFIATruePiloto;
     private javax.swing.JPanel contenedorBotones;
+    private javax.swing.JPanel contenedorBotonesConsultasComisarios;
     private javax.swing.JPanel contenedorBotonesConsultasPilotos;
     private javax.swing.JPanel contenedorIconos;
     private javax.swing.ButtonGroup grupoLicenciaFIAModificar;
@@ -1821,15 +2546,21 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1838,41 +2569,59 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel labelVersion;
     private javax.swing.JRadioButton pProbador;
     private javax.swing.JRadioButton pReserva;
     private javax.swing.JRadioButton pTitular;
     private javax.swing.JPanel panelBotonGuardar;
+    private javax.swing.JPanel panelBotonGuardar1;
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelBotonesComisarios;
+    private javax.swing.JPanel panelBotonesConsultasComisarios;
     private javax.swing.JPanel panelBotonesConsultasPilotos;
+    private javax.swing.JPanel panelBotonesEquipos;
+    private javax.swing.JPanel panelBotonesModificarComisario;
     private javax.swing.JPanel panelBotonesModificarPiloto;
     private javax.swing.JPanel panelBotonesPilotos;
     private javax.swing.JPanel panelCampos;
+    private javax.swing.JPanel panelCargarComisario;
     private javax.swing.JPanel panelCargarPiloto;
     private javax.swing.JPanel panelComisarios;
     private javax.swing.JPanel panelContenedor;
+    private javax.swing.JPanel panelContenedorCargarComisario;
     private javax.swing.JPanel panelContenedorCargarPiloto;
+    private javax.swing.JPanel panelContenedorComisarios;
+    private javax.swing.JPanel panelContenedorEquipos;
+    private javax.swing.JPanel panelContenedorModificarComisario;
     private javax.swing.JPanel panelContenedorModificarPiloto;
     private javax.swing.JPanel panelContenedorPilotos;
-    private javax.swing.JPanel panelContenedorPilotos1;
     private javax.swing.JPanel panelDatosPersonales;
     private javax.swing.JPanel panelEquipos;
+    private javax.swing.JPanel panelEstadisticasComisario;
     private javax.swing.JPanel panelEstadisticasPiloto;
+    private javax.swing.JPanel panelGeneral;
     private javax.swing.JPanel panelInicio;
+    private javax.swing.JPanel panelModificarComisario;
     private javax.swing.JPanel panelModificarPiloto;
+    private javax.swing.JPanel panelMostrarComisarios;
+    private javax.swing.JPanel panelMostrarEquipos;
     private javax.swing.JPanel panelMostrarPilotos;
     private javax.swing.JPanel panelPilotos;
+    private javax.swing.JScrollPane scrollComisarios;
     private javax.swing.JScrollPane scrollDatosPersonalesPilotos;
+    private javax.swing.JScrollPane scrollEquipos;
     private javax.swing.JScrollPane scrollEstadisticasPilotos;
     private javax.swing.JTabbedPane tabbedMostrarPilotos;
+    private javax.swing.JTable tablaComisarios;
     private javax.swing.JTable tablaDatosPersonalesPilotos;
+    private javax.swing.JTable tablaEquipos;
     private javax.swing.JTable tablaEstadisticasPilotos;
     // End of variables declaration//GEN-END:variables
 }

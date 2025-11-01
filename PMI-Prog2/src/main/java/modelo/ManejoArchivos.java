@@ -40,11 +40,16 @@ public class ManejoArchivos {
                 aux.setVueltasRapidas(Integer.parseInt(reader.readLine()));
                 aux.setPenalizaciones(Integer.parseInt(reader.readLine()));
                 aux.setAbandonos(Integer.parseInt(reader.readLine()));
-                aux.setFia(Boolean.parseBoolean(reader.readLine()));
+                line = reader.readLine();
+                if(line.equals("Si")) aux.setFia(true);
+                else aux.setFia(false);
                 lista.addPiloto(aux);
-                equipos.buscarEquipoPorNombre(aux.getEquipo()).agregarPiloto(aux);
-                System.out.println("se cargo un piloto");
+                System.out.println("equipo del piloto: " + aux.getEquipo());
+                if(equipos.buscarEquipoPorNombre(aux.getEquipo()).agregarPiloto(aux)){
+                    System.out.println("cargado en lista de equipos" + " | equipo: "+ equipos.buscarEquipoPorNombre(aux.getEquipo()).getNombreE());
+                }
                 
+                System.out.println("cargado en lista de pilotos");
             }
         }catch(IOException e){
             System.err.println("Error leyendo el archivo: " + e.getMessage());
@@ -66,12 +71,15 @@ public class ManejoArchivos {
                 aux.setApellido(reader.readLine());
                 String[] fecha = reader.readLine().split("/");
                 aux.setFechaDeNacimiento(new Fecha(Integer.parseInt(fecha[0]),
-                                                   Integer.parseInt(fecha[2]),
+                                                   Integer.parseInt(fecha[1]),
                                                    Integer.parseInt(fecha[2])));
                 aux.setNacionalidad(reader.readLine());
                 aux.setSancionesAplicadas(Integer.parseInt(reader.readLine()));
-                aux.setFia(Boolean.parseBoolean(reader.readLine()));
+                line = reader.readLine();
+                if(line.equals("Si")) aux.setFia(true);
+                else aux.setFia(false);
                 lista.addComisario(aux);
+                System.out.println("fia aux: "+ (aux.getFia() ? "Si" : "No"));
                 System.out.println("se cargo un comisario");
                 
             }

@@ -1,13 +1,9 @@
 package modelo;
+
 import java.util.ArrayList;
 
-/**
- *
- * @author arctan
- */
 public class ListaComisarios {
     private ArrayList<ComisarioDeportivo> lista;
-    private int cantComisarios;
 
     public ListaComisarios() {
         this.lista = new ArrayList<ComisarioDeportivo>();
@@ -22,14 +18,8 @@ public class ListaComisarios {
     }
 
     public int getCantComisarios() {
-        return cantComisarios;
+        return lista.size();
     }
-
-    public void setCantComisairos(int cantComisarios) {
-        this.cantComisarios = cantComisarios;
-    }
-    
-    
     
     public ComisarioDeportivo buscarComisarioPorId(int Id){
         for(ComisarioDeportivo c: lista)
@@ -38,9 +28,11 @@ public class ListaComisarios {
     }
     
     public boolean addComisario(ComisarioDeportivo c){
+        if(c == null) return false;
         ComisarioDeportivo caux = buscarComisarioPorId(c.getID());
         if(caux == null){
             lista.add(c);
+            if(c.getID() == 0) c.setID(lista.size());
             return true;
         }
         return false;

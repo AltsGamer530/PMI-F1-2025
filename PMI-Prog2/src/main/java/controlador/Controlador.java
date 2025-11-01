@@ -44,6 +44,11 @@ public class Controlador {
         return listaComisarios;
     }
     
+    public static ListaEquipos getListaEquipos(){
+        listaEquipos.mostrarEquipos();
+        return listaEquipos;
+    }
+    
     public static boolean agregarPilotoInterfaz(Piloto p){
         return listaPilotos.addPiloto(p);
     }
@@ -99,6 +104,20 @@ public class Controlador {
         }
         if(pOriginal.getAbandonos() != pModificado.getAbandonos()){
             pOriginal.setAbandonos(pModificado.getAbandonos());
+            modificado = true;
+        }
+        return modificado;
+    }
+    
+    public static boolean modificarComisarioInterfaz(ComisarioDeportivo cModificado){
+        int id = cModificado.getID();
+        ComisarioDeportivo cOriginal = listaComisarios.buscarComisarioPorId(id);
+        cOriginal.mostrarDatos();
+        System.out.println("^ comisario encontrado por ID" + id);
+        boolean modificado = false;
+        if(cOriginal == null) return false;
+        if(cOriginal.getSancionesAplicadas() != cModificado.getSancionesAplicadas()){
+            cOriginal.setSancionesAplicadas(cModificado.getSancionesAplicadas());
             modificado = true;
         }
         return modificado;

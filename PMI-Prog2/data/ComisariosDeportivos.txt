@@ -2,7 +2,7 @@
 1
 Michael
 Anderson
-05/07/1972
+5/7/1972
 Reino Unido
 12
 No
@@ -10,7 +10,7 @@ No
 2
 Carlos
 Mendez
-02/08/1980
+2/8/1980
 Argentina
 5
 No
@@ -18,7 +18,7 @@ No
 3
 Laura
 Stevens
-14/03/1985
+14/3/1985
 Estados Unidos
 9
 Si
@@ -34,7 +34,7 @@ Si
 5
 Akira
 Tanaka
-09/06/1975
+9/6/1975
 Japón
 11
 Si
@@ -42,7 +42,7 @@ Si
 6
 Sophie
 Dubois
-30/01/1988
+30/1/1988
 Francia
 4
 Si
@@ -50,7 +50,7 @@ Si
 7
 Heinz
 Keller
-17/04/1969
+17/4/1969
 Alemania
 18
 Si
@@ -63,26 +63,18 @@ Argentina
 6
 No
 -----------------------------
-9
-William
-Hughes
-25/09/1976
-Reino Unido
-15
-Si
------------------------------
 10
 Federico
 Bianchi
-03/12/1981
+3/12/1981
 Italia
-8
+10
 Si
 -----------------------------
 11
 Pablo
 Ramos
-27/05/1987
+27/5/1987
 Uruguay
 3
 No
@@ -90,7 +82,7 @@ No
 12
 Helena
 Kowalski
-19/02/1974
+19/2/1974
 Polonia
 10
 Si
@@ -98,7 +90,7 @@ Si
 13
 Lucas
 Giménez
-11/07/1989
+11/7/1989
 Argentina
 5
 No
@@ -106,7 +98,7 @@ No
 14
 Erik
 Larsen
-08/08/1968
+8/8/1968
 Suecia
 14
 Si
@@ -114,7 +106,7 @@ Si
 15
 Rodolfo
 Martínez
-29/03/1982
+29/3/1982
 México
 9
 No
@@ -122,7 +114,7 @@ No
 16
 Giulia
 Conti
-06/06/1977
+6/6/1977
 Italia
 13
 Si
@@ -130,7 +122,7 @@ Si
 17
 Marta
 Sánchez
-20/09/1986
+20/9/1986
 España
 4
 No
@@ -138,7 +130,7 @@ No
 18
 Daniel
 Reyes
-18/01/1980
+18/1/1980
 Chile
 7
 No
@@ -146,7 +138,7 @@ No
 19
 Yuki
 Morimoto
-07/12/1971
+7/12/1971
 Japón
 16
 Si
@@ -154,7 +146,15 @@ Si
 20
 Eduardo
 Pérez
-04/04/1984
+4/4/1984
 Argentina
+5
+No
+-----------------------------
+0
+Agapito
+Fernandez
+19/7/450
+Canadá
 5
 No

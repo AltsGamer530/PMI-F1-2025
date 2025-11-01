@@ -1,4 +1,4 @@
-package modelo;
+    package modelo;
 
 
 
@@ -42,7 +42,7 @@ public class ComisarioDeportivo extends Persona{
     @Override
     public void mostrarDatos(){
         super.mostrarDatos();
-        System.out.println("Sanciiones aplicadas: "+this.getSancionesAplicadas());
+        System.out.println("Sanciones aplicadas: "+this.getSancionesAplicadas());
         System.out.println("");
         System.out.println("Licencia FIA: "+ (this.getFia() ? "Si" : "No"));
     }

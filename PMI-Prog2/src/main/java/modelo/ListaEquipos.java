@@ -11,7 +11,7 @@ public class ListaEquipos {
         this.equipos = new ArrayList<>();
         inicializarEquiposPredefinidos();
     }
-
+    
     private void inicializarEquiposPredefinidos() {
         equipos.add(new Equipo(1, "Alfa Romeo",      "Italia"));        
         equipos.add(new Equipo(2, "Alpine",          "Francia"));

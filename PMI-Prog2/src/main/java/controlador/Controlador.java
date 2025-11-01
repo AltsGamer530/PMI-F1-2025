@@ -52,8 +52,8 @@ public class Controlador {
     }
     
     //solo se llama cuando se realizo la confirmacion
-    public static boolean eliminarPilotoInterfaz(int nroAuto){
-        return listaPilotos.eliminarPiloto(nroAuto);
+    public static boolean eliminarPilotoInterfaz(int id){
+        return listaPilotos.eliminarPiloto(id);
     }
 
     //lo mismo que arriba
@@ -64,6 +64,8 @@ public class Controlador {
     public static boolean modificarPilotoInterfaz(Piloto pModificado){
         int id = pModificado.getID();
         Piloto pOriginal = listaPilotos.buscarPilotoPorID(id);
+        pOriginal.mostrarDatos();
+        System.out.println("^ piloto encontrado por ID" + id);
         boolean modificado = false;
         if(pOriginal == null) return false;
         if(pOriginal.getNumeroDeAuto() != pModificado.getNumeroDeAuto()){

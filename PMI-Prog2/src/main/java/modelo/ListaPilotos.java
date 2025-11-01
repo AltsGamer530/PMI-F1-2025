@@ -59,7 +59,7 @@ public class ListaPilotos {
         return false;
     }
 
-    public boolean eliminarPiloto(int numeroAuto) {
+    public boolean eliminarPilotoNroAuto(int numeroAuto) {
         Piloto p = buscarPilotoPorNumero(numeroAuto);
         if (p != null) {
             lista.remove(p);
@@ -67,6 +67,16 @@ public class ListaPilotos {
         }
         return false;
     }
+    
+    public boolean eliminarPiloto(int id){
+        Piloto elim = buscarPilotoPorID(id);
+        if(elim == null){
+            return false;
+        }
+        lista.remove(elim);
+        return true;
+    }
+            
 
     public ListaPilotos filtrarPilotosPorPuntaje(int puntos) {
         ListaPilotos filtrados = new ListaPilotos();

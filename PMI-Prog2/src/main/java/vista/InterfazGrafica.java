@@ -169,11 +169,13 @@ public class InterfazGrafica extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         botonGuardarPiloto = new javax.swing.JButton();
         panelContenedorCargarPiloto = new javax.swing.JPanel();
+        jSeparator3 = new javax.swing.JSeparator();
         panelModificarPiloto = new javax.swing.JPanel();
         panelBotonesModificarPiloto = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         botonGuardarPilotoModificado = new javax.swing.JButton();
         botonCancelarPilotoModificado = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
         panelContenedorModificarPiloto = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -296,7 +298,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         setForeground(new java.awt.Color(0, 0, 0));
         setMaximumSize(new java.awt.Dimension(1180, 670));
         setMinimumSize(new java.awt.Dimension(1180, 670));
-        setPreferredSize(new java.awt.Dimension(1180, 670));
         setSize(new java.awt.Dimension(1180, 670));
 
         jLabel36.setText("F1 Manager 2025 v0.0.1 Magios Inc. 2025");
@@ -414,7 +415,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setText("Penalizaciones");
+        jLabel18.setText("Abandonos");
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
@@ -431,7 +432,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jLabel21)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
                 .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
@@ -966,7 +967,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(panelBotonGuardarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 543, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 549, Short.MAX_VALUE)
                 .addComponent(botonGuardarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -980,27 +981,43 @@ public class InterfazGrafica extends javax.swing.JFrame {
         );
 
         panelContenedorCargarPiloto.setBackground(new java.awt.Color(0, 0, 0));
-        panelContenedorCargarPiloto.setLayout(new java.awt.CardLayout());
+        panelContenedorCargarPiloto.setMaximumSize(new java.awt.Dimension(945, 504));
+        panelContenedorCargarPiloto.setMinimumSize(new java.awt.Dimension(945, 504));
+        panelContenedorCargarPiloto.setPreferredSize(new java.awt.Dimension(945, 504));
+
+        javax.swing.GroupLayout panelContenedorCargarPilotoLayout = new javax.swing.GroupLayout(panelContenedorCargarPiloto);
+        panelContenedorCargarPiloto.setLayout(panelContenedorCargarPilotoLayout);
+        panelContenedorCargarPilotoLayout.setHorizontalGroup(
+            panelContenedorCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 945, Short.MAX_VALUE)
+        );
+        panelContenedorCargarPilotoLayout.setVerticalGroup(
+            panelContenedorCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 504, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout panelCargarPilotoLayout = new javax.swing.GroupLayout(panelCargarPiloto);
         panelCargarPiloto.setLayout(panelCargarPilotoLayout);
         panelCargarPilotoLayout.setHorizontalGroup(
             panelCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCargarPilotoLayout.createSequentialGroup()
-                .addComponent(panelBotonGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, 945, Short.MAX_VALUE)
+                .addGroup(panelCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelBotonGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, 951, Short.MAX_VALUE)
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelCargarPilotoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(panelContenedorCargarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(panelCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panelContenedorCargarPiloto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelCargarPilotoLayout.setVerticalGroup(
             panelCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCargarPilotoLayout.createSequentialGroup()
                 .addComponent(panelBotonGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(566, Short.MAX_VALUE))
-            .addGroup(panelCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCargarPilotoLayout.createSequentialGroup()
-                    .addGap(0, 181, Short.MAX_VALUE)
-                    .addComponent(panelContenedorCargarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelContenedorCargarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         panelContenedor.add(panelCargarPiloto, "card6");
@@ -1036,51 +1053,68 @@ public class InterfazGrafica extends javax.swing.JFrame {
         panelBotonesModificarPilotoLayout.setHorizontalGroup(
             panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonCancelarPilotoModificado)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botonGuardarPilotoModificado)
+                .addGroup(panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 432, Short.MAX_VALUE)
+                        .addComponent(botonCancelarPilotoModificado)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(botonGuardarPilotoModificado))
+                    .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator1)))
                 .addContainerGap())
         );
         panelBotonesModificarPilotoLayout.setVerticalGroup(
             panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBotonesModificarPilotoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(botonCancelarPilotoModificado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonGuardarPilotoModificado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(botonCancelarPilotoModificado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botonGuardarPilotoModificado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        panelContenedorModificarPiloto.setLayout(new java.awt.CardLayout());
+        panelContenedorModificarPiloto.setBackground(new java.awt.Color(0, 0, 0));
+        panelContenedorModificarPiloto.setMaximumSize(new java.awt.Dimension(945, 504));
+        panelContenedorModificarPiloto.setMinimumSize(new java.awt.Dimension(945, 504));
+        panelContenedorModificarPiloto.setPreferredSize(new java.awt.Dimension(945, 504));
+
+        javax.swing.GroupLayout panelContenedorModificarPilotoLayout = new javax.swing.GroupLayout(panelContenedorModificarPiloto);
+        panelContenedorModificarPiloto.setLayout(panelContenedorModificarPilotoLayout);
+        panelContenedorModificarPilotoLayout.setHorizontalGroup(
+            panelContenedorModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panelContenedorModificarPilotoLayout.setVerticalGroup(
+            panelContenedorModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 504, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout panelModificarPilotoLayout = new javax.swing.GroupLayout(panelModificarPiloto);
         panelModificarPiloto.setLayout(panelModificarPilotoLayout);
         panelModificarPilotoLayout.setHorizontalGroup(
             panelModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelBotonesModificarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(panelModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panelModificarPilotoLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(panelContenedorModificarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(panelModificarPilotoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelContenedorModificarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelModificarPilotoLayout.setVerticalGroup(
             panelModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelModificarPilotoLayout.createSequentialGroup()
                 .addComponent(panelBotonesModificarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 554, Short.MAX_VALUE))
-            .addGroup(panelModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panelModificarPilotoLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(panelContenedorModificarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelContenedorModificarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         panelContenedor.add(panelModificarPiloto, "card7");
@@ -1277,13 +1311,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 623, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(panelContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                    .addComponent(panelBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(0, 654, Short.MAX_VALUE)
+                    .addGap(0, 641, Short.MAX_VALUE)
                     .addComponent(jLabel36)))
         );
 
@@ -1292,18 +1324,45 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     private void botonCargarPilotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarPilotoActionPerformed
         // TODO add your handling code here:
-        panelContenedorCargarPiloto.removeAll();
-        panelContenedorCargarPiloto.add(panelCampos);
+        panelContenedor.removeAll();
+        panelContenedor.add(panelPilotos);
         panelContenedorPilotos.removeAll();
         panelContenedorPilotos.add(panelCargarPiloto);
+        panelContenedorCargarPiloto.add(panelDatosPersonales);
+        panelContenedorCargarPiloto.add(panelEstadisticasPiloto);
         panelContenedorPilotos.repaint();
-        panelContenedorPilotos.revalidate();
+        panelContenedorPilotos.revalidate();   
         panelContenedor.repaint();
-        panelContenedor.revalidate();   
+        panelContenedor.revalidate();  
     }//GEN-LAST:event_botonCargarPilotoActionPerformed
 
     private void botonEliminarPilotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarPilotoActionPerformed
         // TODO add your handling code here:
+        int fila1 = tablaDatosPersonalesPilotos.getSelectedRow();
+        int fila2 = tablaEstadisticasPilotos.getSelectedRow();
+        int fila;
+        if(fila1 == -1 && fila2 == -1){
+            JOptionPane.showMessageDialog(this,"Seleccione un piloto en la tabla", "Aviso", JOptionPane.WARNING_MESSAGE);
+            return;
+        }else if(fila1 != -1) fila = fila1;
+        else fila = fila2;
+        pilotoSeleccionado = Controlador.getListaPilotos().getLista().get(fila);
+        int respuesta = JOptionPane.showConfirmDialog(this,
+        "¿Desea eliminar a "+pilotoSeleccionado.getNombre()+" "+pilotoSeleccionado.getApellido()+"?",
+        "Confirmar eliminación", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE
+        );
+        
+        if(respuesta == JOptionPane.YES_OPTION){
+            //eliminar
+            if(Controlador.eliminarPilotoInterfaz(pilotoSeleccionado.getID())){
+                JOptionPane.showMessageDialog(this, "Se eliminó el piloto.\nHaga click en 'Mostrar pilotos' para ver los cambios");
+                Controlador.actualizarArchivo();
+            }else JOptionPane.showMessageDialog(this, "No se pudo eliminar el piloto", "Error Inesperado", JOptionPane.ERROR_MESSAGE);
+        }else if(respuesta == JOptionPane.NO_OPTION){
+            JOptionPane.showMessageDialog(this, "No se eliminó el piloto.");
+        }
+        
+        
     }//GEN-LAST:event_botonEliminarPilotoActionPerformed
 
     private void botonMostrarPilotosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMostrarPilotosActionPerformed
@@ -1338,38 +1397,41 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_botonMostrarEquiposActionPerformed
 
     private void cargarPilotoEnFormulario(Piloto p){
-        if(campoNombrePiloto.getText().isEmpty() || campoApellidoPiloto.getText().isEmpty() ||
-           campoFechaNacPiloto.getDate() == null || campoNroAutoPiloto.getText().isEmpty() ||
-           (!pTitular.isSelected() && !pReserva.isSelected() && !pProbador.isSelected())  ||
-           campoPuntosPiloto.getText().isEmpty() || campoPolesPiloto.getText().isEmpty() ||
-           campoVueltasRapidasPiloto.getText().isEmpty() || campoPenalizacionesPiloto.getText().isEmpty() ||
-           campoAbandonosPiloto.getText().isEmpty() || (!checkFIATruePiloto.isSelected() && !checkFIAFalsePiloto.isSelected())){
-            JOptionPane.showMessageDialog(this,"Debe llenar todos los campos para continuar", "Error", JOptionPane.ERROR_MESSAGE);
-        }else {
-            p.setNombre(campoNombrePiloto.getText());
-            p.setApellido(campoApellidoPiloto.getText());
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(campoFechaNacPiloto.getDate());
-            int dia = cal.get(Calendar.DAY_OF_MONTH);
-            int mes = cal.get(Calendar.MONTH);
-            int ano = cal.get(Calendar.YEAR);
-            Fecha f = new Fecha(dia,mes,ano);
-            p.setFechaDeNacimiento(f);
-            p.setNumeroDeAuto(Integer.parseInt(campoNroAutoPiloto.getText()));
-            p.setEquipo(campoEquipoPiloto.getSelectedItem().toString());
-            p.setNacionalidad(campoNacionalidadPiloto.getSelectedItem().toString());String rol = "";
-            if(pTitular.isSelected()) rol = "Titular";
-            else if(pReserva.isSelected()) rol = "Reserva";
-            else if(pProbador.isSelected()) rol = "Probador";
-            p.setRol(rol);
-            p.setPuntos(Integer.parseInt(campoPuntosPiloto.getText()));
-            p.setPodios(Integer.parseInt(campoPodiosPiloto.getText()));
-            p.setPoles(Integer.parseInt(campoPolesPiloto.getText()));
-            p.setVueltasRapidas(Integer.parseInt(campoVueltasRapidasPiloto.getText()));
-            p.setPenalizaciones(Integer.parseInt(campoPenalizacionesPiloto.getText()));
-            p.setAbandonos(Integer.parseInt(campoAbandonosPiloto.getText()));
-            p.setFia(checkFIATruePiloto.isSelected());
+        campoNombrePiloto.setText(p.getNombre());
+        campoApellidoPiloto.setText(p.getApellido());
+        int dia = p.getFechaDeNacimiento().getDia();
+        int mes = p.getFechaDeNacimiento().getMes();
+        int ano = p.getFechaDeNacimiento().getAno();
+        Calendar cal = Calendar.getInstance();
+        cal.set(ano, mes-1, dia); //enero es 0
+        Date fecha = cal.getTime();
+        campoFechaNacPiloto.setDate(fecha);
+        campoNroAutoPiloto.setText(String.valueOf(p.getNumeroDeAuto()));
+        int index = 0;
+        int jndex = 0;
+        while(true){
+            campoEquipoPiloto.setSelectedIndex(index);
+            if(p.getEquipo().equals(campoEquipoPiloto.getSelectedItem().toString())){
+                break;
+            }else index++;
+            campoNacionalidadPiloto.setSelectedIndex(jndex);
+            if(p.getNacionalidad().equals(campoNacionalidadPiloto.getSelectedItem().toString())){
+                break;
+            }else jndex++;
         }
+        switch(p.getRol()){
+            case "Titular": pTitular.setSelected(true);
+            case "Reserva": pReserva.setSelected(true);
+            case "Probador": pProbador.setSelected(true);
+        }
+        campoPuntosPiloto.setText(String.valueOf(p.getPuntos()));
+        campoPodiosPiloto.setText(String.valueOf(p.getPodios()));
+        campoPolesPiloto.setText(String.valueOf(p.getPoles()));
+        campoVueltasRapidasPiloto.setText(String.valueOf(p.getVueltasRapidas()));
+        campoPenalizacionesPiloto.setText(String.valueOf(p.getPenalizaciones()));
+        campoAbandonosPiloto.setText(String.valueOf(p.getAbandonos()));
+        if(p.getFia()) checkFIATruePiloto.setSelected(true);
+        else checkFIAFalsePiloto.setSelected(true);
     }
     
     private void botonModificarPilotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarPilotoActionPerformed
@@ -1382,14 +1444,14 @@ public class InterfazGrafica extends javax.swing.JFrame {
             return;
         }else if(fila1 != -1) fila = fila1;
         else fila = fila2;
-        Piloto pSeleccionado = Controlador.getListaPilotos().getLista().get(fila);
-        cargarPilotoEnFormulario(pSeleccionado);
+        pilotoSeleccionado = Controlador.getListaPilotos().getLista().get(fila);
         panelContenedor.removeAll();
         panelContenedor.add(panelPilotos);
         panelContenedorPilotos.removeAll();
         panelContenedorPilotos.add(panelModificarPiloto);
-        panelModificarPiloto.add(panelDatosPersonales);
-        panelModificarPiloto.add(panelEstadisticasPiloto);
+        panelContenedorModificarPiloto.add(panelDatosPersonales);
+        panelContenedorModificarPiloto.add(panelEstadisticasPiloto);
+        cargarPilotoEnFormulario(pilotoSeleccionado);
         panelContenedorPilotos.repaint();
         panelContenedorPilotos.revalidate();   
         panelContenedor.repaint();
@@ -1398,13 +1460,18 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     private void botonGuardarPilotoModificadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarPilotoModificadoActionPerformed
         // TODO add your handling code here:
-        if(pilotoSeleccionado == null){
-            JOptionPane.showMessageDialog(this, "No hay ningún piloto seleccionado",
-                    "Error", JOptionPane.ERROR_MESSAGE);
-        }
-        Piloto p = pilotoSeleccionado;
+        Piloto p = new Piloto(pilotoSeleccionado.getID(), pilotoSeleccionado.getNombre(), pilotoSeleccionado.getApellido(),
+                              pilotoSeleccionado.getFechaDeNacimiento(), pilotoSeleccionado.getNacionalidad(),
+                              0,"","",0,0,0,0,0,0,false);
+        if(campoNroAutoPiloto.getText().isEmpty() || campoPuntosPiloto.getText().isEmpty() ||
+           campoPolesPiloto.getText().isEmpty() || campoVueltasRapidasPiloto.getText().isEmpty() ||
+           campoPenalizacionesPiloto.getText().isEmpty() || campoAbandonosPiloto.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this,"Debe llenar todos los campos para continuar", "Error", JOptionPane.ERROR_MESSAGE);
+        }else {
+        
         //----- modificar los parametros de p -----
         p.setNumeroDeAuto(Integer.parseInt(campoNroAutoPiloto.getText()));
+        System.out.println("campo nro auto: " + campoNroAutoPiloto.getText());
         p.setPuntos(Integer.parseInt(campoPuntosPiloto.getText()));
         p.setPodios(Integer.parseInt(campoPodiosPiloto.getText()));
         p.setPoles(Integer.parseInt(campoPolesPiloto.getText()));
@@ -1414,22 +1481,22 @@ public class InterfazGrafica extends javax.swing.JFrame {
         if(pTitular.isSelected()) p.setRol("Titular");
         else if(pReserva.isSelected()) p.setRol("Reserva");
         else p.setRol("Probador");
-        if(checkFIATruePiloto.isSelected()) p.setFia(true);
-        else p.setFia(false);
+        p.setFia(checkFIATruePiloto.isSelected());
+        p.mostrarDatos();
+        System.out.println("^ piloto c/ modificaciones");
         if(Controlador.modificarPilotoInterfaz(p)){
             JOptionPane.showMessageDialog(this, "Se modificó el piloto correctamente", "Modificación Exitosa", JOptionPane.INFORMATION_MESSAGE);
             Controlador.actualizarArchivo();
         }else JOptionPane.showMessageDialog(this, "No se pudo modificar el piloto", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_botonGuardarPilotoModificadoActionPerformed
 
     private void botonCancelarPilotoModificadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarPilotoModificadoActionPerformed
         // TODO add your handling code here:
         panelContenedor.removeAll();
-        panelContenedor.setLayout(new BorderLayout());
-
-        panelContenedor.add(panelPilotos, BorderLayout.NORTH);
-        panelContenedor.add(tabbedMostrarPilotos, BorderLayout.CENTER);
-
+        panelPilotos.removeAll();
+        panelContenedorPilotos.add(panelMostrarPilotos);
+        panelContenedor.add(panelPilotos);
         panelContenedor.repaint();
         panelContenedor.revalidate();
         
@@ -1660,6 +1727,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTable jTable1;

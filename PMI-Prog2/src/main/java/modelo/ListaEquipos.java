@@ -13,16 +13,16 @@ public class ListaEquipos {
     }
 
     private void inicializarEquiposPredefinidos() {
-        equipos.add(new Equipo(1, "Ferrari",          "Italia"));
-        equipos.add(new Equipo(2, "Red Bull Racing", "Austria"));
-        equipos.add(new Equipo(3, "McLaren",         "Reino Unido"));
-        equipos.add(new Equipo(4, "Haas",            "Estados Unidos"));
-        equipos.add(new Equipo(5, "Los Na",          "Peru")); 
-        equipos.add(new Equipo(6, "Alpine",          "Francia"));
-        equipos.add(new Equipo(7, "Racing Bulls",    "Italia"));
+        equipos.add(new Equipo(1, "Alfa Romeo",      "Italia"));        
+        equipos.add(new Equipo(2, "Alpine",          "Francia"));
+        equipos.add(new Equipo(3, "Aston Martin",    "Reino Unido"));
+        equipos.add(new Equipo(4, "Ferrari",         "Italia"));
+        equipos.add(new Equipo(5, "Haas",            "Estados Unidos"));
+        equipos.add(new Equipo(6, "McLaren",         "Reino Unido")); 
+        equipos.add(new Equipo(7, "Losco F1",        "Italia"));
         equipos.add(new Equipo(8, "Williams",        "Reino Unido"));
-        equipos.add(new Equipo(9, "Aston Martin",    "Reino Unido"));
-        equipos.add(new Equipo(10,"Magios Racing",   "Alemania")); 
+        equipos.add(new Equipo(9, "Red Bull Racing", "Austria"));
+        equipos.add(new Equipo(10,"Magios Racists",  "Alemania")); 
     }
 
     public ArrayList<Equipo> getEquipos() {

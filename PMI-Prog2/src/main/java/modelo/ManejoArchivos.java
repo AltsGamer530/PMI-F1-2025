@@ -16,7 +16,7 @@ import java.io.IOException;
 public class ManejoArchivos {
     public ManejoArchivos(){}
     
-    public static boolean cargarPilotosDeArchivo(ListaPilotos lista){
+    public static boolean cargarPilotosDeArchivo(ListaPilotos lista, ListaEquipos equipos){
         File f = new File("./data/Pilotos.txt");
         String line;
         try(BufferedReader reader = new BufferedReader(new FileReader(f))){
@@ -42,6 +42,7 @@ public class ManejoArchivos {
                 aux.setAbandonos(Integer.parseInt(reader.readLine()));
                 aux.setFia(Boolean.parseBoolean(reader.readLine()));
                 lista.addPiloto(aux);
+                equipos.buscarEquipoPorNombre(aux.getEquipo()).agregarPiloto(aux);
                 System.out.println("se cargo un piloto");
                 
             }

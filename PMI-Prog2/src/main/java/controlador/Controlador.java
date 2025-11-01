@@ -17,9 +17,10 @@ import modelo.*;
 public class Controlador {
     private static ListaPilotos listaPilotos = new ListaPilotos();
     private static ListaComisarios listaComisarios = new ListaComisarios();
+    private static ListaEquipos listaEquipos = new ListaEquipos();
     
     public static boolean obtenerPilotosArchivo(){
-        return ManejoArchivos.cargarPilotosDeArchivo(listaPilotos);
+        return ManejoArchivos.cargarPilotosDeArchivo(listaPilotos, listaEquipos);
     }
 
     public static boolean obtenerComisariosArchivo(){

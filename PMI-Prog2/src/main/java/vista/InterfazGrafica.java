@@ -91,10 +91,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         grupoLicenciaFIAModificar = new javax.swing.ButtonGroup();
         jSpinner1 = new javax.swing.JSpinner();
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
-        panelComisarios = new javax.swing.JPanel();
-        botonCargarComisario = new javax.swing.JButton();
-        botonEliminarComisario = new javax.swing.JButton();
-        botonMostrarComisario = new javax.swing.JButton();
         panelEquipos = new javax.swing.JPanel();
         botonMostrarEquipos = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -177,6 +173,15 @@ public class InterfazGrafica extends javax.swing.JFrame {
         botonCancelarPilotoModificado = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         panelContenedorModificarPiloto = new javax.swing.JPanel();
+        panelComisarios = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        panelBotonesComisarios = new javax.swing.JPanel();
+        botonMostrarComisarios = new javax.swing.JButton();
+        botonCargarComisario = new javax.swing.JButton();
+        botonModificarPiloto1 = new javax.swing.JButton();
+        botonEliminarPiloto1 = new javax.swing.JButton();
+        panelContenedorPilotos1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         panelBotones = new javax.swing.JPanel();
@@ -194,51 +199,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
-
-        botonCargarComisario.setText("Cargar comisario");
-        botonCargarComisario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCargarComisarioActionPerformed(evt);
-            }
-        });
-
-        botonEliminarComisario.setText("Eliminar Comisario");
-        botonEliminarComisario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEliminarComisarioActionPerformed(evt);
-            }
-        });
-
-        botonMostrarComisario.setText("Mostrar comisarios");
-        botonMostrarComisario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonMostrarComisarioActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panelComisariosLayout = new javax.swing.GroupLayout(panelComisarios);
-        panelComisarios.setLayout(panelComisariosLayout);
-        panelComisariosLayout.setHorizontalGroup(
-            panelComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelComisariosLayout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addGroup(panelComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(botonMostrarComisario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonEliminarComisario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonCargarComisario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(710, Short.MAX_VALUE))
-        );
-        panelComisariosLayout.setVerticalGroup(
-            panelComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelComisariosLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(botonCargarComisario)
-                .addGap(18, 18, 18)
-                .addComponent(botonEliminarComisario)
-                .addGap(18, 18, 18)
-                .addComponent(botonMostrarComisario)
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
 
         panelEquipos.setMaximumSize(new java.awt.Dimension(780, 494));
 
@@ -585,7 +545,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 "Mónaco",
                 "Países Bajos",
                 "Reino Unido",
-                "Rusia"}));
+                "Rusia",
+                "Uruguay"}));
     campoNacionalidadPiloto.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             campoNacionalidadPilotoActionPerformed(evt);
@@ -1154,6 +1115,116 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     panelContenedor.add(panelModificarPiloto, "card7");
 
+    panelComisarios.setBackground(new java.awt.Color(0, 0, 0));
+    panelComisarios.setForeground(new java.awt.Color(0, 0, 0));
+    panelComisarios.setMaximumSize(new java.awt.Dimension(945, 626));
+    panelComisarios.setMinimumSize(new java.awt.Dimension(945, 626));
+
+    jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+    jPanel3.setForeground(new java.awt.Color(0, 0, 0));
+
+    jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+    jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel23.setText("Comisarios");
+
+    javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+    jPanel3.setLayout(jPanel3Layout);
+    jPanel3Layout.setHorizontalGroup(
+        jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanel3Layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jLabel23)
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    jPanel3Layout.setVerticalGroup(
+        jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanel3Layout.createSequentialGroup()
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel23))
+    );
+
+    panelBotonesComisarios.setBackground(new java.awt.Color(0, 0, 0));
+    panelBotonesComisarios.setForeground(new java.awt.Color(0, 0, 0));
+    panelBotonesComisarios.setLayout(new java.awt.GridLayout());
+
+    botonMostrarComisarios.setBackground(new java.awt.Color(204, 102, 0));
+    botonMostrarComisarios.setText("Mostrar comisarios");
+    botonMostrarComisarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonMostrarComisarios.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+    botonMostrarComisarios.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonMostrarComisariosActionPerformed(evt);
+        }
+    });
+    panelBotonesComisarios.add(botonMostrarComisarios);
+
+    botonCargarComisario.setBackground(new java.awt.Color(204, 102, 0));
+    botonCargarComisario.setText("Cargar comisario");
+    botonCargarComisario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonCargarComisario.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonCargarComisarioActionPerformed(evt);
+        }
+    });
+    panelBotonesComisarios.add(botonCargarComisario);
+
+    botonModificarPiloto1.setBackground(new java.awt.Color(204, 102, 0));
+    botonModificarPiloto1.setText("Modificar comisario");
+    botonModificarPiloto1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonModificarPiloto1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+    botonModificarPiloto1.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonModificarPiloto1ActionPerformed(evt);
+        }
+    });
+    panelBotonesComisarios.add(botonModificarPiloto1);
+
+    botonEliminarPiloto1.setBackground(new java.awt.Color(204, 102, 0));
+    botonEliminarPiloto1.setText("Eliminar piloto");
+    botonEliminarPiloto1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonEliminarPiloto1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+    botonEliminarPiloto1.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonEliminarPiloto1ActionPerformed(evt);
+        }
+    });
+    panelBotonesComisarios.add(botonEliminarPiloto1);
+
+    panelContenedorPilotos1.setBackground(new java.awt.Color(0, 0, 0));
+    panelContenedorPilotos1.setForeground(new java.awt.Color(0, 0, 0));
+    panelContenedorPilotos1.setMaximumSize(new java.awt.Dimension(945, 516));
+    panelContenedorPilotos1.setMinimumSize(new java.awt.Dimension(945, 516));
+    panelContenedorPilotos1.setLayout(new java.awt.CardLayout());
+
+    javax.swing.GroupLayout panelComisariosLayout = new javax.swing.GroupLayout(panelComisarios);
+    panelComisarios.setLayout(panelComisariosLayout);
+    panelComisariosLayout.setHorizontalGroup(
+        panelComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelComisariosLayout.createSequentialGroup()
+            .addGroup(panelComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelComisariosLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panelBotonesComisarios, javax.swing.GroupLayout.DEFAULT_SIZE, 945, Short.MAX_VALUE))
+            .addContainerGap())
+        .addGroup(panelComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelContenedorPilotos1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    panelComisariosLayout.setVerticalGroup(
+        panelComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelComisariosLayout.createSequentialGroup()
+            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(panelBotonesComisarios, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(527, Short.MAX_VALUE))
+        .addGroup(panelComisariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelComisariosLayout.createSequentialGroup()
+                .addGap(0, 102, Short.MAX_VALUE)
+                .addComponent(panelContenedorPilotos1, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)))
+    );
+
+    panelContenedor.add(panelComisarios, "card4");
+
     jPanel2.setBackground(new java.awt.Color(0, 0, 0));
     jPanel2.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -1415,18 +1486,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_botonMostrarPilotosActionPerformed
 
     
-    private void botonCargarComisarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarComisarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonCargarComisarioActionPerformed
-
-    private void botonEliminarComisarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarComisarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonEliminarComisarioActionPerformed
-
-    private void botonMostrarComisarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMostrarComisarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonMostrarComisarioActionPerformed
-
     private void botonMostrarEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMostrarEquiposActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonMostrarEquiposActionPerformed
@@ -1684,6 +1743,22 @@ public class InterfazGrafica extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pProbadorActionPerformed
 
+    private void botonMostrarComisariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMostrarComisariosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonMostrarComisariosActionPerformed
+
+    private void botonCargarComisarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarComisarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonCargarComisarioActionPerformed
+
+    private void botonModificarPiloto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarPiloto1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonModificarPiloto1ActionPerformed
+
+    private void botonEliminarPiloto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarPiloto1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonEliminarPiloto1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1694,8 +1769,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JButton botonCargarComisario;
     private javax.swing.JButton botonCargarPiloto;
     private javax.swing.JButton botonComisarios;
-    private javax.swing.JButton botonEliminarComisario;
     private javax.swing.JButton botonEliminarPiloto;
+    private javax.swing.JButton botonEliminarPiloto1;
     private javax.swing.JButton botonEquipos;
     private javax.swing.JButton botonFiltrarPorPuntos;
     private javax.swing.JButton botonFiltrarPorPuntos1;
@@ -1705,7 +1780,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JButton botonGuardarPilotoModificado;
     private javax.swing.JButton botonInicio;
     private javax.swing.JButton botonModificarPiloto;
-    private javax.swing.JButton botonMostrarComisario;
+    private javax.swing.JButton botonModificarPiloto1;
+    private javax.swing.JButton botonMostrarComisarios;
     private javax.swing.JButton botonMostrarEquipos;
     private javax.swing.JButton botonMostrarPilotos;
     private javax.swing.JButton botonPilotos;
@@ -1744,6 +1820,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel34;
@@ -1760,6 +1837,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
@@ -1772,6 +1850,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JRadioButton pTitular;
     private javax.swing.JPanel panelBotonGuardar;
     private javax.swing.JPanel panelBotones;
+    private javax.swing.JPanel panelBotonesComisarios;
     private javax.swing.JPanel panelBotonesConsultasPilotos;
     private javax.swing.JPanel panelBotonesModificarPiloto;
     private javax.swing.JPanel panelBotonesPilotos;
@@ -1782,6 +1861,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JPanel panelContenedorCargarPiloto;
     private javax.swing.JPanel panelContenedorModificarPiloto;
     private javax.swing.JPanel panelContenedorPilotos;
+    private javax.swing.JPanel panelContenedorPilotos1;
     private javax.swing.JPanel panelDatosPersonales;
     private javax.swing.JPanel panelEquipos;
     private javax.swing.JPanel panelEstadisticasPiloto;

@@ -369,957 +369,992 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
-        campoEquipoPiloto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ferrari", "Red Bull Racing", "McLaren", "Haas", "Los Na", "Alpine", "Racing Bulls", "Williams", "Aston Martin", "Magios Racing" }));
+        campoEquipoPiloto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]
+            {
+                "Alfa Romeo",
+                "Alpine",
+                "Aston Martin",
+                "Ferrari",
+                "Haas",
+                "Kick Sauber",
+                "McLaren",
+                "Mercedes",
+                "Minardi",
+                "Losco F1",
+                "Red Bull Racing",
+                "Magios Racists",
+                "Williams"
+            }));
 
-        pProbador.setBackground(new java.awt.Color(0, 0, 51));
-        grupoRolPiloto.add(pProbador);
-        pProbador.setForeground(new java.awt.Color(255, 255, 255));
-        pProbador.setText("Probador");
-        pProbador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pProbadorActionPerformed(evt);
-            }
-        });
+            pProbador.setBackground(new java.awt.Color(0, 0, 51));
+            grupoRolPiloto.add(pProbador);
+            pProbador.setForeground(new java.awt.Color(255, 255, 255));
+            pProbador.setText("Probador");
+            pProbador.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    pProbadorActionPerformed(evt);
+                }
+            });
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Número de auto");
+            jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+            jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel10.setText("Número de auto");
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Equipo");
+            jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+            jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel11.setText("Equipo");
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Rol");
+            jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+            jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel12.setText("Rol");
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Puntos");
+            jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+            jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel13.setText("Puntos");
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Podios");
+            jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+            jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel14.setText("Podios");
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Poles");
+            jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+            jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel15.setText("Poles");
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("Vueltas Rápidas");
+            jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+            jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel16.setText("Vueltas Rápidas");
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("Penalizaciones");
+            jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+            jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel17.setText("Penalizaciones");
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setText("Abandonos");
+            jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+            jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel18.setText("Abandonos");
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setText("Licencia Internacional FIA");
+            jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+            jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel19.setText("Licencia Internacional FIA");
 
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setText("Estadísticas");
+            jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+            jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel21.setText("Estadísticas");
 
-        javax.swing.GroupLayout panelEstadisticasPilotoLayout = new javax.swing.GroupLayout(panelEstadisticasPiloto);
-        panelEstadisticasPiloto.setLayout(panelEstadisticasPilotoLayout);
-        panelEstadisticasPilotoLayout.setHorizontalGroup(
-            panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel21)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
-                .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            javax.swing.GroupLayout panelEstadisticasPilotoLayout = new javax.swing.GroupLayout(panelEstadisticasPiloto);
+            panelEstadisticasPiloto.setLayout(panelEstadisticasPilotoLayout);
+            panelEstadisticasPilotoLayout.setHorizontalGroup(
+                panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                    .addGap(16, 16, 16)
+                    .addComponent(jLabel21)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
+                    .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addGap(32, 32, 32)
+                                .addComponent(campoEquipoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addGap(18, 18, 18)
+                                .addComponent(campoNroAutoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                            .addComponent(jLabel11)
-                            .addGap(32, 32, 32)
-                            .addComponent(campoEquipoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                            .addComponent(jLabel10)
+                            .addComponent(jLabel12)
+                            .addGap(63, 63, 63)
+                            .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(pReserva)
+                                .addComponent(pTitular)
+                                .addComponent(pProbador))))
+                    .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEstadisticasPilotoLayout.createSequentialGroup()
+                            .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                    .addGap(84, 84, 84)
+                                    .addComponent(jLabel13)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(campoPuntosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEstadisticasPilotoLayout.createSequentialGroup()
+                                    .addComponent(jLabel14)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(campoPodiosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(102, 102, 102)
+                            .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                    .addComponent(jLabel18)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(campoAbandonosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                    .addComponent(jLabel17)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(campoPenalizacionesPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(6, 6, 6))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEstadisticasPilotoLayout.createSequentialGroup()
+                            .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                    .addComponent(jLabel15)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(campoPolesPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                    .addComponent(jLabel16)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(campoVueltasRapidasPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGap(18, 18, 18)
-                            .addComponent(campoNroAutoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                        .addComponent(jLabel12)
-                        .addGap(63, 63, 63)
-                        .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pReserva)
-                            .addComponent(pTitular)
-                            .addComponent(pProbador))))
-                .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEstadisticasPilotoLayout.createSequentialGroup()
-                        .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                                .addGap(84, 84, 84)
-                                .addComponent(jLabel13)
-                                .addGap(18, 18, 18)
-                                .addComponent(campoPuntosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEstadisticasPilotoLayout.createSequentialGroup()
+                            .addComponent(jLabel19)
+                            .addGap(18, 18, 18)
+                            .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(checkFIAFalsePiloto)
+                                .addComponent(checkFIATruePiloto))))
+                    .addGap(21, 21, 21))
+            );
+            panelEstadisticasPilotoLayout.setVerticalGroup(
+                panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                    .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                            .addGap(71, 71, 71)
+                            .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel14)
-                                .addGap(18, 18, 18)
-                                .addComponent(campoPodiosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(102, 102, 102)
-                        .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                .addComponent(campoPodiosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel11)
+                                .addComponent(campoEquipoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel18)
-                                .addGap(18, 18, 18)
-                                .addComponent(campoAbandonosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                .addComponent(campoAbandonosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel21)
+                                .addComponent(jLabel10)
+                                .addComponent(campoNroAutoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel13)
+                                .addComponent(campoPuntosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel17)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(campoPenalizacionesPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(6, 6, 6))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEstadisticasPilotoLayout.createSequentialGroup()
-                        .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                .addComponent(campoPenalizacionesPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(64, 64, 64)))
+                    .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                            .addGap(4, 4, 4)
+                            .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel15)
-                                .addGap(18, 18, 18)
-                                .addComponent(campoPolesPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                .addComponent(campoPolesPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel19))
+                            .addGap(18, 18, 18)
+                            .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel16)
-                                .addGap(18, 18, 18)
-                                .addComponent(campoVueltasRapidasPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel19)
-                        .addGap(18, 18, 18)
-                        .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(checkFIAFalsePiloto)
-                            .addComponent(checkFIATruePiloto))))
-                .addGap(21, 21, 21))
-        );
-        panelEstadisticasPilotoLayout.setVerticalGroup(
-            panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14)
-                            .addComponent(campoPodiosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11)
-                            .addComponent(campoEquipoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18)
-                            .addComponent(campoAbandonosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel21)
-                            .addComponent(jLabel10)
-                            .addComponent(campoNroAutoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13)
-                            .addComponent(campoPuntosPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17)
-                            .addComponent(campoPenalizacionesPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(64, 64, 64)))
-                .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(campoPolesPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel19))
-                        .addGap(18, 18, 18)
-                        .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel16)
-                            .addComponent(campoVueltasRapidasPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(checkFIATruePiloto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(checkFIAFalsePiloto))
-                    .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                        .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(pTitular)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pReserva)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pProbador)))
-                .addGap(0, 24, Short.MAX_VALUE))
-        );
+                                .addComponent(campoVueltasRapidasPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(checkFIATruePiloto)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(checkFIAFalsePiloto))
+                        .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                            .addGroup(panelEstadisticasPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(panelEstadisticasPilotoLayout.createSequentialGroup()
+                                    .addGap(6, 6, 6)
+                                    .addComponent(pTitular)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(pReserva)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(pProbador)))
+                    .addGap(0, 24, Short.MAX_VALUE))
+            );
 
-        panelDatosPersonales.setBackground(new java.awt.Color(51, 0, 0));
-        panelDatosPersonales.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        panelDatosPersonales.setMaximumSize(new java.awt.Dimension(900, 140));
-        panelDatosPersonales.setMinimumSize(new java.awt.Dimension(900, 140));
-        panelDatosPersonales.setPreferredSize(new java.awt.Dimension(900, 140));
+            panelDatosPersonales.setBackground(new java.awt.Color(51, 0, 0));
+            panelDatosPersonales.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+            panelDatosPersonales.setMaximumSize(new java.awt.Dimension(900, 140));
+            panelDatosPersonales.setMinimumSize(new java.awt.Dimension(900, 140));
+            panelDatosPersonales.setPreferredSize(new java.awt.Dimension(900, 140));
 
-        campoNacionalidadPiloto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Argentina", "Chile", "Alemania", "Suecia", "Arabia Saudi", "Gran Bretaña", "Bolivia", "Brasil", "Uruguay", "Perú", "México", "Francia" }));
-        campoNacionalidadPiloto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNacionalidadPilotoActionPerformed(evt);
-            }
-        });
+            campoNacionalidadPiloto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {
+                "Alemania",
+                "Argentina",
+                "Australia",
+                "Brasil",
+                "Canadá",
+                "China",
+                "Dinamarca",
+                "España",
+                "Estados Unidos",
+                "Finlandia",
+                "Francia",
+                "Gran Bretaña",
+                "Irlanda",
+                "Italia",
+                "Japón",
+                "México",
+                "Mónaco",
+                "Países Bajos",
+                "Reino Unido",
+                "Rusia"}));
+    campoNacionalidadPiloto.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            campoNacionalidadPilotoActionPerformed(evt);
+        }
+    });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Datos");
+    jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+    jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel5.setText("Datos");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Nombre");
+    jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+    jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel6.setText("Nombre");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Apellido");
+    jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+    jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel7.setText("Apellido");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Fecha de Nacimiento");
+    jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+    jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel8.setText("Fecha de Nacimiento");
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Nacionalidad");
+    jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+    jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel9.setText("Nacionalidad");
 
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("Personales");
+    jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+    jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel20.setText("Personales");
 
-        javax.swing.GroupLayout panelDatosPersonalesLayout = new javax.swing.GroupLayout(panelDatosPersonales);
-        panelDatosPersonales.setLayout(panelDatosPersonalesLayout);
-        panelDatosPersonalesLayout.setHorizontalGroup(
-            panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel20)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(campoApellidoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(89, 89, 89)
-                        .addComponent(jLabel9)
-                        .addGap(66, 66, 66)
-                        .addComponent(campoNacionalidadPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(12, 12, 12)
-                        .addComponent(campoNombrePiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(89, 89, 89)
-                        .addComponent(jLabel8)
-                        .addGap(18, 18, 18)
-                        .addComponent(campoFechaNacPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(73, 73, 73))
-        );
-        panelDatosPersonalesLayout.setVerticalGroup(
-            panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDatosPersonalesLayout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel6)
-                        .addComponent(campoNombrePiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
-                            .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel8)
-                                .addComponent(campoFechaNacPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(1, 1, 1))))
-                .addGap(2, 2, 2)
+    javax.swing.GroupLayout panelDatosPersonalesLayout = new javax.swing.GroupLayout(panelDatosPersonales);
+    panelDatosPersonales.setLayout(panelDatosPersonalesLayout);
+    panelDatosPersonalesLayout.setHorizontalGroup(
+        panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+            .addContainerGap()
+            .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabel20)
-                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel7)
-                        .addComponent(campoApellidoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel5))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                    .addComponent(jLabel7)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(campoApellidoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(89, 89, 89)
+                    .addComponent(jLabel9)
+                    .addGap(66, 66, 66)
+                    .addComponent(campoNacionalidadPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                    .addComponent(jLabel6)
+                    .addGap(12, 12, 12)
+                    .addComponent(campoNombrePiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(89, 89, 89)
+                    .addComponent(jLabel8)
+                    .addGap(18, 18, 18)
+                    .addComponent(campoFechaNacPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGap(73, 73, 73))
+    );
+    panelDatosPersonalesLayout.setVerticalGroup(
+        panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDatosPersonalesLayout.createSequentialGroup()
+            .addGap(7, 7, 7)
+            .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel5)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel6)
+                    .addComponent(campoNombrePiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
-                            .addComponent(campoNacionalidadPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
+                        .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(campoFechaNacPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(1, 1, 1))))
+            .addGap(2, 2, 2)
+            .addComponent(jLabel20)
+            .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel7)
+                    .addComponent(campoApellidoPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                    .addGap(5, 5, 5)
+                    .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel9)
+                        .addComponent(campoNacionalidadPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addContainerGap(28, Short.MAX_VALUE))
+    );
 
-        javax.swing.GroupLayout panelCamposLayout = new javax.swing.GroupLayout(panelCampos);
-        panelCampos.setLayout(panelCamposLayout);
-        panelCamposLayout.setHorizontalGroup(
-            panelCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelEstadisticasPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(panelDatosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, 951, Short.MAX_VALUE)
-        );
-        panelCamposLayout.setVerticalGroup(
-            panelCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCamposLayout.createSequentialGroup()
-                .addComponent(panelDatosPersonales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelEstadisticasPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+    javax.swing.GroupLayout panelCamposLayout = new javax.swing.GroupLayout(panelCampos);
+    panelCampos.setLayout(panelCamposLayout);
+    panelCamposLayout.setHorizontalGroup(
+        panelCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addComponent(panelEstadisticasPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(panelDatosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, 951, Short.MAX_VALUE)
+    );
+    panelCamposLayout.setVerticalGroup(
+        panelCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCamposLayout.createSequentialGroup()
+            .addComponent(panelDatosPersonales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(panelEstadisticasPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
 
-        panelContenedor.add(panelCampos, "card8");
+    panelContenedor.add(panelCampos, "card8");
 
-        panelPilotos.setBackground(new java.awt.Color(0, 0, 0));
-        panelPilotos.setForeground(new java.awt.Color(0, 0, 0));
-        panelPilotos.setMaximumSize(new java.awt.Dimension(945, 626));
-        panelPilotos.setMinimumSize(new java.awt.Dimension(945, 626));
-        panelPilotos.setPreferredSize(new java.awt.Dimension(945, 626));
+    panelPilotos.setBackground(new java.awt.Color(0, 0, 0));
+    panelPilotos.setForeground(new java.awt.Color(0, 0, 0));
+    panelPilotos.setMaximumSize(new java.awt.Dimension(945, 626));
+    panelPilotos.setMinimumSize(new java.awt.Dimension(945, 626));
+    panelPilotos.setPreferredSize(new java.awt.Dimension(945, 626));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
+    jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+    jPanel1.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("PILOTOS");
+    jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+    jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel2.setText("PILOTOS");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2))
-        );
+    javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+    jPanel1.setLayout(jPanel1Layout);
+    jPanel1Layout.setHorizontalGroup(
+        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanel1Layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jLabel2)
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    jPanel1Layout.setVerticalGroup(
+        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanel1Layout.createSequentialGroup()
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel2))
+    );
 
-        panelBotonesPilotos.setBackground(new java.awt.Color(0, 0, 0));
-        panelBotonesPilotos.setForeground(new java.awt.Color(0, 0, 0));
-        panelBotonesPilotos.setLayout(new java.awt.GridLayout(1, 0));
+    panelBotonesPilotos.setBackground(new java.awt.Color(0, 0, 0));
+    panelBotonesPilotos.setForeground(new java.awt.Color(0, 0, 0));
+    panelBotonesPilotos.setLayout(new java.awt.GridLayout(1, 0));
 
-        botonMostrarPilotos.setBackground(new java.awt.Color(204, 102, 0));
-        botonMostrarPilotos.setText("Mostrar pilotos");
-        botonMostrarPilotos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botonMostrarPilotos.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        botonMostrarPilotos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonMostrarPilotosActionPerformed(evt);
-            }
-        });
-        panelBotonesPilotos.add(botonMostrarPilotos);
+    botonMostrarPilotos.setBackground(new java.awt.Color(204, 102, 0));
+    botonMostrarPilotos.setText("Mostrar pilotos");
+    botonMostrarPilotos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonMostrarPilotos.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+    botonMostrarPilotos.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonMostrarPilotosActionPerformed(evt);
+        }
+    });
+    panelBotonesPilotos.add(botonMostrarPilotos);
 
-        botonCargarPiloto.setBackground(new java.awt.Color(204, 102, 0));
-        botonCargarPiloto.setText("Cargar piloto");
-        botonCargarPiloto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botonCargarPiloto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCargarPilotoActionPerformed(evt);
-            }
-        });
-        panelBotonesPilotos.add(botonCargarPiloto);
+    botonCargarPiloto.setBackground(new java.awt.Color(204, 102, 0));
+    botonCargarPiloto.setText("Cargar piloto");
+    botonCargarPiloto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonCargarPiloto.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonCargarPilotoActionPerformed(evt);
+        }
+    });
+    panelBotonesPilotos.add(botonCargarPiloto);
 
-        botonModificarPiloto.setBackground(new java.awt.Color(204, 102, 0));
-        botonModificarPiloto.setText("Modificar piloto");
-        botonModificarPiloto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botonModificarPiloto.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        botonModificarPiloto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonModificarPilotoActionPerformed(evt);
-            }
-        });
-        panelBotonesPilotos.add(botonModificarPiloto);
+    botonModificarPiloto.setBackground(new java.awt.Color(204, 102, 0));
+    botonModificarPiloto.setText("Modificar piloto");
+    botonModificarPiloto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonModificarPiloto.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+    botonModificarPiloto.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonModificarPilotoActionPerformed(evt);
+        }
+    });
+    panelBotonesPilotos.add(botonModificarPiloto);
 
-        botonEliminarPiloto.setBackground(new java.awt.Color(204, 102, 0));
-        botonEliminarPiloto.setText("Eliminar piloto");
-        botonEliminarPiloto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botonEliminarPiloto.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        botonEliminarPiloto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEliminarPilotoActionPerformed(evt);
-            }
-        });
-        panelBotonesPilotos.add(botonEliminarPiloto);
+    botonEliminarPiloto.setBackground(new java.awt.Color(204, 102, 0));
+    botonEliminarPiloto.setText("Eliminar piloto");
+    botonEliminarPiloto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    botonEliminarPiloto.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+    botonEliminarPiloto.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonEliminarPilotoActionPerformed(evt);
+        }
+    });
+    panelBotonesPilotos.add(botonEliminarPiloto);
 
-        panelContenedorPilotos.setBackground(new java.awt.Color(0, 0, 0));
-        panelContenedorPilotos.setForeground(new java.awt.Color(0, 0, 0));
-        panelContenedorPilotos.setMaximumSize(new java.awt.Dimension(945, 516));
-        panelContenedorPilotos.setMinimumSize(new java.awt.Dimension(945, 516));
-        panelContenedorPilotos.setLayout(new java.awt.CardLayout());
+    panelContenedorPilotos.setBackground(new java.awt.Color(0, 0, 0));
+    panelContenedorPilotos.setForeground(new java.awt.Color(0, 0, 0));
+    panelContenedorPilotos.setMaximumSize(new java.awt.Dimension(945, 516));
+    panelContenedorPilotos.setMinimumSize(new java.awt.Dimension(945, 516));
+    panelContenedorPilotos.setLayout(new java.awt.CardLayout());
 
-        javax.swing.GroupLayout panelPilotosLayout = new javax.swing.GroupLayout(panelPilotos);
-        panelPilotos.setLayout(panelPilotosLayout);
-        panelPilotosLayout.setHorizontalGroup(
-            panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelPilotosLayout.createSequentialGroup()
-                .addGroup(panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelPilotosLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(panelBotonesPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, 945, Short.MAX_VALUE))
-                .addContainerGap())
+    javax.swing.GroupLayout panelPilotosLayout = new javax.swing.GroupLayout(panelPilotos);
+    panelPilotos.setLayout(panelPilotosLayout);
+    panelPilotosLayout.setHorizontalGroup(
+        panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelPilotosLayout.createSequentialGroup()
             .addGroup(panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panelContenedorPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panelPilotosLayout.setVerticalGroup(
-            panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelPilotosLayout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelBotonesPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(527, Short.MAX_VALUE))
-            .addGroup(panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPilotosLayout.createSequentialGroup()
-                    .addGap(0, 102, Short.MAX_VALUE)
-                    .addComponent(panelContenedorPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        panelContenedor.add(panelPilotos, "card4");
-
-        panelMostrarPilotos.setBackground(new java.awt.Color(0, 0, 0));
-        panelMostrarPilotos.setForeground(new java.awt.Color(0, 0, 0));
-        panelMostrarPilotos.setMaximumSize(new java.awt.Dimension(945, 518));
-        panelMostrarPilotos.setMinimumSize(new java.awt.Dimension(945, 518));
-        panelMostrarPilotos.setPreferredSize(new java.awt.Dimension(945, 518));
-
-        tabbedMostrarPilotos.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentAdded(java.awt.event.ContainerEvent evt) {
-                tabbedMostrarPilotosComponentAdded(evt);
-            }
-        });
-
-        tablaDatosPersonalesPilotos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Nombre", "Apellido", "Fecha de Nacimiento", "Edad", "Pais de origen"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        scrollDatosPersonalesPilotos.setViewportView(tablaDatosPersonalesPilotos);
-
-        tabbedMostrarPilotos.addTab("Datos personales", scrollDatosPersonalesPilotos);
-
-        tablaEstadisticasPilotos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Apellido", "Numero de Auto", "Equipo", "Rol", "Puntos", "Podios", "Poles", "Vueltas", "Penalizaciones", "Abandonos", "Licencia FIA"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        scrollEstadisticasPilotos.setViewportView(tablaEstadisticasPilotos);
-
-        tabbedMostrarPilotos.addTab("Estadísticas", scrollEstadisticasPilotos);
-
-        panelBotonesConsultasPilotos.setBackground(new java.awt.Color(0, 0, 0));
-        panelBotonesConsultasPilotos.setForeground(new java.awt.Color(0, 0, 0));
-
-        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel32.setText("Filtrar por puntos:");
-
-        campoFiltrarPuntos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoFiltrarPuntosActionPerformed(evt);
-            }
-        });
-
-        botonFiltrarPorPuntos1.setBackground(new java.awt.Color(255, 153, 0));
-        botonFiltrarPorPuntos1.setForeground(new java.awt.Color(255, 255, 255));
-        botonFiltrarPorPuntos1.setText("Filtrar");
-
-        contenedorBotonesConsultasPilotos.setBackground(new java.awt.Color(0, 0, 0));
-        contenedorBotonesConsultasPilotos.setForeground(new java.awt.Color(0, 0, 0));
-        contenedorBotonesConsultasPilotos.setLayout(new java.awt.GridLayout(1, 0));
-
-        botonFiltrarPorPuntos2.setBackground(new java.awt.Color(255, 153, 0));
-        botonFiltrarPorPuntos2.setForeground(new java.awt.Color(255, 255, 255));
-        botonFiltrarPorPuntos2.setText("Piloto con más penalizaciones");
-        contenedorBotonesConsultasPilotos.add(botonFiltrarPorPuntos2);
-
-        botonFiltrarPorPuntos.setBackground(new java.awt.Color(255, 153, 0));
-        botonFiltrarPorPuntos.setForeground(new java.awt.Color(255, 255, 255));
-        botonFiltrarPorPuntos.setText("Cantidad de pilotos por Rol");
-        botonFiltrarPorPuntos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonFiltrarPorPuntosActionPerformed(evt);
-            }
-        });
-        contenedorBotonesConsultasPilotos.add(botonFiltrarPorPuntos);
-
-        botonFiltrarPorPuntos3.setBackground(new java.awt.Color(255, 153, 0));
-        botonFiltrarPorPuntos3.setForeground(new java.awt.Color(255, 255, 255));
-        botonFiltrarPorPuntos3.setText("TOP 3 Pilotos con más podios");
-        botonFiltrarPorPuntos3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonFiltrarPorPuntos3ActionPerformed(evt);
-            }
-        });
-        contenedorBotonesConsultasPilotos.add(botonFiltrarPorPuntos3);
-
-        javax.swing.GroupLayout panelBotonesConsultasPilotosLayout = new javax.swing.GroupLayout(panelBotonesConsultasPilotos);
-        panelBotonesConsultasPilotos.setLayout(panelBotonesConsultasPilotosLayout);
-        panelBotonesConsultasPilotosLayout.setHorizontalGroup(
-            panelBotonesConsultasPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBotonesConsultasPilotosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoFiltrarPuntos, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botonFiltrarPorPuntos1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(contenedorBotonesConsultasPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, 677, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        panelBotonesConsultasPilotosLayout.setVerticalGroup(
-            panelBotonesConsultasPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBotonesConsultasPilotosLayout.createSequentialGroup()
-                .addGroup(panelBotonesConsultasPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelBotonesConsultasPilotosLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(panelBotonesConsultasPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                            .addComponent(campoFiltrarPuntos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botonFiltrarPorPuntos1)))
-                    .addComponent(contenedorBotonesConsultasPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout panelMostrarPilotosLayout = new javax.swing.GroupLayout(panelMostrarPilotos);
-        panelMostrarPilotos.setLayout(panelMostrarPilotosLayout);
-        panelMostrarPilotosLayout.setHorizontalGroup(
-            panelMostrarPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelMostrarPilotosLayout.createSequentialGroup()
-                .addComponent(tabbedMostrarPilotos)
-                .addContainerGap())
-            .addGroup(panelMostrarPilotosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelBotonesConsultasPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panelMostrarPilotosLayout.setVerticalGroup(
-            panelMostrarPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMostrarPilotosLayout.createSequentialGroup()
-                .addContainerGap(86, Short.MAX_VALUE)
-                .addComponent(panelBotonesConsultasPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tabbedMostrarPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        panelContenedor.add(panelMostrarPilotos, "card2");
-
-        panelCargarPiloto.setBackground(new java.awt.Color(0, 0, 0));
-        panelCargarPiloto.setForeground(new java.awt.Color(0, 0, 0));
-        panelCargarPiloto.setMaximumSize(new java.awt.Dimension(900, 476));
-        panelCargarPiloto.setMinimumSize(new java.awt.Dimension(900, 476));
-        panelCargarPiloto.setPreferredSize(new java.awt.Dimension(900, 476));
-
-        panelBotonGuardar.setBackground(new java.awt.Color(0, 0, 0));
-        panelBotonGuardar.setForeground(new java.awt.Color(0, 0, 0));
-        panelBotonGuardar.setMaximumSize(new java.awt.Dimension(900, 40));
-        panelBotonGuardar.setMinimumSize(new java.awt.Dimension(900, 40));
-        panelBotonGuardar.setPreferredSize(new java.awt.Dimension(900, 40));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("CARGA DE PILOTO");
-
-        botonGuardarPiloto.setBackground(new java.awt.Color(204, 102, 0));
-        botonGuardarPiloto.setText("Guardar");
-        botonGuardarPiloto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonGuardarPilotoActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panelBotonGuardarLayout = new javax.swing.GroupLayout(panelBotonGuardar);
-        panelBotonGuardar.setLayout(panelBotonGuardarLayout);
-        panelBotonGuardarLayout.setHorizontalGroup(
-            panelBotonGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBotonGuardarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 549, Short.MAX_VALUE)
-                .addComponent(botonGuardarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        panelBotonGuardarLayout.setVerticalGroup(
-            panelBotonGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBotonGuardarLayout.createSequentialGroup()
-                .addGroup(panelBotonGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                    .addComponent(botonGuardarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        panelContenedorCargarPiloto.setBackground(new java.awt.Color(0, 0, 0));
-        panelContenedorCargarPiloto.setMaximumSize(new java.awt.Dimension(945, 504));
-        panelContenedorCargarPiloto.setMinimumSize(new java.awt.Dimension(945, 504));
-        panelContenedorCargarPiloto.setPreferredSize(new java.awt.Dimension(945, 504));
-
-        javax.swing.GroupLayout panelContenedorCargarPilotoLayout = new javax.swing.GroupLayout(panelContenedorCargarPiloto);
-        panelContenedorCargarPiloto.setLayout(panelContenedorCargarPilotoLayout);
-        panelContenedorCargarPilotoLayout.setHorizontalGroup(
-            panelContenedorCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 945, Short.MAX_VALUE)
-        );
-        panelContenedorCargarPilotoLayout.setVerticalGroup(
-            panelContenedorCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 504, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout panelCargarPilotoLayout = new javax.swing.GroupLayout(panelCargarPiloto);
-        panelCargarPiloto.setLayout(panelCargarPilotoLayout);
-        panelCargarPilotoLayout.setHorizontalGroup(
-            panelCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCargarPilotoLayout.createSequentialGroup()
-                .addGroup(panelCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelBotonGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, 951, Short.MAX_VALUE)
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelCargarPilotoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(panelContenedorCargarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        panelCargarPilotoLayout.setVerticalGroup(
-            panelCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCargarPilotoLayout.createSequentialGroup()
-                .addComponent(panelBotonGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelContenedorCargarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        panelContenedor.add(panelCargarPiloto, "card6");
-
-        panelModificarPiloto.setBackground(new java.awt.Color(0, 0, 0));
-        panelModificarPiloto.setMaximumSize(new java.awt.Dimension(945, 518));
-        panelModificarPiloto.setMinimumSize(new java.awt.Dimension(945, 518));
-        panelModificarPiloto.setPreferredSize(new java.awt.Dimension(945, 518));
-
-        panelBotonesModificarPiloto.setBackground(new java.awt.Color(0, 0, 0));
-
-        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel22.setText("Modificar Piloto");
-
-        botonGuardarPilotoModificado.setBackground(new java.awt.Color(204, 102, 0));
-        botonGuardarPilotoModificado.setText("Guardar Cambios");
-        botonGuardarPilotoModificado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonGuardarPilotoModificadoActionPerformed(evt);
-            }
-        });
-
-        botonCancelarPilotoModificado.setBackground(new java.awt.Color(204, 102, 0));
-        botonCancelarPilotoModificado.setText("Cancelar");
-        botonCancelarPilotoModificado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCancelarPilotoModificadoActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panelBotonesModificarPilotoLayout = new javax.swing.GroupLayout(panelBotonesModificarPiloto);
-        panelBotonesModificarPiloto.setLayout(panelBotonesModificarPilotoLayout);
-        panelBotonesModificarPilotoLayout.setHorizontalGroup(
-            panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
-                .addGroup(panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 432, Short.MAX_VALUE)
-                        .addComponent(botonCancelarPilotoModificado)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botonGuardarPilotoModificado))
-                    .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jSeparator1)))
-                .addContainerGap())
-        );
-        panelBotonesModificarPilotoLayout.setVerticalGroup(
-            panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
-                .addGroup(panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(botonCancelarPilotoModificado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botonGuardarPilotoModificado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        panelContenedorModificarPiloto.setBackground(new java.awt.Color(0, 0, 0));
-        panelContenedorModificarPiloto.setMaximumSize(new java.awt.Dimension(945, 504));
-        panelContenedorModificarPiloto.setMinimumSize(new java.awt.Dimension(945, 504));
-        panelContenedorModificarPiloto.setPreferredSize(new java.awt.Dimension(945, 504));
-
-        javax.swing.GroupLayout panelContenedorModificarPilotoLayout = new javax.swing.GroupLayout(panelContenedorModificarPiloto);
-        panelContenedorModificarPiloto.setLayout(panelContenedorModificarPilotoLayout);
-        panelContenedorModificarPilotoLayout.setHorizontalGroup(
-            panelContenedorModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        panelContenedorModificarPilotoLayout.setVerticalGroup(
-            panelContenedorModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 504, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout panelModificarPilotoLayout = new javax.swing.GroupLayout(panelModificarPiloto);
-        panelModificarPiloto.setLayout(panelModificarPilotoLayout);
-        panelModificarPilotoLayout.setHorizontalGroup(
-            panelModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBotonesModificarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(panelModificarPilotoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelContenedorModificarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panelModificarPilotoLayout.setVerticalGroup(
-            panelModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelModificarPilotoLayout.createSequentialGroup()
-                .addComponent(panelBotonesModificarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelContenedorModificarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        panelContenedor.add(panelModificarPiloto, "card7");
-
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel2.setForeground(new java.awt.Color(0, 0, 0));
-
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\Imagenes\\f1logo_horizontal.png")); // NOI18N
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(504, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        panelBotones.setBackground(new java.awt.Color(0, 0, 0));
-        panelBotones.setForeground(new java.awt.Color(0, 0, 0));
-        panelBotones.setMaximumSize(new java.awt.Dimension(223, 610));
-        panelBotones.setMinimumSize(new java.awt.Dimension(223, 610));
-        panelBotones.setPreferredSize(new java.awt.Dimension(223, 610));
-
-        jLabel35.setFont(new java.awt.Font("Bauhaus 93", 0, 36)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel35.setText("Opciones");
-
-        botonInicio.setBackground(new java.awt.Color(204, 102, 0));
-        botonInicio.setText("Inicio");
-        botonInicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonInicioActionPerformed(evt);
-            }
-        });
-
-        contenedorBotones.setBackground(new java.awt.Color(0, 0, 0));
-        contenedorBotones.setForeground(new java.awt.Color(0, 0, 0));
-
-        botonComisarios.setBackground(new java.awt.Color(204, 102, 0));
-        botonComisarios.setText("Comisarios");
-        botonComisarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonComisariosActionPerformed(evt);
-            }
-        });
-
-        jSeparator6.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
-        jSeparator6.setToolTipText("");
-
-        botonPilotos.setBackground(new java.awt.Color(204, 102, 0));
-        botonPilotos.setText("Pilotos");
-        botonPilotos.setMaximumSize(new java.awt.Dimension(93, 27));
-        botonPilotos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonPilotosActionPerformed(evt);
-            }
-        });
-
-        botonEquipos.setBackground(new java.awt.Color(204, 102, 0));
-        botonEquipos.setText("Equipos");
-        botonEquipos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEquiposActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout contenedorBotonesLayout = new javax.swing.GroupLayout(contenedorBotones);
-        contenedorBotones.setLayout(contenedorBotonesLayout);
-        contenedorBotonesLayout.setHorizontalGroup(
-            contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contenedorBotonesLayout.createSequentialGroup()
-                .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(botonComisarios, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addComponent(botonPilotos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(botonEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(12, Short.MAX_VALUE))
-            .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(contenedorBotonesLayout.createSequentialGroup()
+                .addGroup(panelPilotosLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jSeparator6, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-        contenedorBotonesLayout.setVerticalGroup(
-            contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panelBotonesPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, 945, Short.MAX_VALUE))
+            .addContainerGap())
+        .addGroup(panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelContenedorPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    panelPilotosLayout.setVerticalGroup(
+        panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelPilotosLayout.createSequentialGroup()
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(panelBotonesPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(527, Short.MAX_VALUE))
+        .addGroup(panelPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPilotosLayout.createSequentialGroup()
+                .addGap(0, 102, Short.MAX_VALUE)
+                .addComponent(panelContenedorPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)))
+    );
+
+    panelContenedor.add(panelPilotos, "card4");
+
+    panelMostrarPilotos.setBackground(new java.awt.Color(0, 0, 0));
+    panelMostrarPilotos.setForeground(new java.awt.Color(0, 0, 0));
+    panelMostrarPilotos.setMaximumSize(new java.awt.Dimension(945, 518));
+    panelMostrarPilotos.setMinimumSize(new java.awt.Dimension(945, 518));
+    panelMostrarPilotos.setPreferredSize(new java.awt.Dimension(945, 518));
+
+    tabbedMostrarPilotos.addContainerListener(new java.awt.event.ContainerAdapter() {
+        public void componentAdded(java.awt.event.ContainerEvent evt) {
+            tabbedMostrarPilotosComponentAdded(evt);
+        }
+    });
+
+    tablaDatosPersonalesPilotos.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null}
+        },
+        new String [] {
+            "Nombre", "Apellido", "Fecha de Nacimiento", "Edad", "Pais de origen"
+        }
+    ) {
+        Class[] types = new Class [] {
+            java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class
+        };
+        boolean[] canEdit = new boolean [] {
+            false, false, false, false, false
+        };
+
+        public Class getColumnClass(int columnIndex) {
+            return types [columnIndex];
+        }
+
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return canEdit [columnIndex];
+        }
+    });
+    scrollDatosPersonalesPilotos.setViewportView(tablaDatosPersonalesPilotos);
+
+    tabbedMostrarPilotos.addTab("Datos personales", scrollDatosPersonalesPilotos);
+
+    tablaEstadisticasPilotos.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {
+            {null, null, null, null, null, null, null, null, null, null, null},
+            {null, null, null, null, null, null, null, null, null, null, null},
+            {null, null, null, null, null, null, null, null, null, null, null},
+            {null, null, null, null, null, null, null, null, null, null, null}
+        },
+        new String [] {
+            "Apellido", "Numero de Auto", "Equipo", "Rol", "Puntos", "Podios", "Poles", "Vueltas", "Penalizaciones", "Abandonos", "Licencia FIA"
+        }
+    ) {
+        Class[] types = new Class [] {
+            java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
+        };
+        boolean[] canEdit = new boolean [] {
+            false, false, false, false, false, false, false, false, false, false, false
+        };
+
+        public Class getColumnClass(int columnIndex) {
+            return types [columnIndex];
+        }
+
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return canEdit [columnIndex];
+        }
+    });
+    scrollEstadisticasPilotos.setViewportView(tablaEstadisticasPilotos);
+
+    tabbedMostrarPilotos.addTab("Estadísticas", scrollEstadisticasPilotos);
+
+    panelBotonesConsultasPilotos.setBackground(new java.awt.Color(0, 0, 0));
+    panelBotonesConsultasPilotos.setForeground(new java.awt.Color(0, 0, 0));
+
+    jLabel32.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel32.setText("Filtrar por puntos:");
+
+    campoFiltrarPuntos.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            campoFiltrarPuntosActionPerformed(evt);
+        }
+    });
+
+    botonFiltrarPorPuntos1.setBackground(new java.awt.Color(255, 153, 0));
+    botonFiltrarPorPuntos1.setForeground(new java.awt.Color(255, 255, 255));
+    botonFiltrarPorPuntos1.setText("Filtrar");
+
+    contenedorBotonesConsultasPilotos.setBackground(new java.awt.Color(0, 0, 0));
+    contenedorBotonesConsultasPilotos.setForeground(new java.awt.Color(0, 0, 0));
+    contenedorBotonesConsultasPilotos.setLayout(new java.awt.GridLayout(1, 0));
+
+    botonFiltrarPorPuntos2.setBackground(new java.awt.Color(255, 153, 0));
+    botonFiltrarPorPuntos2.setForeground(new java.awt.Color(255, 255, 255));
+    botonFiltrarPorPuntos2.setText("Piloto con más penalizaciones");
+    contenedorBotonesConsultasPilotos.add(botonFiltrarPorPuntos2);
+
+    botonFiltrarPorPuntos.setBackground(new java.awt.Color(255, 153, 0));
+    botonFiltrarPorPuntos.setForeground(new java.awt.Color(255, 255, 255));
+    botonFiltrarPorPuntos.setText("Cantidad de pilotos por Rol");
+    botonFiltrarPorPuntos.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonFiltrarPorPuntosActionPerformed(evt);
+        }
+    });
+    contenedorBotonesConsultasPilotos.add(botonFiltrarPorPuntos);
+
+    botonFiltrarPorPuntos3.setBackground(new java.awt.Color(255, 153, 0));
+    botonFiltrarPorPuntos3.setForeground(new java.awt.Color(255, 255, 255));
+    botonFiltrarPorPuntos3.setText("TOP 3 Pilotos con más podios");
+    botonFiltrarPorPuntos3.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonFiltrarPorPuntos3ActionPerformed(evt);
+        }
+    });
+    contenedorBotonesConsultasPilotos.add(botonFiltrarPorPuntos3);
+
+    javax.swing.GroupLayout panelBotonesConsultasPilotosLayout = new javax.swing.GroupLayout(panelBotonesConsultasPilotos);
+    panelBotonesConsultasPilotos.setLayout(panelBotonesConsultasPilotosLayout);
+    panelBotonesConsultasPilotosLayout.setHorizontalGroup(
+        panelBotonesConsultasPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelBotonesConsultasPilotosLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(campoFiltrarPuntos, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addComponent(botonFiltrarPorPuntos1)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addComponent(contenedorBotonesConsultasPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, 677, Short.MAX_VALUE)
+            .addContainerGap())
+    );
+    panelBotonesConsultasPilotosLayout.setVerticalGroup(
+        panelBotonesConsultasPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelBotonesConsultasPilotosLayout.createSequentialGroup()
+            .addGroup(panelBotonesConsultasPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelBotonesConsultasPilotosLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(panelBotonesConsultasPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                        .addComponent(campoFiltrarPuntos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonFiltrarPorPuntos1)))
+                .addComponent(contenedorBotonesConsultasPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addContainerGap())
+    );
+
+    javax.swing.GroupLayout panelMostrarPilotosLayout = new javax.swing.GroupLayout(panelMostrarPilotos);
+    panelMostrarPilotos.setLayout(panelMostrarPilotosLayout);
+    panelMostrarPilotosLayout.setHorizontalGroup(
+        panelMostrarPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelMostrarPilotosLayout.createSequentialGroup()
+            .addComponent(tabbedMostrarPilotos)
+            .addContainerGap())
+        .addGroup(panelMostrarPilotosLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(panelBotonesConsultasPilotos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    panelMostrarPilotosLayout.setVerticalGroup(
+        panelMostrarPilotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMostrarPilotosLayout.createSequentialGroup()
+            .addContainerGap(86, Short.MAX_VALUE)
+            .addComponent(panelBotonesConsultasPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(tabbedMostrarPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
+    );
+
+    panelContenedor.add(panelMostrarPilotos, "card2");
+
+    panelCargarPiloto.setBackground(new java.awt.Color(0, 0, 0));
+    panelCargarPiloto.setForeground(new java.awt.Color(0, 0, 0));
+    panelCargarPiloto.setMaximumSize(new java.awt.Dimension(900, 476));
+    panelCargarPiloto.setMinimumSize(new java.awt.Dimension(900, 476));
+    panelCargarPiloto.setPreferredSize(new java.awt.Dimension(900, 476));
+
+    panelBotonGuardar.setBackground(new java.awt.Color(0, 0, 0));
+    panelBotonGuardar.setForeground(new java.awt.Color(0, 0, 0));
+    panelBotonGuardar.setMaximumSize(new java.awt.Dimension(900, 40));
+    panelBotonGuardar.setMinimumSize(new java.awt.Dimension(900, 40));
+    panelBotonGuardar.setPreferredSize(new java.awt.Dimension(900, 40));
+
+    jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+    jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel4.setText("CARGA DE PILOTO");
+
+    botonGuardarPiloto.setBackground(new java.awt.Color(204, 102, 0));
+    botonGuardarPiloto.setText("Guardar");
+    botonGuardarPiloto.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonGuardarPilotoActionPerformed(evt);
+        }
+    });
+
+    javax.swing.GroupLayout panelBotonGuardarLayout = new javax.swing.GroupLayout(panelBotonGuardar);
+    panelBotonGuardar.setLayout(panelBotonGuardarLayout);
+    panelBotonGuardarLayout.setHorizontalGroup(
+        panelBotonGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelBotonGuardarLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 549, Short.MAX_VALUE)
+            .addComponent(botonGuardarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
+    );
+    panelBotonGuardarLayout.setVerticalGroup(
+        panelBotonGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelBotonGuardarLayout.createSequentialGroup()
+            .addGroup(panelBotonGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addComponent(botonGuardarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE))
+    );
+
+    panelContenedorCargarPiloto.setBackground(new java.awt.Color(0, 0, 0));
+    panelContenedorCargarPiloto.setMaximumSize(new java.awt.Dimension(945, 504));
+    panelContenedorCargarPiloto.setMinimumSize(new java.awt.Dimension(945, 504));
+    panelContenedorCargarPiloto.setPreferredSize(new java.awt.Dimension(945, 504));
+
+    javax.swing.GroupLayout panelContenedorCargarPilotoLayout = new javax.swing.GroupLayout(panelContenedorCargarPiloto);
+    panelContenedorCargarPiloto.setLayout(panelContenedorCargarPilotoLayout);
+    panelContenedorCargarPilotoLayout.setHorizontalGroup(
+        panelContenedorCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 945, Short.MAX_VALUE)
+    );
+    panelContenedorCargarPilotoLayout.setVerticalGroup(
+        panelContenedorCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 504, Short.MAX_VALUE)
+    );
+
+    javax.swing.GroupLayout panelCargarPilotoLayout = new javax.swing.GroupLayout(panelCargarPiloto);
+    panelCargarPiloto.setLayout(panelCargarPilotoLayout);
+    panelCargarPilotoLayout.setHorizontalGroup(
+        panelCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelCargarPilotoLayout.createSequentialGroup()
+            .addGroup(panelCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(panelBotonGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, 951, Short.MAX_VALUE)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(panelCargarPilotoLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(panelContenedorCargarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addContainerGap())
+    );
+    panelCargarPilotoLayout.setVerticalGroup(
+        panelCargarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelCargarPilotoLayout.createSequentialGroup()
+            .addComponent(panelBotonGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelContenedorCargarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
+    );
+
+    panelContenedor.add(panelCargarPiloto, "card6");
+
+    panelModificarPiloto.setBackground(new java.awt.Color(0, 0, 0));
+    panelModificarPiloto.setMaximumSize(new java.awt.Dimension(945, 518));
+    panelModificarPiloto.setMinimumSize(new java.awt.Dimension(945, 518));
+    panelModificarPiloto.setPreferredSize(new java.awt.Dimension(945, 518));
+
+    panelBotonesModificarPiloto.setBackground(new java.awt.Color(0, 0, 0));
+
+    jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+    jLabel22.setText("Modificar Piloto");
+
+    botonGuardarPilotoModificado.setBackground(new java.awt.Color(204, 102, 0));
+    botonGuardarPilotoModificado.setText("Guardar Cambios");
+    botonGuardarPilotoModificado.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonGuardarPilotoModificadoActionPerformed(evt);
+        }
+    });
+
+    botonCancelarPilotoModificado.setBackground(new java.awt.Color(204, 102, 0));
+    botonCancelarPilotoModificado.setText("Cancelar");
+    botonCancelarPilotoModificado.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonCancelarPilotoModificadoActionPerformed(evt);
+        }
+    });
+
+    javax.swing.GroupLayout panelBotonesModificarPilotoLayout = new javax.swing.GroupLayout(panelBotonesModificarPiloto);
+    panelBotonesModificarPiloto.setLayout(panelBotonesModificarPilotoLayout);
+    panelBotonesModificarPilotoLayout.setHorizontalGroup(
+        panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
+            .addGroup(panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
+                    .addGap(18, 18, 18)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 432, Short.MAX_VALUE)
+                    .addComponent(botonCancelarPilotoModificado)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(botonGuardarPilotoModificado))
+                .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jSeparator1)))
+            .addContainerGap())
+    );
+    panelBotonesModificarPilotoLayout.setVerticalGroup(
+        panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
+            .addGroup(panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
+                    .addGap(11, 11, 11)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelBotonesModificarPilotoLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(panelBotonesModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(botonCancelarPilotoModificado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonGuardarPilotoModificado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
+    );
+
+    panelContenedorModificarPiloto.setBackground(new java.awt.Color(0, 0, 0));
+    panelContenedorModificarPiloto.setMaximumSize(new java.awt.Dimension(945, 504));
+    panelContenedorModificarPiloto.setMinimumSize(new java.awt.Dimension(945, 504));
+    panelContenedorModificarPiloto.setPreferredSize(new java.awt.Dimension(945, 504));
+
+    javax.swing.GroupLayout panelContenedorModificarPilotoLayout = new javax.swing.GroupLayout(panelContenedorModificarPiloto);
+    panelContenedorModificarPiloto.setLayout(panelContenedorModificarPilotoLayout);
+    panelContenedorModificarPilotoLayout.setHorizontalGroup(
+        panelContenedorModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 0, Short.MAX_VALUE)
+    );
+    panelContenedorModificarPilotoLayout.setVerticalGroup(
+        panelContenedorModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 504, Short.MAX_VALUE)
+    );
+
+    javax.swing.GroupLayout panelModificarPilotoLayout = new javax.swing.GroupLayout(panelModificarPiloto);
+    panelModificarPiloto.setLayout(panelModificarPilotoLayout);
+    panelModificarPilotoLayout.setHorizontalGroup(
+        panelModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addComponent(panelBotonesModificarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addGroup(panelModificarPilotoLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(panelContenedorModificarPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    panelModificarPilotoLayout.setVerticalGroup(
+        panelModificarPilotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelModificarPilotoLayout.createSequentialGroup()
+            .addComponent(panelBotonesModificarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelContenedorModificarPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
+    );
+
+    panelContenedor.add(panelModificarPiloto, "card7");
+
+    jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+    jPanel2.setForeground(new java.awt.Color(0, 0, 0));
+
+    jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+    jLabel1.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
+    jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+    jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\Imagenes\\f1logo_horizontal.png")); // NOI18N
+
+    javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+    jPanel2.setLayout(jPanel2Layout);
+    jPanel2Layout.setHorizontalGroup(
+        jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanel2Layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jLabel1)
+            .addContainerGap(504, Short.MAX_VALUE))
+    );
+    jPanel2Layout.setVerticalGroup(
+        jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+    );
+
+    panelBotones.setBackground(new java.awt.Color(0, 0, 0));
+    panelBotones.setForeground(new java.awt.Color(0, 0, 0));
+    panelBotones.setMaximumSize(new java.awt.Dimension(223, 610));
+    panelBotones.setMinimumSize(new java.awt.Dimension(223, 610));
+    panelBotones.setPreferredSize(new java.awt.Dimension(223, 610));
+
+    jLabel35.setFont(new java.awt.Font("Bauhaus 93", 0, 36)); // NOI18N
+    jLabel35.setForeground(new java.awt.Color(255, 255, 255));
+    jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+    jLabel35.setText("Opciones");
+
+    botonInicio.setBackground(new java.awt.Color(204, 102, 0));
+    botonInicio.setText("Inicio");
+    botonInicio.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonInicioActionPerformed(evt);
+        }
+    });
+
+    contenedorBotones.setBackground(new java.awt.Color(0, 0, 0));
+    contenedorBotones.setForeground(new java.awt.Color(0, 0, 0));
+
+    botonComisarios.setBackground(new java.awt.Color(204, 102, 0));
+    botonComisarios.setText("Comisarios");
+    botonComisarios.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonComisariosActionPerformed(evt);
+        }
+    });
+
+    jSeparator6.setBackground(new java.awt.Color(0, 0, 0));
+    jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
+    jSeparator6.setToolTipText("");
+
+    botonPilotos.setBackground(new java.awt.Color(204, 102, 0));
+    botonPilotos.setText("Pilotos");
+    botonPilotos.setMaximumSize(new java.awt.Dimension(93, 27));
+    botonPilotos.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonPilotosActionPerformed(evt);
+        }
+    });
+
+    botonEquipos.setBackground(new java.awt.Color(204, 102, 0));
+    botonEquipos.setText("Equipos");
+    botonEquipos.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            botonEquiposActionPerformed(evt);
+        }
+    });
+
+    javax.swing.GroupLayout contenedorBotonesLayout = new javax.swing.GroupLayout(contenedorBotones);
+    contenedorBotones.setLayout(contenedorBotonesLayout);
+    contenedorBotonesLayout.setHorizontalGroup(
+        contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(contenedorBotonesLayout.createSequentialGroup()
+            .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(botonComisarios, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                    .addComponent(botonPilotos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(botonEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addContainerGap(12, Short.MAX_VALUE))
+        .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenedorBotonesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botonPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(103, 103, 103)
-                .addComponent(botonComisarios, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78)
-                .addComponent(botonEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(78, Short.MAX_VALUE))
-            .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorBotonesLayout.createSequentialGroup()
-                    .addContainerGap(278, Short.MAX_VALUE)
-                    .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(60, 60, 60)))
-        );
+                .addComponent(jSeparator6, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                .addContainerGap()))
+    );
+    contenedorBotonesLayout.setVerticalGroup(
+        contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(contenedorBotonesLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(botonPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(103, 103, 103)
+            .addComponent(botonComisarios, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(78, 78, 78)
+            .addComponent(botonEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(78, Short.MAX_VALUE))
+        .addGroup(contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorBotonesLayout.createSequentialGroup()
+                .addContainerGap(278, Short.MAX_VALUE)
+                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)))
+    );
 
-        contenedorIconos.setBackground(new java.awt.Color(0, 0, 0));
-        contenedorIconos.setForeground(new java.awt.Color(0, 0, 0));
+    contenedorIconos.setBackground(new java.awt.Color(0, 0, 0));
+    contenedorIconos.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel37.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\Imagenes\\iconoPiloto.png")); // NOI18N
+    jLabel37.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\Imagenes\\iconoPiloto.png")); // NOI18N
 
-        jLabel38.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\Imagenes\\iconoComisario.png")); // NOI18N
+    jLabel38.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\Imagenes\\iconoComisario.png")); // NOI18N
 
-        jLabel39.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\Imagenes\\iconoEquipo.png")); // NOI18N
+    jLabel39.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\PMI-F1-2025\\PMI-Prog2\\src\\main\\java\\Imagenes\\iconoEquipo.png")); // NOI18N
 
-        javax.swing.GroupLayout contenedorIconosLayout = new javax.swing.GroupLayout(contenedorIconos);
-        contenedorIconos.setLayout(contenedorIconosLayout);
-        contenedorIconosLayout.setHorizontalGroup(
-            contenedorIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contenedorIconosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(contenedorIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorIconosLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(contenedorIconosLayout.createSequentialGroup()
-                        .addGroup(contenedorIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel38)
-                            .addComponent(jLabel39))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        contenedorIconosLayout.setVerticalGroup(
-            contenedorIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contenedorIconosLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80)
-                .addComponent(jLabel38)
-                .addGap(68, 68, 68)
-                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(132, Short.MAX_VALUE))
-        );
+    javax.swing.GroupLayout contenedorIconosLayout = new javax.swing.GroupLayout(contenedorIconos);
+    contenedorIconos.setLayout(contenedorIconosLayout);
+    contenedorIconosLayout.setHorizontalGroup(
+        contenedorIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(contenedorIconosLayout.createSequentialGroup()
+            .addContainerGap()
+            .addGroup(contenedorIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorIconosLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(contenedorIconosLayout.createSequentialGroup()
+                    .addGroup(contenedorIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel38)
+                        .addComponent(jLabel39))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addContainerGap())
+    );
+    contenedorIconosLayout.setVerticalGroup(
+        contenedorIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(contenedorIconosLayout.createSequentialGroup()
+            .addGap(46, 46, 46)
+            .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(80, 80, 80)
+            .addComponent(jLabel38)
+            .addGap(68, 68, 68)
+            .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(132, Short.MAX_VALUE))
+    );
 
-        javax.swing.GroupLayout panelBotonesLayout = new javax.swing.GroupLayout(panelBotones);
-        panelBotones.setLayout(panelBotonesLayout);
-        panelBotonesLayout.setHorizontalGroup(
-            panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(panelBotonesLayout.createSequentialGroup()
-                .addComponent(contenedorIconos, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contenedorBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(botonInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        panelBotonesLayout.setVerticalGroup(
-            panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBotonesLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addGroup(panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelBotonesLayout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(contenedorBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(contenedorIconos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
+    javax.swing.GroupLayout panelBotonesLayout = new javax.swing.GroupLayout(panelBotones);
+    panelBotones.setLayout(panelBotonesLayout);
+    panelBotonesLayout.setHorizontalGroup(
+        panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addGroup(panelBotonesLayout.createSequentialGroup()
+            .addComponent(contenedorIconos, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(contenedorBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addComponent(botonInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+    );
+    panelBotonesLayout.setVerticalGroup(
+        panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBotonesLayout.createSequentialGroup()
+            .addGap(12, 12, 12)
+            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(botonInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(15, 15, 15)
+            .addGroup(panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelBotonesLayout.createSequentialGroup()
+                    .addGap(55, 55, 55)
+                    .addComponent(contenedorBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(contenedorIconos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addContainerGap())
+    );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panelBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+    getContentPane().setLayout(layout);
+    layout.setHorizontalGroup(
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addGroup(layout.createSequentialGroup()
+            .addComponent(panelBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(panelContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 967, Short.MAX_VALUE)
+                .addComponent(jLabel36)))
+    );
+    layout.setVerticalGroup(
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(layout.createSequentialGroup()
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(0, 967, Short.MAX_VALUE)
-                    .addComponent(jLabel36)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(0, 641, Short.MAX_VALUE)
-                    .addComponent(jLabel36)))
-        );
+                .addComponent(panelBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 641, Short.MAX_VALUE)
+                .addComponent(jLabel36)))
+    );
 
-        pack();
+    pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonCargarPilotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarPilotoActionPerformed
@@ -1612,7 +1647,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             Calendar cal = Calendar.getInstance();
             cal.setTime(campoFechaNacPiloto.getDate());
             int dia = cal.get(Calendar.DAY_OF_MONTH);
-            int mes = cal.get(Calendar.MONTH);
+            int mes = cal.get(Calendar.MONTH) + 1; //enero es 
             int ano = cal.get(Calendar.YEAR);
             Fecha f = new Fecha(dia,mes,ano);
             p.setFechaDeNacimiento(f);

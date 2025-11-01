@@ -645,19 +645,8 @@
                 </Component>
                 <Component class="javax.swing.JComboBox" name="campoEquipoPiloto">
                   <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="10">
-                        <StringItem index="0" value="Ferrari"/>
-                        <StringItem index="1" value="Red Bull Racing"/>
-                        <StringItem index="2" value="McLaren"/>
-                        <StringItem index="3" value="Haas"/>
-                        <StringItem index="4" value="Los Na"/>
-                        <StringItem index="5" value="Alpine"/>
-                        <StringItem index="6" value="Racing Bulls"/>
-                        <StringItem index="7" value="Williams"/>
-                        <StringItem index="8" value="Aston Martin"/>
-                        <StringItem index="9" value="Magios Racing"/>
-                      </StringArray>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[]&#xa;{ &#xa;    &quot;Alfa Romeo&quot;, &#xa;    &quot;Alpine&quot;, &#xa;    &quot;Aston Martin&quot;, &#xa;    &quot;Ferrari&quot;, &#xa;    &quot;Haas&quot;, &#xa;    &quot;Kick Sauber&quot;, &#xa;    &quot;McLaren&quot;, &#xa;    &quot;Mercedes&quot;, &#xa;    &quot;Minardi&quot;, &#xa;    &quot;Losco F1&quot;, &#xa;    &quot;Red Bull Racing&quot;, &#xa;    &quot;Magios Racists&quot;, &#xa;    &quot;Williams&quot;&#xa;})" type="code"/>
                     </Property>
                   </Properties>
                   <AuxValues>
@@ -904,21 +893,8 @@
                 </Component>
                 <Component class="javax.swing.JComboBox" name="campoNacionalidadPiloto">
                   <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="12">
-                        <StringItem index="0" value="Argentina"/>
-                        <StringItem index="1" value="Chile"/>
-                        <StringItem index="2" value="Alemania"/>
-                        <StringItem index="3" value="Suecia"/>
-                        <StringItem index="4" value="Arabia Saudi"/>
-                        <StringItem index="5" value="Gran Breta&#xf1;a"/>
-                        <StringItem index="6" value="Bolivia"/>
-                        <StringItem index="7" value="Brasil"/>
-                        <StringItem index="8" value="Uruguay"/>
-                        <StringItem index="9" value="Per&#xfa;"/>
-                        <StringItem index="10" value="M&#xe9;xico"/>
-                        <StringItem index="11" value="Francia"/>
-                      </StringArray>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] {&#xa;    &quot;Alemania&quot;,&#xa;    &quot;Argentina&quot;,&#xa;    &quot;Australia&quot;,&#xa;    &quot;Brasil&quot;,&#xa;    &quot;Canad&#xe1;&quot;,&#xa;    &quot;China&quot;,&#xa;    &quot;Dinamarca&quot;,&#xa;    &quot;Espa&#xf1;a&quot;,&#xa;    &quot;Estados Unidos&quot;,&#xa;    &quot;Finlandia&quot;,&#xa;    &quot;Francia&quot;,&#xa;    &quot;Gran Breta&#xf1;a&quot;,&#xa;    &quot;Irlanda&quot;,&#xa;    &quot;Italia&quot;,&#xa;    &quot;Jap&#xf3;n&quot;,&#xa;    &quot;M&#xe9;xico&quot;,&#xa;    &quot;M&#xf3;naco&quot;,&#xa;    &quot;Pa&#xed;ses Bajos&quot;,&#xa;    &quot;Reino Unido&quot;,&#xa;    &quot;Rusia&quot;})" type="code"/>
                     </Property>
                   </Properties>
                   <Events>

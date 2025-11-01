@@ -50,7 +50,7 @@ public class ListaPilotos {
         if (p == null) {
             return false;
         }
-        Piloto paux = buscarPilotoPorNumero(p.getNumeroDeAuto());
+        Piloto paux = buscarPilotoPorID(p.getID());
         if (paux == null) {
             lista.add(p);
             if(p.getID() == 0) p.setID(this.getLista().size());

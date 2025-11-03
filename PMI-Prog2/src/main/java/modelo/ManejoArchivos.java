@@ -117,8 +117,8 @@ public class ManejoArchivos {
                  pw.println(p.getAbandonos());
                  pw.println(p.getFia() ? "Si" : "No");
                  exito_pilotos = 1;
-                 System.out.println("archivo pilotos actualizado");
             }
+            System.out.println("archivo pilotos actualizado");
         }catch(IOException e){
              System.err.println("Error al guardar los pilotos: " + e.getMessage());
         }

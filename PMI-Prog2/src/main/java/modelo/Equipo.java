@@ -16,12 +16,14 @@ public class Equipo {
     private String nombreE; 
     private String pais;
     private Piloto pilotos[] = new Piloto[4];
-    private final int MAX_COMISARIOS = 4;
+    private final int MAX_COMISARIOS = 2;
+    private int cantidadComisarios;
     private int cantidadPilotos; //maximo 4 pilotos y 2 comisarios
     private int puntosTotales;
 
         public Equipo(){
             cantidadPilotos = 0;
+            cantidadComisarios = 0;
         }
 
         public Equipo(int id, String nombreE, String pais){
@@ -29,6 +31,7 @@ public class Equipo {
             this.nombreE = nombreE;
             this.pais = pais;
             this.cantidadPilotos = 0;
+            cantidadComisarios = 0;
             this.puntosTotales = 0;
         }
 
@@ -50,10 +53,14 @@ public class Equipo {
             return this.cantidadPilotos;
         }
         
-        public int localizarPiloto(int numeroDeAuto){
+        public int getCantidadComisarios(){
+            return cantidadComisarios;
+        }
+        
+        public int localizarPiloto(int id){
             if(this.cantidadPilotos == 0) return -1; //no hay pilotos
             for(int i=0; i<this.cantidadPilotos; i++){
-                if(this.pilotos[i].getNumeroDeAuto() == numeroDeAuto) return i; //encontrado
+                if(this.pilotos[i].getID() == id) return i; //encontrado
             }
             return -2; // no esta
         }
@@ -83,19 +90,34 @@ public class Equipo {
             }
         }
 
-        public boolean elimarPiloto(int id) { //Siento que me voy a olvidar de algo de aca que es importante
+        public boolean eliminarPiloto(int id) { //Siento que me voy a olvidar de algo de aca que es importante
             int pos = this.localizarPiloto(id);
-            int puntos = pilotos[pos].getPuntos();
+            System.out.println("localizando piloto id "+id+"\npos: "+pos);
             if(pos >= 0){
-                for(int i = pos; i < cantidadPilotos - 1; i++){
-                   pilotos[i] = pilotos[i + 1];
-                    cantidadPilotos--;
+                System.out.println("pos >= 0 --> eliminando piloto\ninicio iteración");
+                System.out.println("piloto: "+pilotos[pos].getNombre()+" "+pilotos[pos].getApellido());
+                int i;
+                int puntos = pilotos[pos].getPuntos();
+                int n = cantidadPilotos;
+                Piloto paux;
+                System.out.println("antes de iteracion cant: "+this.getCantidadPilotos());
+                for(i = pos; i < n-1; i++){
+                    if(pilotos[i] == null) System.out.println(pilotos[i-1].getNombre()+"<--"+pilotos[i+1].getNombre());
+                    else System.out.println(pilotos[i].getNombre()+"<--"+pilotos[i+1].getNombre());
+                    paux = pilotos[i+1];
+                    pilotos[i+1] = null;
+                    pilotos[i] = paux;
                     puntosTotales -= puntos;
-                    System.out.println("Piloto eliminado excitantemente");
-                    return true;
+                    puntos = pilotos[pos].getPuntos();
                 }
+                cantidadPilotos--;
+                System.out.println("Se realizaron "+i+" corrimientos sobre los pilotos del equipo "+nombreE);
+                System.out.println("despues de iteración cant: "+this.getCantidadPilotos());
+                System.out.println("Piloto eliminado excitantemente");
+                System.out.println("fin de operacion <eliminar piloto>. Lista actualizada de pilotos del equipo "+nombreE+": ");
+                this.mostrarPilotos();
+                return true;
             }
-               
             System.out.println("No se encontro el piloto...");
             return false; 
         }

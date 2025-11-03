@@ -1,0 +1,37 @@
+PMI PROG2
+
+
+//ya está
+Gestión de la Información
+El sistema debe permitir almacenar y operar sobre la información relacionada con pilotos,
+comisarios y equipos. Debe permitir las operaciones:
+//ya está// 1. Carga: Agregar nuevo piloto/comisario.
+//ya está// 2. Modificación: Editar información existente de piloto/comisario.
+//ya está// 3. Eliminación: Remover piloto/comisario.
+
+//ya está
+Persistencia de Datos
+//ya está//Toda la información debe ser persistente, guardándose en archivos de texto que permitan
+//       //recuperar los datos al iniciar el sistema nuevamente.
+
+
+
+
+Consultas específicas 
+
+PILOTOS
+-filtrar pilotos por puntos //ya está
+-piloto con mayor cantidad de penalizaciones //ya está 
+-cantidad de pilotos por rol //ya está
+-Top 3 pilotos con mas podios //ya está
+
+COMISARIOS 
+-filtrar comisarios por FIA //ya esta
+
+
+
+EQUIPOS 
+-cantidad de pilotos por equipo //ya está 
+-equipo con mas puntos acumulados //ya está
+
+

@@ -10,16 +10,19 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import vista.InterfazGrafica;
 import javax.swing.UIManager.LookAndFeelInfo;
+import com.formdev.flatlaf.FlatDarkLaf;
 
 /**
  *
- * @author arctan
+ * @author arctan & alts
  */
 public class Main {
      public static void main(String args[]) {
          
         try {
-            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+            //UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+            FlatDarkLaf.setup();
+            UIManager.put("Component.accentColor", new java.awt.Color(255,140,0));
         } catch (Exception e) {
         e.printStackTrace();
         }

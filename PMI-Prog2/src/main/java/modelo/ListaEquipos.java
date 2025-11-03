@@ -41,14 +41,20 @@ public class ListaEquipos {
 
     
     public Equipo buscarEquipoPorNombre(String nombre) {
-    for (int i = 0; i < equipos.size(); i++) {
-        Equipo e = equipos.get(i);
-        if (e.getNombreE().equalsIgnoreCase(nombre)) {
-            return e;
+        System.out.println("buscando equipo: "+nombre);
+        for(Equipo e : equipos){
+            if(e == null) System.out.println("el equipo es null");
+            else{
+                System.out.println("equipo "+e.getNombreE());
+                if(e.getNombreE().equalsIgnoreCase(nombre)){
+                   return e;
+                }
+            }
+            
         }
+        System.out.println("no se encontro el equipo "+nombre);
+        return null;
     }
-    return null;
-}
 
 
     public void mostrarEquipos() {
@@ -78,23 +84,43 @@ public class ListaEquipos {
         }
         Equipo equipoGanador = null;
         int maxPuntos = 0; //capaz haya que ponerlo en -1 no se
-
+        
         for (int i = 0; i < equipos.size(); i++) {
             Equipo equipoActual = equipos.get(i);
+            equipoActual.mostrarPilotos();
             int puntosDelEquipo = 0;
-
             Piloto[] listaPilotos = equipoActual.getPilotos(); 
-            for (int j = 0; j < listaPilotos.length; j++) {
+            for (int j = 0; j < equipoActual.getCantidadPilotos(); j++) {
                 Piloto pilotoActual = listaPilotos[j];
-                puntosDelEquipo += pilotoActual.getPuntos();
+                if(pilotoActual == null) System.out.println("el piloto "+j+" del equipo "+equipoActual.getNombreE()+" es null");
+                else puntosDelEquipo += pilotoActual.getPuntos();
             }
             if (puntosDelEquipo > maxPuntos) {
                 maxPuntos = puntosDelEquipo;
                 equipoGanador = equipoActual;
             }
+            System.out.println("maximo de puntos: "+maxPuntos);
         }
         return equipoGanador;
-    }
+    }   
     
+    public Equipo equipoConMasPilotos(){
+        if(equipos.isEmpty()){
+            return null;
+        }
+        Equipo equipoGanador = null;
+        int maxPilotos = 0; //capaz haya que ponerlo en -1 no se
+        
+        for (int i = 0; i < equipos.size(); i++) {
+            Equipo equipoActual = equipos.get(i);
+            
+            if (equipoActual.getCantidadPilotos() > maxPilotos) {
+                maxPilotos = equipoActual.getCantidadPilotos();
+                equipoGanador = equipoActual;
+            }
+            System.out.println("maximo de pilotos: "+maxPilotos);
+        }
+        return equipoGanador;
+    }   
     
 }

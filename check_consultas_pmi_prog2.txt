@@ -1,5 +1,12 @@
 PMI PROG2
 
+REVISAR:
+equipos:
+equipo con más puntos, equipo con mas pilotos, mostrar equipo
+--> error: añadir el padre de un contenedor a él mismo
+--> comentar esta línea:
+panelInfoEquipos.add(panelInformacionEquipo);
+
 
 //ya está
 Gestión de la Información
